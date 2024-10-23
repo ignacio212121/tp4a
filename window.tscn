@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://cvnq5sbnshg47"]
-
-[node name="Window" type="Window"]
-position = Vector2i(960, 0)
-size = Vector2i(1920, 1080)

@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://ds2dmhmo7pybq"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_7jcjb"]
+file = "res://prueba.ogg"
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tuedi"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77siy"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_tuedi")
+
+[sub_resource type="QuadMesh" id="QuadMesh_vs4xv"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_77siy")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_turb1"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rs761"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8bnik"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_rs761")
+
+[sub_resource type="QuadMesh" id="QuadMesh_7mgex"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_8bnik")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_gf82l"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Node" type="Node"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(1920, 1080)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_7jcjb")
+autoplay = true
+loop = true
+
+[node name="SubViewport2" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="SubViewport2"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SubViewport2/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_7jcjb")
+autoplay = true
+loop = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(249, 305)
+scale = Vector2(406.438, -347.094)
+mesh = SubResource("QuadMesh_vs4xv")
+texture = SubResource("ViewportTexture_turb1")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+position = Vector2(894, 469)
+scale = Vector2(318.25, -227.625)
+mesh = SubResource("QuadMesh_7mgex")
+texture = SubResource("ViewportTexture_gf82l")
