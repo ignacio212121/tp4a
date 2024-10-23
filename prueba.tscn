@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwelvfpdu2i3r"]
+
+[ext_resource type="Script" path="res://main2.gd" id="1_rods1"]
+[ext_resource type="Texture2D" uid="uid://bxh5jcyjl2fkb" path="res://fondo.png" id="2_o6k7v"]
+[ext_resource type="Texture2D" uid="uid://ceykkbb8r1oci" path="res://img escena 1/bordes.png" id="8_gaimu"]
+[ext_resource type="Texture2D" uid="uid://bdosewhw8ims4" path="res://img escena 1/Group 309.png" id="9_00ytr"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rods1")
+
+[node name="ContenedorPrincipal" type="SubViewportContainer" parent="."]
+offset_right = 1043.0
+offset_bottom = 657.0
+
+[node name="MainViewport" type="SubViewport" parent="ContenedorPrincipal"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="ContenedorSub1" type="SubViewportContainer" parent="."]
+offset_left = 326.0
+offset_top = 1617.0
+offset_right = 2246.0
+offset_bottom = 2697.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SubViewport1" type="SubViewport" parent="ContenedorSub1"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="camaras" type="Sprite2D" parent="ContenedorSub1/SubViewport1"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_o6k7v")
+
+[node name="Bordes" type="Sprite2D" parent="ContenedorSub1/SubViewport1"]
+position = Vector2(966.925, 458.53)
+scale = Vector2(1.0115, 1.00949)
+texture = ExtResource("8_gaimu")
+
+[node name="Texto" type="Sprite2D" parent="ContenedorSub1/SubViewport1"]
+scale = Vector2(1, 1.15254)
+texture = ExtResource("9_00ytr")
+
+[node name="ContenedorSub2" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2444.0
+offset_top = 1589.0
+offset_right = 4364.0
+offset_bottom = 2669.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="SubViewport2" type="SubViewport" parent="ContenedorSub2"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="tarea" type="Sprite2D" parent="ContenedorSub2/SubViewport2"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_o6k7v")

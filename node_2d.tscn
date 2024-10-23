@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://byh8ru3p31u6g"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_8kpsw"]
+[ext_resource type="Texture2D" uid="uid://bxh5jcyjl2fkb" path="res://fondo.png" id="1_i14es"]
+[ext_resource type="Texture2D" uid="uid://cdjvh53asovn7" path="res://Group 307.png" id="2_4xaew"]
+[ext_resource type="Script" path="res://window.gd" id="3_hrvwf"]
+[ext_resource type="Texture2D" uid="uid://itytpbgpmov8" path="res://Rectangle 234.png" id="5_bl6to"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_8kpsw")
+
+[node name="Window" type="Window" parent="."]
+position = Vector2i(0, 36)
+size = Vector2i(1560, 760)
+script = ExtResource("3_hrvwf")
+
+[node name="Camera2D" type="Camera2D" parent="Window"]
+
+[node name="Window2" type="Window" parent="."]
+auto_translate_mode = 1
+position = Vector2i(0, 36)
+size = Vector2i(1560, 570)
+script = ExtResource("3_hrvwf")
+
+[node name="Camera2D" type="Camera2D" parent="Window2"]
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(963, 541)
+texture = ExtResource("1_i14es")
+
+[node name="Group307" type="Sprite2D" parent="Fondo"]
+position = Vector2(24, -25)
+texture = ExtResource("2_4xaew")
+
+[node name="Fondo2" type="Sprite2D" parent="."]
+position = Vector2(2879, 541)
+texture = ExtResource("1_i14es")
+
+[node name="Rectangle234" type="Sprite2D" parent="Fondo2"]
+position = Vector2(-16, -15)
+texture = ExtResource("5_bl6to")
