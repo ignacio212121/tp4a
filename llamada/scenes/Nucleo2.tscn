@@ -1,0 +1,109 @@
+[gd_scene load_steps=21 format=3 uid="uid://s2wmbf6jurft"]
+
+[ext_resource type="Texture2D" uid="uid://isc23nrep8l5" path="res://imag/llamada/Rectangle 237@2x.png" id="1_4e4fg"]
+[ext_resource type="Script" path="res://assets/scripts/llamada.gd" id="1_rypf2"]
+[ext_resource type="Script" path="res://addons/godOSC/scripts/OSCServer.gd" id="2_h2khk"]
+[ext_resource type="Texture2D" uid="uid://b4etao5g163jl" path="res://imag/linea 1.png" id="2_ujehb"]
+[ext_resource type="PackedScene" uid="uid://bxclj0nwffblc" path="res://scenes/Nucleo1.tscn" id="2_yv2j7"]
+[ext_resource type="Texture2D" uid="uid://jcjntjqpcaq1" path="res://imag/Property 1=Variant2.png" id="3_llf8s"]
+[ext_resource type="Script" path="res://addons/godOSC/scripts/OSCReceiver.gd" id="3_rlhm4"]
+[ext_resource type="PackedScene" uid="uid://2x4506ppxm6l" path="res://scenes/Nucleo3.tscn" id="3_vpsjf"]
+[ext_resource type="Script" path="res://addons/godOSC/scripts/OSCClient.gd" id="4_4tp5i"]
+[ext_resource type="PackedScene" uid="uid://cuon6pdn00csb" path="res://scenes/Nucleo4.tscn" id="4_mbvti"]
+[ext_resource type="Texture2D" uid="uid://cyb0r8jrs5wp7" path="res://imag/linea 3.png" id="4_s0v2j"]
+[ext_resource type="Texture2D" uid="uid://dkineowwsls4n" path="res://imag/Property 1=Variant2-2.png" id="5_r2yx3"]
+[ext_resource type="PackedScene" uid="uid://b6mhgf3fmns3r" path="res://scenes/Nucleo5.tscn" id="5_wk43g"]
+[ext_resource type="Texture2D" uid="uid://bbwuun1or3xo4" path="res://imag/linea 4.png" id="6_p1r1o"]
+[ext_resource type="Texture2D" uid="uid://cixafacrj6qtu" path="res://imag/Property 1=Variant2-3.png" id="7_apjqq"]
+[ext_resource type="Texture2D" uid="uid://ddl2arq6w8kbi" path="res://imag/linea 5.png" id="8_a2gui"]
+[ext_resource type="Texture2D" uid="uid://l8867y65newq" path="res://imag/Property 1=Variant2-4.png" id="9_h8652"]
+[ext_resource type="Texture2D" uid="uid://jqrxv7qmng6" path="res://imag/llamada2/Group 326.png" id="14_d1p54"]
+[ext_resource type="Texture2D" uid="uid://c7g4jjg74t1s5" path="res://imag/llamada2/Group 325.png" id="15_c310u"]
+[ext_resource type="Script" path="res://assets/scripts/osc_message_main.gd" id="15_ekn2h"]
+
+[node name="Llamda2" type="Node"]
+script = ExtResource("1_rypf2")
+nucleo1 = ExtResource("2_yv2j7")
+nucleo2 = null
+nucleo3 = ExtResource("3_vpsjf")
+nucleo4 = ExtResource("4_mbvti")
+nucleo5 = ExtResource("5_wk43g")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_4e4fg")
+
+[node name="Llamada1" type="TextureButton" parent="."]
+offset_left = 1062.0
+offset_top = 74.0
+offset_right = 1102.0
+offset_bottom = 114.0
+texture_normal = ExtResource("2_ujehb")
+texture_hover = ExtResource("3_llf8s")
+
+[node name="Llamada3" type="TextureButton" parent="."]
+offset_left = 1485.0
+offset_top = 74.0
+offset_right = 1525.0
+offset_bottom = 114.0
+texture_normal = ExtResource("4_s0v2j")
+texture_hover = ExtResource("5_r2yx3")
+
+[node name="Llamada4" type="TextureButton" parent="."]
+offset_left = 1059.0
+offset_top = 506.0
+offset_right = 1466.0
+offset_bottom = 844.0
+texture_normal = ExtResource("6_p1r1o")
+texture_hover = ExtResource("7_apjqq")
+
+[node name="Llamada5" type="TextureButton" parent="."]
+offset_left = 1481.0
+offset_top = 506.0
+offset_right = 1888.0
+offset_bottom = 844.0
+texture_normal = ExtResource("8_a2gui")
+texture_hover = ExtResource("9_h8652")
+
+[node name="Group324" type="Sprite2D" parent="."]
+position = Vector2(961, 977.25)
+scale = Vector2(1.00864, 1.13025)
+texture = ExtResource("14_d1p54")
+
+[node name="Llamada1Grande" type="Sprite2D" parent="."]
+position = Vector2(531, 468)
+texture = ExtResource("15_c310u")
+
+[node name="OSCServer" type="Node" parent="."]
+script = ExtResource("2_h2khk")
+port = 12345
+
+[node name="OSCReceiver" type="Node" parent="OSCServer" node_paths=PackedStringArray("target_server")]
+script = ExtResource("3_rlhm4")
+target_server = NodePath("..")
+osc_address = "/llamada"
+
+[node name="OSCClient" type="Node" parent="."]
+script = ExtResource("4_4tp5i")
+ip_address = "192.168.0.7"
+port = 9000
+
+[node name="OSCMessage" type="Node" parent="OSCClient" node_paths=PackedStringArray("target_client")]
+script = ExtResource("15_ekn2h")
+nucleo1 = ExtResource("2_yv2j7")
+nucleo2 = null
+nucleo3 = ExtResource("3_vpsjf")
+nucleo4 = ExtResource("4_mbvti")
+nucleo5 = ExtResource("5_wk43g")
+target_client = NodePath("..")
+osc_address = "/inter"
+
+[connection signal="pressed" from="Llamada1" to="." method="_on_llamada_1_pressed"]
+[connection signal="pressed" from="Llamada1" to="OSCClient/OSCMessage" method="_on_llamada_1_pressed"]
+[connection signal="pressed" from="Llamada3" to="." method="_on_llamada_3_pressed"]
+[connection signal="pressed" from="Llamada3" to="OSCClient/OSCMessage" method="_on_llamada_3_pressed"]
+[connection signal="pressed" from="Llamada4" to="." method="_on_llamada_4_pressed"]
+[connection signal="pressed" from="Llamada4" to="OSCClient/OSCMessage" method="_on_llamada_4_pressed"]
+[connection signal="pressed" from="Llamada5" to="." method="_on_llamada_5_pressed"]
+[connection signal="pressed" from="Llamada5" to="OSCClient/OSCMessage" method="_on_llamada_5_pressed"]

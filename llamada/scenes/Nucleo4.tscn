@@ -1,0 +1,95 @@
+[gd_scene load_steps=17 format=3 uid="uid://cuon6pdn00csb"]
+
+[ext_resource type="Texture2D" uid="uid://isc23nrep8l5" path="res://imag/llamada/Rectangle 237@2x.png" id="1_pmdmr"]
+[ext_resource type="Script" path="res://assets/scripts/llamada.gd" id="1_q4en1"]
+[ext_resource type="Texture2D" uid="uid://crak0icakjrdu" path="res://imag/linea 2.png" id="2_afna5"]
+[ext_resource type="Script" path="res://addons/godOSC/scripts/OSCServer.gd" id="2_euw1g"]
+[ext_resource type="Texture2D" uid="uid://b4etao5g163jl" path="res://imag/linea 1.png" id="2_xvisk"]
+[ext_resource type="Texture2D" uid="uid://jcjntjqpcaq1" path="res://imag/Property 1=Variant2.png" id="3_bld6x"]
+[ext_resource type="Script" path="res://addons/godOSC/scripts/OSCReceiver.gd" id="3_en61d"]
+[ext_resource type="Texture2D" uid="uid://cyocnw07dh68e" path="res://imag/Property 1=Variant2-1.png" id="3_qag7j"]
+[ext_resource type="Texture2D" uid="uid://cyb0r8jrs5wp7" path="res://imag/linea 3.png" id="4_awqin"]
+[ext_resource type="Script" path="res://addons/godOSC/scripts/OSCClient.gd" id="4_v81j0"]
+[ext_resource type="Texture2D" uid="uid://dkineowwsls4n" path="res://imag/Property 1=Variant2-2.png" id="5_fi8fb"]
+[ext_resource type="Texture2D" uid="uid://ddl2arq6w8kbi" path="res://imag/linea 5.png" id="8_yimry"]
+[ext_resource type="Texture2D" uid="uid://l8867y65newq" path="res://imag/Property 1=Variant2-4.png" id="9_iq3xi"]
+[ext_resource type="Script" path="res://assets/scripts/osc_message_main.gd" id="13_yrnki"]
+[ext_resource type="Texture2D" uid="uid://cgqfrg8jewcme" path="res://imag/llamada4/Group 330.png" id="14_y1g4l"]
+[ext_resource type="Texture2D" uid="uid://bpgsd4ep5ytdq" path="res://imag/llamada4/Group 329.png" id="15_q71f5"]
+
+[node name="Llamada4" type="Node"]
+script = ExtResource("1_q4en1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_pmdmr")
+
+[node name="Llamada1" type="TextureButton" parent="."]
+offset_left = 1062.0
+offset_top = 76.0
+offset_right = 1470.0
+offset_bottom = 423.0
+texture_normal = ExtResource("2_xvisk")
+texture_hover = ExtResource("3_bld6x")
+
+[node name="Llamada2" type="TextureButton" parent="."]
+offset_left = 1485.0
+offset_top = 77.0
+offset_right = 1893.0
+offset_bottom = 424.0
+texture_normal = ExtResource("2_afna5")
+texture_hover = ExtResource("3_qag7j")
+
+[node name="Llamada3" type="TextureButton" parent="."]
+offset_left = 1059.0
+offset_top = 506.0
+offset_right = 1466.0
+offset_bottom = 844.0
+texture_normal = ExtResource("4_awqin")
+texture_hover = ExtResource("5_fi8fb")
+
+[node name="Llamada5" type="TextureButton" parent="."]
+offset_left = 1481.0
+offset_top = 506.0
+offset_right = 1888.0
+offset_bottom = 844.0
+texture_normal = ExtResource("8_yimry")
+texture_hover = ExtResource("9_iq3xi")
+
+[node name="OSCServer" type="Node" parent="."]
+script = ExtResource("2_euw1g")
+port = 12345
+
+[node name="OSCReceiver" type="Node" parent="OSCServer" node_paths=PackedStringArray("target_server")]
+script = ExtResource("3_en61d")
+target_server = NodePath("..")
+osc_address = "/llamada"
+
+[node name="OSCClient" type="Node" parent="."]
+script = ExtResource("4_v81j0")
+ip_address = "192.168.0.7"
+port = 9000
+
+[node name="OSCMessage" type="Node" parent="OSCClient" node_paths=PackedStringArray("target_client")]
+script = ExtResource("13_yrnki")
+target_client = NodePath("..")
+osc_address = "/inter"
+
+[node name="Group324" type="Sprite2D" parent="."]
+position = Vector2(961, 977.25)
+scale = Vector2(1.00864, 1.13025)
+texture = ExtResource("14_y1g4l")
+
+[node name="Llamada1Grande" type="Sprite2D" parent="."]
+position = Vector2(531, 468)
+texture = ExtResource("15_q71f5")
+
+[connection signal="pressed" from="Llamada1" to="." method="_on_llamada_1_pressed"]
+[connection signal="pressed" from="Llamada1" to="OSCClient/OSCMessage" method="_on_llamada_1_pressed"]
+[connection signal="pressed" from="Llamada2" to="." method="_on_llamada_2_pressed"]
+[connection signal="pressed" from="Llamada2" to="OSCClient/OSCMessage" method="_on_llamada_2_pressed"]
+[connection signal="pressed" from="Llamada3" to="." method="_on_llamada_3_pressed"]
+[connection signal="pressed" from="Llamada3" to="OSCClient/OSCMessage" method="_on_llamada_3_pressed"]
+[connection signal="pressed" from="Llamada5" to="." method="_on_llamada_5_pressed"]
+[connection signal="pressed" from="Llamada5" to="OSCClient/OSCMessage" method="_on_llamada_5_pressed"]
