@@ -1,0 +1,220 @@
+[gd_scene load_steps=16 format=3 uid="uid://dvj0n3qg13545"]
+
+[ext_resource type="Script" path="res://assets/scripts/intro.gd" id="1_3xjke"]
+[ext_resource type="Texture2D" uid="uid://bduijvxd577ye" path="res://assets/sprites/intro/intro_frame01.png" id="1_x7xet"]
+[ext_resource type="Texture2D" uid="uid://c7qcjrfymq74c" path="res://assets/sprites/intro/intro_frame02.png" id="2_ab8nn"]
+[ext_resource type="Texture2D" uid="uid://d3qp10og0tw71" path="res://assets/sprites/intro/intro_frame03.png" id="3_4uipp"]
+[ext_resource type="Texture2D" uid="uid://bf0xe4ogo1cxp" path="res://themes/buttons/conectar_audio_normal.png" id="5_4xwe7"]
+[ext_resource type="Texture2D" uid="uid://ddrt4yicvf36s" path="res://themes/buttons/conectar_audio_hover.png" id="6_pl43e"]
+[ext_resource type="Texture2D" uid="uid://g74glx5hgks7" path="res://assets/sprites/intro/iniciando_llamadas.png" id="7_56t21"]
+[ext_resource type="Texture2D" uid="uid://dk5a88mx0f2rn" path="res://assets/sprites/intro/frame_llamadas.png" id="8_g88lb"]
+[ext_resource type="Texture2D" uid="uid://c35tq0bvfcag" path="res://assets/sprites/intro/descripcion_llamadas.png" id="9_abyks"]
+[ext_resource type="PackedScene" uid="uid://drx5frcgg37qy" path="res://scenes/llamada_s.tscn" id="10_s7bkv"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_dfl04"]
+viewport_path = NodePath("Inicio1/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3irno"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_dfl04")
+
+[sub_resource type="QuadMesh" id="QuadMesh_p8h0e"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_3irno")
+size = Vector2(1280, 720)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_cd8wo"]
+viewport_path = NodePath("Inicio1/SubViewport")
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_ims0w"]
+file = "res://assets/videos/inicio/intro_ia.ogg"
+
+[node name="Intro" type="Node"]
+script = ExtResource("1_3xjke")
+
+[node name="Frame" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -5.0
+offset_right = -10.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Frame" type="TextureRect" parent="Frame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -904.0
+offset_top = -477.0
+offset_right = 904.0
+offset_bottom = 477.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x7xet")
+
+[node name="FrameDetail" type="TextureRect" parent="Frame"]
+layout_mode = 1
+offset_left = 528.0
+offset_top = 217.0
+offset_right = 919.0
+offset_bottom = 491.0
+texture = ExtResource("2_ab8nn")
+
+[node name="FrameDetail2" type="TextureRect" parent="Frame"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 903.0
+offset_top = -477.0
+offset_right = 943.0
+offset_bottom = -265.0
+grow_vertical = 0
+texture = ExtResource("3_4uipp")
+
+[node name="Label" type="Label" parent="Frame"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inicio1" type="Node2D" parent="."]
+visible = false
+
+[node name="VideoInicio" type="MeshInstance2D" parent="Inicio1"]
+position = Vector2(944, 527)
+scale = Vector2(1, -1)
+mesh = SubResource("QuadMesh_p8h0e")
+texture = SubResource("ViewportTexture_cd8wo")
+
+[node name="SubViewport" type="SubViewport" parent="Inicio1"]
+size = Vector2i(1280, 720)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Inicio1/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = SubResource("VideoStreamTheora_ims0w")
+
+[node name="Inicio2" type="Node2D" parent="."]
+visible = false
+
+[node name="ConectarAudio" type="TextureButton" parent="Inicio2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 610.0
+offset_top = 724.0
+offset_right = 1304.0
+offset_bottom = 875.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_4xwe7")
+texture_pressed = ExtResource("6_pl43e")
+texture_hover = ExtResource("6_pl43e")
+
+[node name="IniciadoLlamadas" type="TextureRect" parent="Inicio2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 427.0
+offset_top = 260.0
+offset_right = 1454.0
+offset_bottom = 331.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_56t21")
+
+[node name="Inicio3" type="Node2D" parent="."]
+visible = false
+
+[node name="Frame" type="Control" parent="Inicio3"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = 32.0
+offset_right = 36.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Frame" type="TextureRect" parent="Inicio3/Frame"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 28.0
+offset_right = 1876.0
+offset_bottom = 871.0
+texture = ExtResource("8_g88lb")
+metadata/_edit_use_anchors_ = true
+
+[node name="Descripcion" type="TextureRect" parent="Inicio3/Frame"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 885.0
+offset_right = 1894.0
+offset_bottom = 1003.0
+texture = ExtResource("9_abyks")
+metadata/_edit_use_anchors_ = true
+
+[node name="Linea1" parent="Inicio3" instance=ExtResource("10_s7bkv")]
+position = Vector2(120, 71)
+num_linea = 1
+
+[node name="Linea2" parent="Inicio3" instance=ExtResource("10_s7bkv")]
+position = Vector2(752, 71)
+num_linea = 2
+
+[node name="Linea3" parent="Inicio3" instance=ExtResource("10_s7bkv")]
+position = Vector2(1384, 71)
+num_linea = 3
+
+[node name="Linea4" parent="Inicio3" instance=ExtResource("10_s7bkv")]
+position = Vector2(441, 473)
+num_linea = 4
+
+[node name="Linea5" parent="Inicio3" instance=ExtResource("10_s7bkv")]
+position = Vector2(1088, 473)
+num_linea = 5
+
+[node name="TimerEmpezar" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="finished" from="Inicio1/SubViewport/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="Inicio2/ConectarAudio" to="." method="_on_conectar_audio_pressed"]
+[connection signal="clickeado" from="Inicio3/Linea1" to="." method="_on_linea_clickeado"]
+[connection signal="clickeado" from="Inicio3/Linea2" to="." method="_on_linea_clickeado"]
+[connection signal="clickeado" from="Inicio3/Linea3" to="." method="_on_linea_clickeado"]
+[connection signal="clickeado" from="Inicio3/Linea4" to="." method="_on_linea_clickeado"]
+[connection signal="clickeado" from="Inicio3/Linea5" to="." method="_on_linea_clickeado"]
+[connection signal="timeout" from="TimerEmpezar" to="." method="_on_timer_empezar_timeout"]

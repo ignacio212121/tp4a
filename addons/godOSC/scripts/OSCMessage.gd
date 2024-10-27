@@ -19,5 +19,5 @@ func _ready():
 func _process(delta):
 	
 	# Sends 0 to the target OSC address
-	target_client.send_message(osc_address, [0])
+	#target_client.send_message(osc_address, [0])
 	pass
