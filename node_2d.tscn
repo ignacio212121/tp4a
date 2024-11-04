@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://dww7d5cp5g8t3"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_g5lgb"]
+[ext_resource type="Texture2D" uid="uid://smbv4f063f30" path="res://borrador.png" id="2_xh5k4"]
+[ext_resource type="Shader" path="res://test.gdshader" id="3_yxpr6"]
+[ext_resource type="Texture2D" uid="uid://cju1lm32s0o1b" path="res://150465-FoxyRiot-Tux-Linux-yellow-Kill-Bill.png" id="4_llwvy"]
+[ext_resource type="Texture2D" uid="uid://cg5j5m87ubk85" path="res://Blue-Windows-11-Desktop-Wallpaper-2456733369.jpg" id="5_g2csg"]
+[ext_resource type="Texture2D" uid="uid://bwsupoiwr4ud" path="res://cursor.png" id="5_rrbvd"]
+
+[sub_resource type="Gradient" id="Gradient_t3au7"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3lmx3"]
+gradient = SubResource("Gradient_t3au7")
+width = 1920
+height = 1080
+fill_from = Vector2(0.995413, 0.00458716)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jw1kq"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fxm8p"]
+resource_local_to_scene = true
+shader = ExtResource("3_yxpr6")
+shader_parameter/mask_texture = SubResource("ViewportTexture_jw1kq")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_g5lgb")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SubViewport"]
+
+[node name="TextureRect2" type="TextureRect" parent="SubViewport/CanvasLayer"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("GradientTexture2D_3lmx3")
+
+[node name="Brush" type="Sprite2D" parent="SubViewport/CanvasLayer"]
+texture = ExtResource("2_xh5k4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.999123, 0.999123)
+texture = ExtResource("4_llwvy")
+
+[node name="Arriba" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_fxm8p")
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_g2csg")
+
+[node name="Cursor" type="Sprite2D" parent="."]
+modulate = Color(0.684028, 0.000355301, 0.685057, 1)
+texture = ExtResource("5_rrbvd")
