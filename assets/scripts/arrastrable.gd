@@ -26,8 +26,10 @@ func _on_mouse_entered():
 func _mouse_exited():
 	mouse_dentro = false
 
-func llego_zona(posicion):
+func llego_zona(posicion, tamanio):
 	posicion_objetivo = posicion
+	var escala = tamanio / $Imagen.get_rect().size
+	$Imagen.scale = escala
 	$ZonaClickeable/CollisionShape2D.call_deferred("set_disabled", true)
 	emit_signal("posicionado")
 	
