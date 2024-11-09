@@ -19,13 +19,11 @@ func _on_area_2d_area_entered(area):
 	if arrastrable.clave_objetivo == clave:
 		self.arrastrable = arrastrable
 		arrastrable_dentro = true
-		#arrastrable.llego_zona(position)
 
 func _input(event):
 	if event.is_action_released("mouse_left"):
 		if arrastrable_dentro:
-			arrastrable.llego_zona(position, $Sprite2D.get_rect().size)
-			#$Area2D/CollisionShape2D.call_deferred("set_disabled", true)
+			arrastrable.llego_zona(global_position, $Sprite2D.get_rect().size)
 
 func _on_area_2d_area_exited(area):
 	arrastrable = null
