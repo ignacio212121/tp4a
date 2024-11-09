@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjyhlfqw31xgp"]
+
+[ext_resource type="Script" path="res://assets/scripts/arrastrable.gd" id="1_827gn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31c3o"]
+size = Vector2(104, 94)
+
+[node name="Arrastrable" type="Node2D"]
+script = ExtResource("1_827gn")
+
+[node name="Imagen" type="Sprite2D" parent="."]
+
+[node name="ZonaClickeable" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaClickeable"]
+shape = SubResource("RectangleShape2D_31c3o")
+
+[connection signal="mouse_entered" from="ZonaClickeable" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ZonaClickeable" to="." method="_mouse_exited"]

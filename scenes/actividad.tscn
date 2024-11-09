@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5dor1umboa11"]
+
+[ext_resource type="PackedScene" uid="uid://csmeaxa4g6wmb" path="res://scenes/actividades/dibujar.tscn" id="1_diktx"]
+[ext_resource type="Script" path="res://assets/scripts/main.gd" id="1_h3tdy"]
+[ext_resource type="PackedScene" uid="uid://bjyhlfqw31xgp" path="res://scenes/actividades/arrastrable.tscn" id="2_8n4m0"]
+[ext_resource type="Texture2D" uid="uid://wrq1s28qwau" path="res://assets/sprites/actividad_dibujar/borrador.png" id="3_gwbgi"]
+[ext_resource type="PackedScene" uid="uid://bv8bnjs72yogm" path="res://scenes/actividades/destino.tscn" id="5_ovasg"]
+[ext_resource type="PackedScene" uid="uid://djtfeu0qegsme" path="res://scenes/actividades/clickeable.tscn" id="6_qk0qf"]
+
+[sub_resource type="Gradient" id="Gradient_uhacg"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pjmai"]
+gradient = SubResource("Gradient_uhacg")
+
+[node name="Actividad" type="Node"]
+script = ExtResource("1_h3tdy")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(961.5, 546)
+scale = Vector2(31.0469, 18.0625)
+texture = SubResource("GradientTexture2D_pjmai")
+
+[node name="Dibujar" parent="." instance=ExtResource("1_diktx")]
+color = Color(0.996262, 0.651689, 0.761853, 1)
+
+[node name="Destino" parent="." instance=ExtResource("5_ovasg")]
+position = Vector2(489, 320)
+imagen = ExtResource("3_gwbgi")
+color = Color(0.198446, 0.314129, 0.639701, 1)
+
+[node name="Destino2" parent="." instance=ExtResource("5_ovasg")]
+position = Vector2(492, 436)
+clave = "clave2"
+imagen = ExtResource("3_gwbgi")
+color = Color(0.322991, 0.343271, 0.364609, 1)
+
+[node name="Destino3" parent="." instance=ExtResource("5_ovasg")]
+position = Vector2(492, 547)
+clave = "clave3"
+imagen = ExtResource("3_gwbgi")
+color = Color(0.0975458, 0.394574, 0.333566, 1)
+
+[node name="Destino4" parent="." instance=ExtResource("5_ovasg")]
+position = Vector2(489, 668)
+clave = "clave4"
+imagen = ExtResource("3_gwbgi")
+color = Color(0.524227, 0.0541162, 0.6189, 1)
+
+[node name="Destino5" parent="." instance=ExtResource("5_ovasg")]
+position = Vector2(489, 771)
+clave = "clave5"
+imagen = ExtResource("3_gwbgi")
+color = Color(0.450093, 0.310237, 0.0601993, 1)
+
+[node name="Arrastrable" parent="." instance=ExtResource("2_8n4m0")]
+position = Vector2(62, 107)
+imagen = ExtResource("3_gwbgi")
+color = Color(0.68894, 0.00037619, 0.693733, 1)
+
+[node name="Arrastrable2" parent="." instance=ExtResource("2_8n4m0")]
+position = Vector2(74, 627)
+clave_objetivo = "clave2"
+imagen = ExtResource("3_gwbgi")
+color = Color(0.68894, 0.00037619, 0.693733, 1)
+
+[node name="Arrastrable3" parent="." instance=ExtResource("2_8n4m0")]
+position = Vector2(64, 362)
+clave_objetivo = "clave3"
+imagen = ExtResource("3_gwbgi")
+color = Color(0.68894, 0.00037619, 0.693733, 1)
+
+[node name="Arrastrable4" parent="." instance=ExtResource("2_8n4m0")]
+position = Vector2(69, 487)
+clave_objetivo = "clave4"
+imagen = ExtResource("3_gwbgi")
+color = Color(0.68894, 0.00037619, 0.693733, 1)
+
+[node name="Arrastrable5" parent="." instance=ExtResource("2_8n4m0")]
+position = Vector2(64, 246)
+clave_objetivo = "clave5"
+imagen = ExtResource("3_gwbgi")
+color = Color(0.68894, 0.00037619, 0.693733, 1)
+
+[node name="Clickeable" parent="." instance=ExtResource("6_qk0qf")]
+position = Vector2(1552, 454)
+imagen = ExtResource("3_gwbgi")
+color = Color(0.74902, 0.219608, 0.219608, 1)
+
+[node name="Borrador" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1616, 896)
+texture = ExtResource("3_gwbgi")
+
+[connection signal="posicionado" from="Arrastrable" to="." method="_on_arrastrable_posicionado"]
+[connection signal="posicionado" from="Arrastrable2" to="." method="_on_arrastrable_posicionado"]
+[connection signal="posicionado" from="Arrastrable3" to="." method="_on_arrastrable_posicionado"]
+[connection signal="posicionado" from="Arrastrable4" to="." method="_on_arrastrable_posicionado"]
+[connection signal="posicionado" from="Arrastrable5" to="." method="_on_arrastrable_posicionado"]
