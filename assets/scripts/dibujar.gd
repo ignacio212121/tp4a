@@ -20,6 +20,7 @@ func _ready():
 	$Label.modulate = color
 	$Marco.modulate = color
 	$Label.text = texto
+	$BotonS.color = color
 	arriba.texture = imagen_arriba
 	abajo.texture = imagen_abajo
 	accumulated_texture = ImageTexture.new()
@@ -47,4 +48,8 @@ func _zona_cumplida():
 	zonas += 1
 	if zonas == 9:
 		arriba.visible = false
-		emit_signal("actividad_finalizada")
+		$BotonS.visible = true
+
+
+func _on_boton_s_pressed():
+	emit_signal("actividad_finalizada")

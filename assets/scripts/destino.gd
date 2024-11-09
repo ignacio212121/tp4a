@@ -26,9 +26,7 @@ func _input(event):
 	if event.is_action_released("mouse_left"):
 		if arrastrable_dentro:
 			arrastrable.llego_zona(position)
-			$Area2D/CollisionShape2D.call_deferred("set_disabled", true)
-	
-
+			#$Area2D/CollisionShape2D.call_deferred("set_disabled", true)
 
 func _on_area_2d_area_exited(area):
 	arrastrable = null

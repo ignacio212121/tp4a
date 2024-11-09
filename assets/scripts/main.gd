@@ -15,3 +15,7 @@ func _on_arrastrable_posicionado():
 	cantidad_arrastrables += 1
 	if cantidad_arrastrables == 5:
 		$Borrador.visible = true
+
+
+func _on_dibujar_actividad_finalizada():
+	$Dibujar.queue_free()

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgs2ty3i0fjmf"]
+
+[ext_resource type="Texture2D" uid="uid://dd2bvwtv6s1pc" path="res://assets/sprites/elementos/boton_s_normal.png" id="1_jgxm4"]
+[ext_resource type="Texture2D" uid="uid://b4mx4dgd86kft" path="res://assets/sprites/elementos/boton_s_hover.png" id="2_gtja0"]
+[ext_resource type="Script" path="res://assets/scripts/botones.gd" id="3_s1ri5"]
+[ext_resource type="FontFile" uid="uid://8xw37k07sq4b" path="res://assets/fonts/RobotoMono-Regular.ttf" id="4_7b86c"]
+
+[node name="BotonS" type="TextureButton"]
+texture_normal = ExtResource("1_jgxm4")
+texture_pressed = ExtResource("2_gtja0")
+texture_hover = ExtResource("2_gtja0")
+script = ExtResource("3_s1ri5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 124.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_7b86c")
+theme_override_font_sizes/font_size = 27
+text = "PLACE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

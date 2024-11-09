@@ -27,7 +27,6 @@ color = Color(0.996262, 0.651689, 0.761853, 1)
 [node name="Destino" parent="." instance=ExtResource("5_ovasg")]
 position = Vector2(489, 320)
 imagen = ExtResource("3_gwbgi")
-color = Color(0.198446, 0.314129, 0.639701, 1)
 
 [node name="Destino2" parent="." instance=ExtResource("5_ovasg")]
 position = Vector2(492, 436)
@@ -56,7 +55,6 @@ color = Color(0.450093, 0.310237, 0.0601993, 1)
 [node name="Arrastrable" parent="." instance=ExtResource("2_8n4m0")]
 position = Vector2(62, 107)
 imagen = ExtResource("3_gwbgi")
-color = Color(0.68894, 0.00037619, 0.693733, 1)
 
 [node name="Arrastrable2" parent="." instance=ExtResource("2_8n4m0")]
 position = Vector2(74, 627)
@@ -85,13 +83,13 @@ color = Color(0.68894, 0.00037619, 0.693733, 1)
 [node name="Clickeable" parent="." instance=ExtResource("6_qk0qf")]
 position = Vector2(1552, 454)
 imagen = ExtResource("3_gwbgi")
-color = Color(0.74902, 0.219608, 0.219608, 1)
 
 [node name="Borrador" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1616, 896)
 texture = ExtResource("3_gwbgi")
 
+[connection signal="actividad_finalizada" from="Dibujar" to="." method="_on_dibujar_actividad_finalizada"]
 [connection signal="posicionado" from="Arrastrable" to="." method="_on_arrastrable_posicionado"]
 [connection signal="posicionado" from="Arrastrable2" to="." method="_on_arrastrable_posicionado"]
 [connection signal="posicionado" from="Arrastrable3" to="." method="_on_arrastrable_posicionado"]

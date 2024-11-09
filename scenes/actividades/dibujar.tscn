@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://csmeaxa4g6wmb"]
+[gd_scene load_steps=15 format=3 uid="uid://csmeaxa4g6wmb"]
 
 [ext_resource type="Script" path="res://assets/scripts/dibujar.gd" id="1_ds8yn"]
 [ext_resource type="Texture2D" uid="uid://4hx61tjemxyd" path="res://assets/sprites/actividad_dibujar/marco.png" id="2_nhu46"]
@@ -8,6 +8,7 @@
 [ext_resource type="Shader" path="res://assets/shaders/transparencia.gdshader" id="5_iuy0o"]
 [ext_resource type="Texture2D" uid="uid://b75qlnk12j3eb" path="res://assets/sprites/actividad_dibujar/placeholder_arriba.jpg" id="6_hhqj5"]
 [ext_resource type="Script" path="res://assets/scripts/zonas_dibujar.gd" id="8_i6245"]
+[ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="9_a7tif"]
 
 [sub_resource type="Gradient" id="Gradient_24rcq"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -153,6 +154,13 @@ shape = SubResource("CircleShape2D_2kofn")
 
 [node name="Node2D" type="Node2D" parent="AreasInteraccion"]
 
+[node name="BotonS" parent="." instance=ExtResource("9_a7tif")]
+visible = false
+offset_left = 1577.0
+offset_top = 888.0
+offset_right = 1705.0
+offset_bottom = 933.0
+
 [connection signal="mouse_entered" from="AreasInteraccion/Zona0" to="AreasInteraccion/Zona0" method="_on_mouse_entered"]
 [connection signal="zona_cumplida" from="AreasInteraccion/Zona0" to="." method="_zona_cumplida"]
 [connection signal="mouse_entered" from="AreasInteraccion/Zona1" to="AreasInteraccion/Zona1" method="_on_mouse_entered"]
@@ -171,3 +179,4 @@ shape = SubResource("CircleShape2D_2kofn")
 [connection signal="zona_cumplida" from="AreasInteraccion/Zona7" to="." method="_zona_cumplida"]
 [connection signal="mouse_entered" from="AreasInteraccion/Zona8" to="AreasInteraccion/Zona8" method="_on_mouse_entered"]
 [connection signal="zona_cumplida" from="AreasInteraccion/Zona8" to="." method="_zona_cumplida"]
+[connection signal="pressed" from="BotonS" to="." method="_on_boton_s_pressed"]
