@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3 uid="uid://drx5frcgg37qy"]
+
+[ext_resource type="Script" path="res://assets/scripts/llamada_s.gd" id="1_1qfwm"]
+[ext_resource type="Texture2D" uid="uid://cd2gqmpcrce1e" path="res://assets/sprites/call_frame_small.png" id="2_0vrpd"]
+[ext_resource type="Theme" uid="uid://bm1ub45g4i7os" path="res://themes/ai_theme.tres" id="3_cdoyl"]
+[ext_resource type="Shader" path="res://assets/shaders/gui.gdshader" id="4_4vpp2"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_b5a2w"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pth1x"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_b5a2w")
+
+[sub_resource type="QuadMesh" id="QuadMesh_obnnj"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_pth1x")
+size = Vector2(379, 282)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tqjb7"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_36goo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_376di"]
+shader = ExtResource("4_4vpp2")
+shader_parameter/range = 0.05
+shader_parameter/noiseQuality = 250.0
+shader_parameter/noiseIntensity = 0.0088
+shader_parameter/offsetIntensity = 0.03
+shader_parameter/colorOffsetIntensity = 1.3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_l07pl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wh273"]
+size = Vector2(407, 339)
+
+[node name="LlamadaS" type="Node2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_1qfwm")
+
+[node name="Frame" type="TextureRect" parent="."]
+modulate = Color(0.4, 0.4, 0.4, 1)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_0vrpd")
+
+[node name="Linea" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 84.0
+offset_bottom = 33.0
+theme = ExtResource("3_cdoyl")
+text = "LINEA N"
+
+[node name="Video" type="MeshInstance2D" parent="."]
+position = Vector2(204, 181)
+scale = Vector2(1, -1)
+mesh = SubResource("QuadMesh_obnnj")
+texture = SubResource("ViewportTexture_tqjb7")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(379, 282)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = SubResource("VideoStreamTheora_36goo")
+loop = true
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport"]
+material = SubResource("ShaderMaterial_376di")
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("NoiseTexture2D_l07pl")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(202.5, 170.5)
+shape = SubResource("RectangleShape2D_wh273")
+
+[connection signal="mouse_entered" from="Frame" to="." method="_on_frame_mouse_entered"]
+[connection signal="mouse_exited" from="Frame" to="." method="_on_frame_mouse_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgmlu3i5rbrvc"]
+
+[ext_resource type="Texture2D" uid="uid://bduijvxd577ye" path="res://assets/sprites/intro/intro_frame01.png" id="1_7tpq3"]
+[ext_resource type="PackedScene" uid="uid://bt58lk6jwxluf" path="res://scenes/botones/boton_l.tscn" id="1_lhmkw"]
+[ext_resource type="Texture2D" uid="uid://c7qcjrfymq74c" path="res://assets/sprites/intro/intro_frame02.png" id="2_qh1pi"]
+[ext_resource type="Texture2D" uid="uid://d3qp10og0tw71" path="res://assets/sprites/intro/intro_frame03.png" id="3_ym8mx"]
+
+[node name="IniciarIntercativo" type="Node2D"]
+
+[node name="Borde" type="Node2D" parent="."]
+
+[node name="Frame" type="TextureRect" parent="Borde"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 58.0
+offset_top = 50.0
+offset_right = 1866.0
+offset_bottom = 1004.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7tpq3")
+metadata/_edit_use_anchors_ = true
+
+[node name="FrameDetail" type="TextureRect" parent="Borde"]
+offset_left = 1491.0
+offset_top = 744.0
+offset_right = 1882.0
+offset_bottom = 1018.0
+texture = ExtResource("2_qh1pi")
+metadata/_edit_use_anchors_ = true
+
+[node name="FrameDetail2" type="TextureRect" parent="Borde"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1864.0
+offset_top = 50.0
+offset_right = 1904.0
+offset_bottom = 262.0
+grow_vertical = 0
+texture = ExtResource("3_ym8mx")
+metadata/_edit_use_anchors_ = true
+
+[node name="BotonL" parent="." instance=ExtResource("1_lhmkw")]
+offset_left = 604.0
+offset_top = 481.0
+offset_right = 1322.0
+offset_bottom = 596.0
+color = Color(0.866667, 0.592157, 0.0588235, 1)
+texto = "INICIAR"

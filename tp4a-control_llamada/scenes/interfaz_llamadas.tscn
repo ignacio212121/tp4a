@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbnwsfy1fenk7"]
+
+[ext_resource type="PackedScene" uid="uid://edik7in6a6us" path="res://scenes/llamada_l.tscn" id="1_o4us6"]
+[ext_resource type="Script" path="res://assets/scripts/interfaz_llamadas.gd" id="1_xjy4u"]
+[ext_resource type="PackedScene" uid="uid://drx5frcgg37qy" path="res://scenes/llamada_s.tscn" id="2_o6enu"]
+
+[node name="InterfazLlamadas" type="Node2D"]
+script = ExtResource("1_xjy4u")
+
+[node name="LlamadaL" parent="." instance=ExtResource("1_o4us6")]
+
+[node name="LlamadasEsperando" type="Node2D" parent="."]
+position = Vector2(1054, 98)
+
+[node name="LlamadaS" parent="LlamadasEsperando" instance=ExtResource("2_o6enu")]
+
+[node name="LlamadaS2" parent="LlamadasEsperando" instance=ExtResource("2_o6enu")]
+position = Vector2(433, 0)
+
+[node name="LlamadaS3" parent="LlamadasEsperando" instance=ExtResource("2_o6enu")]
+position = Vector2(1, 378)
+
+[node name="LlamadaS4" parent="LlamadasEsperando" instance=ExtResource("2_o6enu")]
+position = Vector2(433, 378)
+
+[connection signal="clickeado" from="LlamadasEsperando/LlamadaS" to="." method="_on_llamada_clickeado"]
+[connection signal="clickeado" from="LlamadasEsperando/LlamadaS2" to="." method="_on_llamada_clickeado"]
+[connection signal="clickeado" from="LlamadasEsperando/LlamadaS3" to="." method="_on_llamada_clickeado"]
+[connection signal="clickeado" from="LlamadasEsperando/LlamadaS4" to="." method="_on_llamada_clickeado"]

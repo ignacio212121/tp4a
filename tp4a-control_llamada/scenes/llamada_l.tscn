@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://edik7in6a6us"]
+
+[ext_resource type="Script" path="res://assets/scripts/llamada_l.gd" id="1_rchcx"]
+[ext_resource type="Texture2D" uid="uid://dqjmr7x6vjerl" path="res://assets/sprites/call_frame_l.png" id="2_6ftdt"]
+[ext_resource type="Theme" uid="uid://bm1ub45g4i7os" path="res://themes/ai_theme.tres" id="3_jg8el"]
+[ext_resource type="Shader" path="res://assets/shaders/gui.gdshader" id="4_m7l4o"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mxxat"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qi1dy"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_mxxat")
+
+[sub_resource type="QuadMesh" id="QuadMesh_hqtvl"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_qi1dy")
+size = Vector2(950, 799)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5bihb"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_q7hx5"]
+resource_local_to_scene = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ijpqp"]
+shader = ExtResource("4_m7l4o")
+shader_parameter/range = 0.02
+shader_parameter/noiseQuality = 250.0
+shader_parameter/noiseIntensity = 0.0088
+shader_parameter/offsetIntensity = 0.01
+shader_parameter/colorOffsetIntensity = 0.2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qp6kx"]
+
+[node name="LlamadaL" type="Node2D"]
+script = ExtResource("1_rchcx")
+
+[node name="Video" type="MeshInstance2D" parent="."]
+position = Vector2(523, 450)
+scale = Vector2(1, -1)
+mesh = SubResource("QuadMesh_hqtvl")
+texture = SubResource("ViewportTexture_5bihb")
+
+[node name="CallFrameL" type="Sprite2D" parent="."]
+position = Vector2(955, 533)
+texture = ExtResource("2_6ftdt")
+
+[node name="Linea" type="Label" parent="."]
+offset_left = 55.0
+offset_top = 43.0
+offset_right = 123.0
+offset_bottom = 66.0
+theme = ExtResource("3_jg8el")
+text = "LINEA N"
+
+[node name="Descripcion" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 942.0
+offset_right = 1289.0
+offset_bottom = 1003.0
+theme = ExtResource("3_jg8el")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "..."
+autowrap_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(950, 800)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = SubResource("VideoStreamTheora_q7hx5")
+loop = true
+
+[node name="GlitchTexture" type="TextureRect" parent="SubViewport"]
+material = SubResource("ShaderMaterial_ijpqp")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_qp6kx")
