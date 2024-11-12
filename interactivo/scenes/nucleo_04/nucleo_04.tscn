@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://bnh37j1sqrsoh"]
+
+[ext_resource type="Script" path="res://assets/scripts/nucleo_04/nucleo_04_main.gd" id="1_mjpif"]
+[ext_resource type="Texture2D" uid="uid://l5fosp80b5ys" path="res://assets/sprites/llamadas/atendiendo_llamada_01.png" id="2_e500x"]
+[ext_resource type="Texture2D" uid="uid://drvf1kfsshspt" path="res://assets/sprites/llamadas/atendiendo_llamada_02.png" id="3_y3hhu"]
+[ext_resource type="Texture2D" uid="uid://bx1o07xuoxuoh" path="res://assets/sprites/llamadas/atendiendo_llamada_03.png" id="4_ko18c"]
+[ext_resource type="Texture2D" uid="uid://cbjeajey3mus1" path="res://assets/sprites/llamadas/atendiendo_llamada_04.png" id="5_ya1im"]
+[ext_resource type="Texture2D" uid="uid://wsfrujqbqpfw" path="res://assets/sprites/llamadas/recibiendo_pedido_01.png" id="6_fadfe"]
+[ext_resource type="Texture2D" uid="uid://bioh06b0awaow" path="res://assets/sprites/llamadas/recibiendo_pedido_02.png" id="7_lakdk"]
+[ext_resource type="Texture2D" uid="uid://b0olu1pw4p8ma" path="res://assets/sprites/llamadas/recibiendo_pedido_03.png" id="8_iawkt"]
+[ext_resource type="Texture2D" uid="uid://ck0j83hh3oe8h" path="res://assets/sprites/llamadas/recibiendo_pedido_04.png" id="9_7hrji"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t32ed"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e500x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y3hhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ko18c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ya1im")
+}],
+"loop": false,
+"name": &"atendiendo_llamada",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fadfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lakdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_iawkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7hrji")
+}],
+"loop": true,
+"name": &"recibiendo_pedido",
+"speed": 3.0
+}]
+
+[node name="Nucleo04" type="Node2D"]
+script = ExtResource("1_mjpif")
+
+[node name="EstadoLlamada" type="AnimatedSprite2D" parent="."]
+position = Vector2(962, 542)
+scale = Vector2(1.02628, 1.02628)
+sprite_frames = SubResource("SpriteFrames_t32ed")
+animation = &"atendiendo_llamada"
+
+[node name="Actividades" type="Node2D" parent="."]
+
+[connection signal="animation_finished" from="EstadoLlamada" to="." method="_on_estado_llamada_animation_finished"]
