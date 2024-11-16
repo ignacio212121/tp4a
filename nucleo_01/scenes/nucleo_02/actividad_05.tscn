@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c40hnj5wd8td1"]
+
+[ext_resource type="Texture2D" uid="uid://bctodv1pnbho8" path="res://img/nucleo_02/actividad_05/datos.png" id="1_brjfp"]
+[ext_resource type="Script" path="res://assets/scripts/nucleo_02/actividad_05.gd" id="1_mtcvh"]
+[ext_resource type="PackedScene" uid="uid://bt58lk6jwxluf" path="res://scenes/elementos/boton_l.tscn" id="2_v0167"]
+
+[node name="Actividad05" type="Node2D"]
+script = ExtResource("1_mtcvh")
+
+[node name="Datos" type="Sprite2D" parent="."]
+position = Vector2(969, 544)
+texture = ExtResource("1_brjfp")
+
+[node name="BotonL" parent="." instance=ExtResource("2_v0167")]
+offset_left = 1136.0
+offset_top = 866.0
+offset_right = 1854.0
+offset_bottom = 981.0
+color = Color(0.909804, 0, 0.490196, 1)
+texto = "FINALIZAR LLAMADA"
+
+[connection signal="pressed" from="BotonL" to="." method="_on_boton_l_pressed"]

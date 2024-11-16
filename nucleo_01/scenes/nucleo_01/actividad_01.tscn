@@ -1,0 +1,188 @@
+[gd_scene load_steps=37 format=3 uid="uid://c808a2n8ll066"]
+
+[ext_resource type="PackedScene" uid="uid://bjyhlfqw31xgp" path="res://scenes/actividades/arrastrable.tscn" id="1_4v3nf"]
+[ext_resource type="Script" path="res://assets/scripts/nucleo_01/actividad_01.gd" id="1_cd5ww"]
+[ext_resource type="Texture2D" uid="uid://bgn4hi2ioh1id" path="res://img/nucleo_01/tarea_1/carpeta_uno.png" id="2_kqid0"]
+[ext_resource type="Texture2D" uid="uid://bcvsr1lnjx76a" path="res://img/nucleo_01/fondo/linea_1_1.png" id="2_xd4ba"]
+[ext_resource type="Texture2D" uid="uid://crlwgmko53bm3" path="res://img/nucleo_01/fondo/linea_1_2.png" id="3_8ew0x"]
+[ext_resource type="PackedScene" uid="uid://bv8bnjs72yogm" path="res://scenes/actividades/destino.tscn" id="3_64hak"]
+[ext_resource type="Texture2D" uid="uid://d3ragiwha0q6h" path="res://img/nucleo_01/tarea_1/cuadro_uno.png" id="4_h2gvu"]
+[ext_resource type="Texture2D" uid="uid://dv8ub8pikchyy" path="res://img/nucleo_01/fondo/linea_1_3.png" id="4_jplps"]
+[ext_resource type="Texture2D" uid="uid://p8as5llb73ky" path="res://img/nucleo_01/fondo/linea_1_4.png" id="5_28d7x"]
+[ext_resource type="Texture2D" uid="uid://qpgum1kyav4k" path="res://img/nucleo_01/fondo/linea_1_5.png" id="6_16mt3"]
+[ext_resource type="Texture2D" uid="uid://b124sxj1x8rik" path="res://img/nucleo_01/tarea_1/cuadro_dos.png" id="6_khidi"]
+[ext_resource type="Texture2D" uid="uid://d16qanjua6vgh" path="res://img/nucleo_01/fondo/linea_1_6.png" id="7_c882e"]
+[ext_resource type="Texture2D" uid="uid://2i24mb5ffygy" path="res://img/nucleo_01/tarea_1/carpeta_dos.png" id="7_ufosa"]
+[ext_resource type="Texture2D" uid="uid://dfrclm318fyov" path="res://img/nucleo_01/fondo/linea_1_7.png" id="8_8mdfi"]
+[ext_resource type="Texture2D" uid="uid://m8ii12su1b6i" path="res://img/nucleo_01/fondo/linea_1_8.png" id="9_mq21t"]
+[ext_resource type="Texture2D" uid="uid://42rj2ghqrfes" path="res://img/nucleo_01/fondo/linea_1_9.png" id="10_5l0sg"]
+[ext_resource type="Texture2D" uid="uid://p6pocamco8ok" path="res://img/nucleo_01/fondo/linea_1_10.png" id="11_031wn"]
+[ext_resource type="Texture2D" uid="uid://d3gbfe48b73as" path="res://img/nucleo_01/fondo/linea_1_11.png" id="12_swo43"]
+[ext_resource type="Texture2D" uid="uid://5pumco516i7a" path="res://img/nucleo_01/fondo/linea_1_12.png" id="13_2fmam"]
+[ext_resource type="Texture2D" uid="uid://cmao7fuouhfom" path="res://img/nucleo_01/fondo/linea_1_13.png" id="14_o2vrr"]
+[ext_resource type="Texture2D" uid="uid://tq5hbnjjflu1" path="res://img/nucleo_01/fondo/linea_1_14.png" id="15_k0nwp"]
+[ext_resource type="Texture2D" uid="uid://c1x10wy4bnrl6" path="res://img/nucleo_01/fondo/linea_1_15.png" id="16_n1j84"]
+[ext_resource type="Texture2D" uid="uid://cpimt3of8ppen" path="res://img/nucleo_01/fondo/linea_1_16.png" id="17_iq0pu"]
+[ext_resource type="Texture2D" uid="uid://jrqgymtojaji" path="res://img/nucleo_01/fondo/linea_1_17.png" id="18_y4mw1"]
+[ext_resource type="Texture2D" uid="uid://dbq657pq6v2h0" path="res://img/nucleo_01/fondo/linea_1_18.png" id="19_beiik"]
+[ext_resource type="Texture2D" uid="uid://dlutqn3f1dlm4" path="res://img/nucleo_01/fondo/linea_1_19.png" id="20_osqr5"]
+[ext_resource type="Texture2D" uid="uid://bhfsceq7aap1y" path="res://img/nucleo_01/tarea_1/borde.png" id="21_kvr8a"]
+[ext_resource type="Texture2D" uid="uid://1gx7unujwtcv" path="res://img/nucleo_01/tarea_1/fondo.png" id="22_3cos1"]
+[ext_resource type="Texture2D" uid="uid://c71ocp561ntyb" path="res://img/nucleo_01/tarea_1/encuesta_dos.png" id="29_bp2aq"]
+[ext_resource type="Texture2D" uid="uid://dmge77sepolnl" path="res://img/nucleo_01/tarea_1/encuesta_uno.png" id="30_7wokn"]
+[ext_resource type="Texture2D" uid="uid://bop8ogxc5ahiq" path="res://img/nucleo_01/tarea_1/carpeta_dos_bien.png" id="31_xct85"]
+[ext_resource type="Texture2D" uid="uid://ok8nl4h0ajmo" path="res://img/nucleo_01/tarea_1/carpeta_uno_bien.png" id="32_6soqr"]
+[ext_resource type="PackedScene" uid="uid://dpc8cgudrxdle" path="res://scenes/actividades/arrastrar_anim.tscn" id="35_4na0n"]
+[ext_resource type="Texture2D" uid="uid://d6y8npgqapt8" path="res://img/nucleo_01/tarea_1/info.png" id="35_v2p63"]
+[ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="36_84els"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqqxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xd4ba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8ew0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jplps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_28d7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_16mt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c882e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8mdfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mq21t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5l0sg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_031wn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_swo43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2fmam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o2vrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_k0nwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_n1j84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_iq0pu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_y4mw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_beiik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_osqr5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Actividad01" type="Node2D"]
+script = ExtResource("1_cd5ww")
+metadata/_edit_horizontal_guides_ = [-164.0]
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.209908, 0.209908, 0.209908, 1)
+scale = Vector2(2.4, 1.8)
+sprite_frames = SubResource("SpriteFrames_cqqxp")
+frame = 14
+frame_progress = 0.278974
+centered = false
+
+[node name="Borde" type="Sprite2D" parent="."]
+texture = ExtResource("21_kvr8a")
+centered = false
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(1046, 539)
+texture = ExtResource("22_3cos1")
+
+[node name="EncuestaDos" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1276, 607)
+texture = ExtResource("29_bp2aq")
+
+[node name="EncuestaUno" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(801, 607)
+texture = ExtResource("30_7wokn")
+
+[node name="CarpetaDosBien" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(252, 741)
+texture = ExtResource("31_xct85")
+
+[node name="CarpetaUnoBien" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(252, 335)
+texture = ExtResource("32_6soqr")
+
+[node name="Destino" parent="." instance=ExtResource("3_64hak")]
+position = Vector2(804, 600)
+imagen = ExtResource("4_h2gvu")
+
+[node name="Destino2" parent="." instance=ExtResource("3_64hak")]
+position = Vector2(1280, 600)
+clave = "clave1"
+imagen = ExtResource("6_khidi")
+
+[node name="Arrastrable" parent="." instance=ExtResource("1_4v3nf")]
+position = Vector2(247, 327)
+imagen = ExtResource("2_kqid0")
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+
+[node name="Arrastrable2" parent="." instance=ExtResource("1_4v3nf")]
+position = Vector2(247, 729)
+clave_objetivo = "clave1"
+imagen = ExtResource("7_ufosa")
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+
+[node name="Arrastrar" parent="." instance=ExtResource("35_4na0n")]
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+
+[node name="Info" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("35_v2p63")
+centered = false
+
+[node name="BotonS" parent="." instance=ExtResource("36_84els")]
+visible = false
+offset_left = 910.0
+offset_top = 589.0
+offset_right = 1038.0
+offset_bottom = 634.0
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+texto = "CERRAR"
+
+[node name="Tiempo" type="Timer" parent="."]
+wait_time = 3.6
+one_shot = true
+
+[connection signal="posicionado" from="Arrastrable" to="." method="_on_arrastrable_posicionado"]
+[connection signal="posicionado" from="Arrastrable2" to="." method="_on_arrastrable_2_posicionado"]
+[connection signal="button_down" from="BotonS" to="." method="_on_boton_s_button_down"]
+[connection signal="timeout" from="Tiempo" to="." method="_on_tiempo_timeout"]
