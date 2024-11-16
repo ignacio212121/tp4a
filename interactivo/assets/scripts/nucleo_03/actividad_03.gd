@@ -24,6 +24,7 @@ func hola():
 	if $Idea11.visible == true && $Idea22.visible == true && $Idea33.visible == true:
 		$Info.visible = true
 		$BotonS.visible = true
+		$Presionar.visible = false
 
 func _on_boton_s_button_down() -> void:
 	$InfoFinal.visible = true

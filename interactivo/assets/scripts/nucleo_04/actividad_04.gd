@@ -17,12 +17,12 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	$Label/AnimatedSprite2D.visible = false
 	$Label.text = "REVELAR RESULTADO"
 
-
 func _on_button_button_down() -> void:
 	$BarraLlena.visible = true
 	$BarraVacia.visible = false
 	$ImagFinal.visible = true
 	$Info1/Timer1.start()
+	$Presionar.visible = false
 
 func _on_timer_1_timeout() -> void:
 	$Info1.visible = true
@@ -40,7 +40,4 @@ func _on_boton_s_button_down() -> void:
 	$BotonS.visible = false
 	$ImagFinal.visible = false
 	$BarraLlena.visible = false
-	$Final.visible = true
-
-func _on_boton_l_button_down() -> void:
 	emit_signal("actividad_terminada")

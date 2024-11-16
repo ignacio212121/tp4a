@@ -67,10 +67,9 @@ func _on_cabeza_mouse_exited() -> void:
 func info_aparece():
 	if $Base/PiernaDerecha.visible == true && $Base/PiernaIzquierda.visible == true && $Base/Cabeza2.visible == true && $Base/Torso2.visible == true && $Base/BrazoDerecho.visible == true && $Base/BrazoIzquierdo.visible == true:
 		$Base/Info.visible = true
-		$BotonS.visible = true
+		$Presionar.visible = false
+		$Timer.start()
 
-func _on_boton_s_button_down() -> void:
-	$Final.visible = true
-
-func _on_boton_s_2_button_down() -> void:
+func _on_timer_timeout() -> void:
 	emit_signal("actividad_terminada")
+	print("pasa al siguiente")

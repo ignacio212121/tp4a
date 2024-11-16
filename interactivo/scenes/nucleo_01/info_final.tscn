@@ -1,23 +1,91 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnm1eg4f72pe3"]
+[gd_scene load_steps=9 format=3 uid="uid://cnm1eg4f72pe3"]
 
 [ext_resource type="Script" path="res://assets/scripts/nucleo_01/info_final.gd" id="1_ptw5a"]
-[ext_resource type="Texture2D" uid="uid://v8gq1hek6gkr" path="res://img/nucleo_1/final_info.png" id="2_x5yxy"]
-[ext_resource type="Texture2D" uid="uid://byo23o6b4aq0x" path="res://img/nucleo_1/finalizar.png" id="3_vbka3"]
-[ext_resource type="Texture2D" uid="uid://c25baju7jn2u5" path="res://img/nucleo_1/finalizar_2.png" id="4_70vla"]
+[ext_resource type="Texture2D" uid="uid://bmxmanunycbpx" path="res://assets/sprites/fondo_negro.png" id="2_qlv1e"]
+[ext_resource type="Texture2D" uid="uid://dign12krxmmny" path="res://img/nucleo_01/info_final/info_01.png" id="3_7isuw"]
+[ext_resource type="Texture2D" uid="uid://bsr4q1lucavn8" path="res://img/nucleo_01/info_final/info_02.png" id="4_ss2yp"]
+[ext_resource type="PackedScene" uid="uid://bt58lk6jwxluf" path="res://scenes/elementos/boton_l.tscn" id="5_fy0rc"]
+
+[sub_resource type="Animation" id="Animation_lpmp5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_l7wa0"]
+resource_name = "aparezco"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.815686)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0hqh2"]
+_data = {
+"RESET": SubResource("Animation_lpmp5"),
+"aparezco": SubResource("Animation_l7wa0")
+}
 
 [node name="InfoFinal" type="Node2D"]
 script = ExtResource("1_ptw5a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_x5yxy")
+texture = ExtResource("2_qlv1e")
 centered = false
 
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1043.0
-offset_top = 830.0
-offset_right = 1761.0
-offset_bottom = 945.0
-texture_normal = ExtResource("3_vbka3")
-texture_hover = ExtResource("4_70vla")
+[node name="Info01" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(476, 532)
+texture = ExtResource("3_7isuw")
 
-[connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Info01"]
+libraries = {
+"": SubResource("AnimationLibrary_0hqh2")
+}
+
+[node name="Info02" type="Sprite2D" parent="Sprite2D"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1389, 396)
+texture = ExtResource("4_ss2yp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Info02"]
+libraries = {
+"": SubResource("AnimationLibrary_0hqh2")
+}
+
+[node name="Timer1" type="Timer" parent="Sprite2D/Info02"]
+wait_time = 4.0
+one_shot = true
+
+[node name="BotonL" parent="Sprite2D" instance=ExtResource("5_fy0rc")]
+visible = false
+offset_left = 1049.0
+offset_top = 857.0
+offset_right = 1767.0
+offset_bottom = 972.0
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+texto = "FINALIZAR LLAMADA"
+
+[node name="Timer2" type="Timer" parent="Sprite2D/BotonL"]
+wait_time = 3.0
+
+[connection signal="timeout" from="Sprite2D/Info02/Timer1" to="." method="_on_timer_1_timeout"]
+[connection signal="button_down" from="Sprite2D/BotonL" to="." method="_on_boton_l_button_down"]
+[connection signal="timeout" from="Sprite2D/BotonL/Timer2" to="." method="_on_timer_2_timeout"]

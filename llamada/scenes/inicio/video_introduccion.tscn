@@ -8,13 +8,13 @@
 [sub_resource type="ViewportTexture" id="ViewportTexture_ljf6q"]
 viewport_path = NodePath("Inicio1/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_scunb"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nfqvc"]
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_ljf6q")
 
 [sub_resource type="QuadMesh" id="QuadMesh_q5e0m"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_scunb")
+material = SubResource("StandardMaterial3D_nfqvc")
 size = Vector2(1280, 720)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_cibc5"]

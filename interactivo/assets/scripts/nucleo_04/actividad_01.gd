@@ -14,32 +14,32 @@ func _process(delta: float) -> void:
 
 func _on_barra_animation_finished() -> void:
 	$Barra.visible = false
-	$Pasos/Paso1/Timer1.start()
-
-func _on_timer_1_timeout() -> void:
+	$Pasos/Paso1/AnimationPlayer.play("fade")
 	$Pasos/Paso1.visible = true
-	$Pasos/Paso2/Timer2.start()
-
-func _on_timer_2_timeout() -> void:
-	$Pasos/Paso2.visible = true
-	$Pasos/Paso3/Timer3.start()
-
-func _on_timer_3_timeout() -> void:
-	$Pasos/Paso3.visible = true
-	$Pasos/Paso4/Timer4.start()
-
-func _on_timer_4_timeout() -> void:
-	$Pasos/Paso4.visible = true
-	$Pasos/Paso5/Timer5.start()
-
-func _on_timer_5_timeout() -> void:
-	$Pasos/Paso5.visible = true
-	$Pasos/Paso6/Timer6.start()
-
-func _on_timer_6_timeout() -> void:
-	$Pasos/Paso6.visible = true
-	$Info.visible = true
-	$BotonS.visible = true
 
 func _on_boton_s_button_down() -> void:
 	emit_signal("actividad_terminada")
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	$Pasos/Paso2.visible = true
+	$Pasos/Paso2/AnimationPlayer2.play("fade")
+
+func _on_animation_player_2_animation_finished(anim_name: StringName) -> void:
+	$Pasos/Paso3.visible = true
+	$Pasos/Paso3/AnimationPlayer3.play("fade")
+
+func _on_animation_player_3_animation_finished(anim_name: StringName) -> void:
+	$Pasos/Paso4.visible = true
+	$Pasos/Paso4/AnimationPlayer4.play("fade")
+
+func _on_animation_player_4_animation_finished(anim_name: StringName) -> void:
+	$Pasos/Paso5.visible = true
+	$Pasos/Paso5/AnimationPlayer5.play("fade")
+
+func _on_animation_player_5_animation_finished(anim_name: StringName) -> void:
+	$Pasos/Paso6.visible = true
+	$Pasos/Paso6/AnimationPlayer6.play("fade")
+
+func _on_animation_player_6_animation_finished(anim_name: StringName) -> void:
+	$Info.visible = true
+	$BotonS.visible = true

@@ -54,6 +54,7 @@ func _input(event):
 		audio_terminado()
 	if event.is_action_pressed("reiniciar"):
 		_reiniciar_nucleos()
+		$OSCClient/OSCMessage.reiniciar()
 	if event.is_action_pressed("nucleo_01"):
 		_cambiar_nucleo(1)
 	if event.is_action_pressed("nucleo_02"):
@@ -84,9 +85,10 @@ func _on_nucleo_terminado():
 	$NucleoActual.remove_child(instancias_nucleos[nucleo_actual])
 	instancias_nucleos[nucleo_actual] = null
 	$Llamada1.visible = true
+	$OSCClient/OSCMessage.nucleo_terminado()
 
 func audio_terminado():
 	instancias_nucleos[nucleo_actual]._actualizar_actividad()
 
 func _on_nucleo_actividad_finalizada():
-	pass
+	$OSCClient/OSCMessage.actividad_terminada()

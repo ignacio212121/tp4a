@@ -6,7 +6,6 @@ signal actividad_terminada
 func _ready() -> void:
 	$AnimatedSprite2D.play()
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	aparezco()
@@ -33,6 +32,7 @@ func aparezco():
 	if $Frames/FrameAnim1.visible == true && $Frames/FrameAnim2.visible == true && $Frames/FrameAnim3.visible == true:
 		$Info.visible = true
 		$BotonS.visible = true
+		$Arrastrar.visible = false
 
 func _on_boton_s_button_down() -> void:
 	$Final.visible = true

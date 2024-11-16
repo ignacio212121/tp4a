@@ -6,6 +6,7 @@ extends Node2D
 var actividad_01: PackedScene = preload("res://scenes/nucleo_01/actividad_01.tscn")
 var actividad_02: PackedScene = preload("res://scenes/nucleo_01/actividad_02.tscn")
 var actividad_03: PackedScene = preload("res://scenes/nucleo_01/actividad_03.tscn")
+var info_final: PackedScene = preload("res://scenes/nucleo_01/info_final.tscn")
 
 var array_actividades: Array
 
@@ -14,7 +15,7 @@ signal actividad_finalizada
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	array_actividades = [actividad_01.instantiate(), actividad_02.instantiate(), actividad_03.instantiate()]
+	array_actividades = [actividad_01.instantiate(), actividad_02.instantiate(), actividad_03.instantiate(), info_final.instantiate()]
 	actividad_actual -= 1
 	if actividad_actual == -1:
 		$Atendiendo.play("atendiendo")

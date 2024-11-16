@@ -8,6 +8,7 @@ var actividad_01: PackedScene = preload("res://scenes/nucleo_04/actividad_01.tsc
 var actividad_02: PackedScene = preload("res://scenes/nucleo_04/actividad_02.tscn")
 var actividad_03: PackedScene = preload("res://scenes/nucleo_04/actividad_03.tscn")
 var actividad_04: PackedScene = preload("res://scenes/nucleo_04/actividad_04.tscn")
+var info_final: PackedScene = preload("res://scenes/nucleo_04/info_final.tscn")
 
 var array_actividades: Array
 
@@ -16,7 +17,7 @@ signal actividad_finalizada
 
 
 func _ready() -> void:
-	array_actividades = [actividad_01.instantiate(), actividad_02.instantiate(), actividad_03.instantiate(), actividad_04.instantiate()]
+	array_actividades = [actividad_01.instantiate(), actividad_02.instantiate(), actividad_03.instantiate(), actividad_04.instantiate(), info_final.instantiate()]
 	actividad_actual -= 1
 	$EstadoLlamada.modulate = color
 	if actividad_actual == -1:

@@ -28,6 +28,7 @@ func _ready():
 	viewport.handle_input_locally = true
 	accumulated_texture.set_image(viewport.get_texture().get_image())
 	arriba.material.set_shader_parameter("mask_texture", accumulated_texture)
+	$AnimatedSprite2D.play()
 
 func _process(delta):
 
@@ -35,6 +36,7 @@ func _process(delta):
 	if Input.is_action_pressed("mouse_left"):
 		borrador.visible = true
 		_draw_to_accumulated_texture()
+		$AnimatedSprite2D.visible = false
 	else:
 		borrador.visible = false
 

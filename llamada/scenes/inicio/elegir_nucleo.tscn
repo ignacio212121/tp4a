@@ -44,23 +44,35 @@ offset_bottom = 262.0
 grow_vertical = 0
 texture = ExtResource("3_ua1m2")
 
-[node name="Linea1" parent="." instance=ExtResource("4_1phu5")]
-position = Vector2(176, 144)
+[node name="Llamadas" type="Node2D" parent="."]
 
-[node name="Linea2" parent="." instance=ExtResource("4_1phu5")]
-position = Vector2(757, 144)
+[node name="LlamadaS" parent="Llamadas" instance=ExtResource("4_1phu5")]
+position = Vector2(166, 153)
+num_linea = 1
+video_path = "res://assets/videos/llamada_01/esperando_s.ogg"
 
-[node name="Linea3" parent="." instance=ExtResource("4_1phu5")]
-position = Vector2(1348, 144)
+[node name="LlamadaS2" parent="Llamadas" instance=ExtResource("4_1phu5")]
+position = Vector2(770, 155)
+num_linea = 2
+video_path = "res://assets/videos/llamada_02/esperando_s.ogg"
 
-[node name="Linea4" parent="." instance=ExtResource("4_1phu5")]
-position = Vector2(462, 584)
+[node name="LlamadaS3" parent="Llamadas" instance=ExtResource("4_1phu5")]
+position = Vector2(1363, 161)
+num_linea = 3
+video_path = "res://assets/videos/llamada_03/esperando_s.ogg"
 
-[node name="Linea5" parent="." instance=ExtResource("4_1phu5")]
-position = Vector2(1069, 584)
+[node name="LlamadaS4" parent="Llamadas" instance=ExtResource("4_1phu5")]
+position = Vector2(471, 593)
+num_linea = 4
+video_path = "res://assets/videos/llamada_04/esperando_s.ogg"
 
-[connection signal="clickeado" from="Linea1" to="." method="_on_linea_elegida"]
-[connection signal="clickeado" from="Linea2" to="." method="_on_linea_elegida"]
-[connection signal="clickeado" from="Linea3" to="." method="_on_linea_elegida"]
-[connection signal="clickeado" from="Linea4" to="." method="_on_linea_elegida"]
-[connection signal="clickeado" from="Linea5" to="." method="_on_linea_elegida"]
+[node name="LlamadaS5" parent="Llamadas" instance=ExtResource("4_1phu5")]
+position = Vector2(1090, 591)
+num_linea = 5
+video_path = "res://assets/videos/llamada_05/esperando_s.ogg"
+
+[connection signal="clickeado" from="Llamadas/LlamadaS" to="." method="_on_linea_elegida"]
+[connection signal="clickeado" from="Llamadas/LlamadaS2" to="." method="_on_linea_elegida"]
+[connection signal="clickeado" from="Llamadas/LlamadaS3" to="." method="_on_linea_elegida"]
+[connection signal="clickeado" from="Llamadas/LlamadaS4" to="." method="_on_linea_elegida"]
+[connection signal="clickeado" from="Llamadas/LlamadaS5" to="." method="_on_linea_elegida"]

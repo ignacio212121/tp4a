@@ -26,6 +26,8 @@ func _on_boton_m_button_down() -> void:
 	$Barra.play()
 	$Label.visible = true
 	$Barra.visible = true
+	$Presionar.visible = false
+	$Arrastrar.visible = true
 
 func _on_barra_frame_changed() -> void:
 	if $Barra.frame == 30:
@@ -70,6 +72,7 @@ func barra_aparece():
 		$Arrastrable.visible = false
 		$Arrastrable2.visible = false
 		$Arrastrable3.visible = false
+		$Arrastrar.visible = false
 
 func _on_timer_timeout() -> void:
 	$ImagFinal.visible = true

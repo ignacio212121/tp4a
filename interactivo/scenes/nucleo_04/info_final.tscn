@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwn0l2aa1j7k7"]
+
+[ext_resource type="Script" path="res://assets/scripts/nucleo_04/info_final.gd" id="1_8egdr"]
+[ext_resource type="Texture2D" uid="uid://boe0s0vvxg7a5" path="res://img/nucleo_04/actividad_04/info_final_01.png" id="2_mk73l"]
+[ext_resource type="Texture2D" uid="uid://bipge5shmlgkk" path="res://img/nucleo_04/actividad_04/info_final_02.png" id="3_8dw40"]
+[ext_resource type="PackedScene" uid="uid://bt58lk6jwxluf" path="res://scenes/elementos/boton_l.tscn" id="4_kqlf7"]
+
+[sub_resource type="Gradient" id="Gradient_3uk5g"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rm1ev"]
+gradient = SubResource("Gradient_3uk5g")
+width = 1920
+height = 1080
+fill_from = Vector2(1, 0)
+
+[sub_resource type="Animation" id="Animation_lpmp5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_l7wa0"]
+resource_name = "aparezco"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.815686)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0hqh2"]
+_data = {
+"RESET": SubResource("Animation_lpmp5"),
+"aparezco": SubResource("Animation_l7wa0")
+}
+
+[node name="InfoFinal" type="Node2D"]
+script = ExtResource("1_8egdr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_rm1ev")
+centered = false
+
+[node name="Info01" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(538, 518)
+texture = ExtResource("2_mk73l")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Info01"]
+libraries = {
+"": SubResource("AnimationLibrary_0hqh2")
+}
+
+[node name="Info02" type="Sprite2D" parent="Sprite2D"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1458, 363)
+texture = ExtResource("3_8dw40")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Info02"]
+libraries = {
+"": SubResource("AnimationLibrary_0hqh2")
+}
+
+[node name="Timer1" type="Timer" parent="Sprite2D/Info02"]
+wait_time = 4.0
+one_shot = true
+
+[node name="BotonL" parent="." instance=ExtResource("4_kqlf7")]
+visible = false
+offset_left = 1111.0
+offset_top = 799.0
+offset_right = 1829.0
+offset_bottom = 914.0
+color = Color(0.615686, 0.0313726, 0.909804, 1)
+texto = "FINALIZAR LLAMADA"
+
+[node name="Timer2" type="Timer" parent="BotonL"]
+
+[connection signal="timeout" from="Sprite2D/Info02/Timer1" to="." method="_on_timer_1_timeout"]
+[connection signal="button_down" from="BotonL" to="." method="_on_boton_l_button_down"]
+[connection signal="timeout" from="BotonL/Timer2" to="." method="_on_timer_2_timeout"]

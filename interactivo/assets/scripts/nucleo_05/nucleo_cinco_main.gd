@@ -8,6 +8,7 @@ var actividad_actual: int = 0
 
 func _ready() -> void:
 	$Inicio.play("atendiendo")
+	$BackgroundAnimado.play()
 
 func _on_dibujar_uno_actividad_finalizada() -> void:
 	$PromptUno.visible = false

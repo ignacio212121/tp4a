@@ -1,7 +1,7 @@
-[gd_scene load_steps=131 format=3 uid="uid://rbfdncbyb3h4"]
+[gd_scene load_steps=130 format=3 uid="uid://rbfdncbyb3h4"]
 
 [ext_resource type="Script" path="res://assets/scripts/nucleo_02/actividad_03.gd" id="1_u2433"]
-[ext_resource type="Texture2D" uid="uid://dm4m7hmln7xdt" path="res://assets/sprites/nucleo_02/actividad_03/buscando_cambios.png" id="2_345bm"]
+[ext_resource type="Texture2D" uid="uid://dm4m7hmln7xdt" path="res://img/nucleo_02/actividad_03/buscando_cambios.png" id="2_345bm"]
 [ext_resource type="Texture2D" uid="uid://b0i4j6xkjlh7g" path="res://img/loading/loading_1.png" id="3_daigm"]
 [ext_resource type="Texture2D" uid="uid://bijbof06qnk06" path="res://img/loading/loading_2.png" id="4_s0vi6"]
 [ext_resource type="Texture2D" uid="uid://b0h4hnqvs7wk1" path="res://img/loading/loading_3.png" id="5_5msqi"]
@@ -121,13 +121,12 @@
 [ext_resource type="Texture2D" uid="uid://ci4g6fc5lq1sk" path="res://img/barra de carga/carga_94.png" id="119_1nmxo"]
 [ext_resource type="Texture2D" uid="uid://duvhv5nnj1o8s" path="res://img/barra de carga/carga_95.png" id="120_ipypv"]
 [ext_resource type="Texture2D" uid="uid://bsmb1btap6tkv" path="res://img/barra de carga/carga_96.png" id="121_gmb46"]
-[ext_resource type="Texture2D" uid="uid://b2fbe7nh8h64c" path="res://assets/sprites/nucleo_02/actividad_03/amarillo.png" id="122_cqews"]
-[ext_resource type="Texture2D" uid="uid://bmgtm2yw7545x" path="res://assets/sprites/nucleo_02/actividad_03/instagram.png" id="123_syojm"]
+[ext_resource type="Texture2D" uid="uid://b2fbe7nh8h64c" path="res://img/nucleo_02/actividad_03/amarillo.png" id="122_cqews"]
+[ext_resource type="Texture2D" uid="uid://bmgtm2yw7545x" path="res://img/nucleo_02/actividad_03/instagram.png" id="123_syojm"]
 [ext_resource type="PackedScene" uid="uid://bsx2wekvb5qet" path="res://scenes/elementos/boton_m.tscn" id="124_bxyof"]
-[ext_resource type="Script" path="res://assets/scripts/scripts_actividades/botones.gd" id="125_yvseh"]
-[ext_resource type="Texture2D" uid="uid://55nrh5iucj1d" path="res://assets/sprites/nucleo_02/actividad_03/resultado.png" id="126_hn7xl"]
+[ext_resource type="Texture2D" uid="uid://55nrh5iucj1d" path="res://img/nucleo_02/actividad_03/resultado.png" id="126_hn7xl"]
 [ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="127_kmg8o"]
-[ext_resource type="Texture2D" uid="uid://dkodnsmbg7m3n" path="res://assets/sprites/nucleo_02/actividad_03/avisar.png" id="128_cfg5r"]
+[ext_resource type="Texture2D" uid="uid://dkodnsmbg7m3n" path="res://img/nucleo_02/actividad_03/avisar.png" id="128_cfg5r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_js8mw"]
 animations = [{
@@ -569,7 +568,6 @@ offset_left = -359.0
 offset_top = 277.0
 offset_right = 5.0
 offset_bottom = 345.0
-script = ExtResource("125_yvseh")
 color = Color(0.909804, 0, 0.490196, 1)
 texto = "SIGUIENTE"
 

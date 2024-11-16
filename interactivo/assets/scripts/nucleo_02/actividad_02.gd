@@ -7,6 +7,7 @@ func _ready():
 	$ExportandoDatos/ProgressBar.modulate = color
 	$ExportandoDatos/Loading.modulate = color
 	$ExportandoDatos/Loading.play("default")
+	$Presionar.modulate = color
 
 func _on_amarillo_clickeado():
 	$Colores.queue_free()
@@ -33,6 +34,7 @@ func _on_boton_aplicaciones():
 func _on_timer_timeout():
 	$ExportandoDatos.visible = false
 	$Personalizacion.visible = true
+	$Presionar.visible = false
 
 
 func _on_boton_personalizacion():

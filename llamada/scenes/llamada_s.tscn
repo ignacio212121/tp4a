@@ -20,7 +20,8 @@ size = Vector2(379, 282)
 [sub_resource type="ViewportTexture" id="ViewportTexture_tqjb7"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_36goo"]
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_g2aoc"]
+resource_local_to_scene = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_376di"]
 shader = ExtResource("4_4vpp2")
@@ -68,13 +69,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -360.0
-offset_right = 640.0
-offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = SubResource("VideoStreamTheora_36goo")
+stream = SubResource("VideoStreamTheora_g2aoc")
 loop = true
 
 [node name="TextureRect" type="TextureRect" parent="SubViewport"]

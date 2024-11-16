@@ -5,7 +5,7 @@ signal actividad_terminada
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Background.play()
-
+	$Presionar.modulate = ("13dd0f")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -19,6 +19,7 @@ func _on_texture_button_button_down() -> void:
 	$Red2.visible = true
 	$Barra.visible = true
 	$Barra.play()
+	$Presionar.visible = false
 
 func _on_barra_animation_finished() -> void:
 	$Red2.visible = false

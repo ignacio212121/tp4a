@@ -3,33 +3,31 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Linea1.num_linea = 1
-	$Linea1.actualizar_linea()
-	$Linea1.cambiar_estado("esperando")
-	
-	$Linea2.num_linea = 2
-	$Linea2.actualizar_linea()
-	$Linea2.cambiar_estado("esperando")
-	
-	$Linea3.num_linea = 3
-	$Linea3.actualizar_linea()
-	$Linea3.cambiar_estado("esperando")
-	
-	$Linea4.num_linea = 4
-	$Linea4.actualizar_linea()
-	$Linea4.cambiar_estado("esperando")
-	
-	$Linea5.num_linea = 5
-	$Linea5.actualizar_linea()
-	$Linea5.cambiar_estado("esperando")
-	
-	$Linea1.iniciar_video()
-	$Linea2.iniciar_video()
-	$Linea3.iniciar_video()
-	$Linea4.iniciar_video()
-	$Linea5.iniciar_video()
+	var llamadas = $Llamadas.get_children()
+	for index in $Llamadas.get_child_count():
+		llamadas[index].color = GLOBAL.colores[index]
+	$Llamadas/LlamadaS.actualizar_linea()
+	$Llamadas/LlamadaS.iniciar_video()
+	$Llamadas/LlamadaS2.actualizar_linea()
+	$Llamadas/LlamadaS2.iniciar_video()
+	$Llamadas/LlamadaS3.actualizar_linea()
+	$Llamadas/LlamadaS3.iniciar_video()
+	$Llamadas/LlamadaS4.actualizar_linea()
+	$Llamadas/LlamadaS4.iniciar_video()
+	$Llamadas/LlamadaS5.actualizar_linea()
+	$Llamadas/LlamadaS5.iniciar_video()
 
-
-
-func _on_linea_elegida(num_linea):
+func _on_linea_elegida(num_linea, llamada):
+	$Llamadas.remove_child(llamada)
+	llamada.queue_free()
+	llamada = null
 	get_parent().get_parent().ir_a_llamada(num_linea)
+	
+
+func detener_llamadas():
+	for llamada in $Llamadas.get_children():
+		llamada.detener_video()
+
+func iniciar_llamadas():
+	for llamada in $Llamadas.get_children():
+		llamada.iniciar_video()

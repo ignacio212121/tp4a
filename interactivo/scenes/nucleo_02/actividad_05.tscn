@@ -1,24 +1,100 @@
-[gd_scene load_steps=5 format=3 uid="uid://c40hnj5wd8td1"]
+[gd_scene load_steps=10 format=3 uid="uid://c40hnj5wd8td1"]
 
-[ext_resource type="Texture2D" uid="uid://bctodv1pnbho8" path="res://assets/sprites/nucleo_02/actividad_5/datos.png" id="1_brjfp"]
 [ext_resource type="Script" path="res://assets/scripts/nucleo_02/actividad_05.gd" id="1_mtcvh"]
+[ext_resource type="Texture2D" uid="uid://bcb5bnstfxuea" path="res://img/nucleo_02/actividad_05/info_01.png" id="2_mrfgg"]
 [ext_resource type="PackedScene" uid="uid://bt58lk6jwxluf" path="res://scenes/elementos/boton_l.tscn" id="2_v0167"]
-[ext_resource type="Script" path="res://assets/scripts/scripts_actividades/botones.gd" id="4_1xqgc"]
+[ext_resource type="Texture2D" uid="uid://dpyfepsj7ex5i" path="res://img/nucleo_02/actividad_05/info_02.png" id="3_1ocsd"]
+
+[sub_resource type="Gradient" id="Gradient_omu4s"]
+offsets = PackedFloat32Array(0, 0.967871)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_scitm"]
+gradient = SubResource("Gradient_omu4s")
+
+[sub_resource type="Animation" id="Animation_lpmp5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_l7wa0"]
+resource_name = "aparezco"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.815686)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0hqh2"]
+_data = {
+"RESET": SubResource("Animation_lpmp5"),
+"aparezco": SubResource("Animation_l7wa0")
+}
 
 [node name="Actividad05" type="Node2D"]
 script = ExtResource("1_mtcvh")
 
-[node name="Datos" type="Sprite2D" parent="."]
-position = Vector2(969, 544)
-texture = ExtResource("1_brjfp")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(966.5, 545.5)
+scale = Vector2(7.61328, 1115)
+texture = SubResource("GradientTexture1D_scitm")
+
+[node name="Info01" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-63.2448, -0.0156951)
+scale = Vector2(0.131349, 0.000896861)
+texture = ExtResource("2_mrfgg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Info01"]
+libraries = {
+"": SubResource("AnimationLibrary_0hqh2")
+}
+
+[node name="Info02" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(60.0924, -0.151121)
+scale = Vector2(0.131349, 0.000896861)
+texture = ExtResource("3_1ocsd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Info02"]
+libraries = {
+"": SubResource("AnimationLibrary_0hqh2")
+}
+
+[node name="Timer1" type="Timer" parent="Sprite2D/Info02"]
+wait_time = 4.0
+one_shot = true
 
 [node name="BotonL" parent="." instance=ExtResource("2_v0167")]
-offset_left = 1136.0
-offset_top = 866.0
-offset_right = 1854.0
-offset_bottom = 981.0
-script = ExtResource("4_1xqgc")
+visible = false
+offset_left = 1052.0
+offset_top = 839.0
+offset_right = 1770.0
+offset_bottom = 954.0
 color = Color(0.909804, 0, 0.490196, 1)
 texto = "FINALIZAR LLAMADA"
+metadata/_edit_use_anchors_ = true
 
+[node name="Timer2" type="Timer" parent="BotonL"]
+wait_time = 3.0
+
+[connection signal="timeout" from="Sprite2D/Info02/Timer1" to="." method="_on_timer_1_timeout"]
 [connection signal="pressed" from="BotonL" to="." method="_on_boton_l_pressed"]
+[connection signal="timeout" from="BotonL/Timer2" to="." method="_on_timer_2_timeout"]

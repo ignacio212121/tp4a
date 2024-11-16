@@ -1,8 +1,9 @@
-[gd_scene load_steps=109 format=3 uid="uid://dpbhi8obrljgs"]
+[gd_scene load_steps=111 format=3 uid="uid://dpbhi8obrljgs"]
 
 [ext_resource type="Script" path="res://assets/scripts/nucleo_02/actividad_04.gd" id="1_pvae5"]
-[ext_resource type="Texture2D" uid="uid://dxrhwrn25g5vs" path="res://assets/sprites/nucleo_02/actividad_04/googlIA.png" id="2_c64mc"]
+[ext_resource type="Texture2D" uid="uid://dxrhwrn25g5vs" path="res://img/nucleo_02/actividad_04/googlIA.png" id="2_c64mc"]
 [ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="3_mcmjx"]
+[ext_resource type="Texture2D" uid="uid://glx8u86fwcw" path="res://img/sprites/tapa.jpg" id="3_vqexg"]
 [ext_resource type="Texture2D" uid="uid://diytu0gjyxhg6" path="res://img/barra de carga/carga_1.png" id="4_1gbjx"]
 [ext_resource type="Texture2D" uid="uid://dn7aa80dtvspl" path="res://img/barra de carga/carga_2.png" id="5_b63mk"]
 [ext_resource type="Texture2D" uid="uid://b6w7bswqmx625" path="res://img/barra de carga/carga_3.png" id="6_etbfs"]
@@ -100,13 +101,14 @@
 [ext_resource type="Texture2D" uid="uid://duvhv5nnj1o8s" path="res://img/barra de carga/carga_95.png" id="98_oa6k0"]
 [ext_resource type="Texture2D" uid="uid://bsmb1btap6tkv" path="res://img/barra de carga/carga_96.png" id="99_byvm5"]
 [ext_resource type="Theme" uid="uid://bm1ub45g4i7os" path="res://themes/ai_theme.tres" id="100_4joq7"]
-[ext_resource type="Texture2D" uid="uid://ci0yhmy2rvo7s" path="res://assets/sprites/nucleo_02/actividad_04/otro.png" id="101_8mr0f"]
-[ext_resource type="Texture2D" uid="uid://4u3rvw1iwjcr" path="res://assets/sprites/nucleo_02/actividad_04/iphone_prop.png" id="102_43gsf"]
-[ext_resource type="Texture2D" uid="uid://bdwj61edjcpus" path="res://assets/sprites/nucleo_02/actividad_04/iphone_select.png" id="103_2q8y8"]
-[ext_resource type="Texture2D" uid="uid://ctftkicwsy218" path="res://assets/sprites/nucleo_02/actividad_04/cyber.png" id="104_lqach"]
-[ext_resource type="Texture2D" uid="uid://cjh7255ns7hox" path="res://assets/sprites/nucleo_02/actividad_04/cyber_select.png" id="105_m755g"]
-[ext_resource type="Texture2D" uid="uid://cfmrod4xbkljp" path="res://assets/sprites/nucleo_02/actividad_04/resultado_cyber.png" id="106_tjxux"]
-[ext_resource type="Texture2D" uid="uid://o417kokli5wq" path="res://assets/sprites/nucleo_02/actividad_04/resultado_pro.png" id="107_oyu1r"]
+[ext_resource type="Texture2D" uid="uid://ci0yhmy2rvo7s" path="res://img/nucleo_02/actividad_04/otro.png" id="101_8mr0f"]
+[ext_resource type="Texture2D" uid="uid://4u3rvw1iwjcr" path="res://img/nucleo_02/actividad_04/iphone_prop.png" id="102_43gsf"]
+[ext_resource type="Texture2D" uid="uid://bdwj61edjcpus" path="res://img/nucleo_02/actividad_04/iphone_select.png" id="103_2q8y8"]
+[ext_resource type="Texture2D" uid="uid://ctftkicwsy218" path="res://img/nucleo_02/actividad_04/cyber.png" id="104_lqach"]
+[ext_resource type="Texture2D" uid="uid://cjh7255ns7hox" path="res://img/nucleo_02/actividad_04/cyber_select.png" id="105_m755g"]
+[ext_resource type="Texture2D" uid="uid://cfmrod4xbkljp" path="res://img/nucleo_02/actividad_04/resultado_cyber.png" id="106_tjxux"]
+[ext_resource type="Texture2D" uid="uid://o417kokli5wq" path="res://img/nucleo_02/actividad_04/resultado_pro.png" id="107_oyu1r"]
+[ext_resource type="PackedScene" uid="uid://c0pnxckwulqw5" path="res://scenes/actividades/presionar_anim.tscn" id="109_bhre5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf4ja"]
 animations = [{
@@ -411,12 +413,16 @@ script = ExtResource("1_pvae5")
 position = Vector2(967, 1550)
 texture = ExtResource("2_c64mc")
 
+[node name="Tapa" type="Sprite2D" parent="GooglIa"]
+position = Vector2(-116, -1134)
+scale = Vector2(0.737037, 0.719298)
+texture = ExtResource("3_vqexg")
+
 [node name="BotonS" parent="GooglIa" instance=ExtResource("3_mcmjx")]
-offset_left = -205.0
-offset_top = -1175.0
-offset_right = -77.0
-offset_bottom = -1130.0
-scale = Vector2(1.44301, 1.64541)
+offset_left = -150.0
+offset_top = -1165.0
+offset_right = -22.0
+offset_bottom = -1120.0
 color = Color(0.909804, 0, 0.490196, 1)
 texto = "BUSCAR"
 
@@ -485,6 +491,10 @@ visible = false
 position = Vector2(1447, 604)
 texture = ExtResource("107_oyu1r")
 
+[node name="Presionar" parent="." instance=ExtResource("109_bhre5")]
+modulate = Color(0.909804, 0, 0.490196, 1)
+position = Vector2(0, -23)
+
 [node name="BotonS" parent="." instance=ExtResource("3_mcmjx")]
 visible = false
 offset_left = 1378.0
@@ -494,7 +504,7 @@ offset_bottom = 937.0
 color = Color(0.909804, 0, 0.490196, 1)
 texto = "ENVIAR"
 
-[connection signal="pressed" from="GooglIa/BotonS" to="." method="_on_boton_buscar"]
+[connection signal="button_down" from="GooglIa/BotonS" to="." method="_on_boton_s_button_down"]
 [connection signal="animation_finished" from="GooglIa/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="GooglIa/Label/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="GooglIa/Opciones/Iphone" to="." method="_on_iphone_pressed"]
