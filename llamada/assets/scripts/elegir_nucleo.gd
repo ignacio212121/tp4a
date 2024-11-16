@@ -29,7 +29,5 @@ func _ready() -> void:
 	$Linea4.iniciar_video()
 	$Linea5.iniciar_video()
 
-
-
 func _on_linea_elegida(num_linea):
 	get_parent().get_parent().ir_a_llamada(num_linea)

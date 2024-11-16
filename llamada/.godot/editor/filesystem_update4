@@ -1,6 +1,11 @@
+res://assets/scripts/llamada.gd
+res://assets/scripts/instrucciones.gd
+res://scenes/inicio/instrucciones.tscn
 res://scenes/llamada.tscn
 res://scenes/inicio/iniciar_intercativo.tscn
 res://scenes/inicio/video_introduccion.tscn
 res://scenes/inicio/conectar_audio.tscn
 res://scenes/inicio/elegir_nucleo.tscn
 res://scenes/chat.tscn
+res://scenes/llamada_l.tscn
+res://assets/scripts/elegir_nucleo.gd

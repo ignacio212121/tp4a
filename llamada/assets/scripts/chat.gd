@@ -1,24 +1,41 @@
 extends Node
 
-var Linea1 = "NombreDelJuego v2.4\n[Sistema] Cargando Chat..."
-var Linea2 = "[Sistema] Recibiendo pedido..."
-var current_index = 0
-var current_line = 1
+@export var color: Color = Color("#ffffff")
+
+
+var titulo = "USO DE IA EN EMPRESAS"
+var chat = "NombreDelJuego v2.4\n[Sistema] Cargando Chat..."
+var current_index_chat = 0
+var current_line_chat = 0
+var current_index_titulo = 0
+var current_line_titulo = 0
 
 func _ready() -> void:
-	$ChatTexto1.text = ""
-	$ChatTexto2.text = ""
-	$Timer.start()
+	$LabelTitulo.text = ""
+	$LabelChat.text = ""
+	$Titulo.modulate = color
+	$Chat.modulate = color
+	$LabelTitulo.modulate = color
+	$LabelChat.modulate = color
+	
+	$TimerChat.start()
+	$TimerTitulo.start()
 
-func _on_timer_timeout() -> void:
-	if current_line == 1:
-		if current_index < Linea1.length():
-			$ChatTexto1.text += Linea1[current_index]
-			current_index += 1
+func _on_timer_chat_timeout() -> void:
+	if current_line_chat == 0:
+		if current_index_chat < chat.length():
+			$LabelChat.text += chat[current_index_chat]
+			current_index_chat += 1
 		else:
-			current_index = 0
-			current_line = 2
-	elif current_line == 2:
-		if current_index < Linea2.length():
-			$ChatTexto2.text += Linea2[current_index]
-			current_index += 1
+			current_index_chat = 0
+			current_line_chat = 1
+	elif current_line_chat == 1:
+		if current_index_chat < chat.length():
+			$LabelChat.text += chat[current_index_chat]
+			current_index_chat += 1
+
+func _on_timer_titulo_timeout() -> void:
+	if current_line_titulo == 0:
+		if current_index_titulo < titulo.length():
+			$LabelTitulo.text += titulo[current_index_titulo]
+			current_index_titulo += 1

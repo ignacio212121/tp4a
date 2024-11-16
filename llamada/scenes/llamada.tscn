@@ -18,6 +18,7 @@ diffuse_texture = SubResource("GradientTexture1D_ukweh")
 
 [node name="Llamada" type="Node"]
 script = ExtResource("1_ax2i4")
+pantalla_actual = 2
 
 [node name="OSCServer" type="Node" parent="."]
 script = ExtResource("22_epe1x")
@@ -29,7 +30,7 @@ osc_address = "/llamada"
 
 [node name="OSCClient" type="Node" parent="."]
 script = ExtResource("24_ph7x7")
-port = 9000
+ip_address = "192.168.0.7"
 
 [node name="OSCMessage" type="Node" parent="OSCClient" node_paths=PackedStringArray("target_client")]
 script = ExtResource("25_pdlhb")

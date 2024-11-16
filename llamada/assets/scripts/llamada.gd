@@ -4,13 +4,13 @@ extends Node
 
 var iniciar_interactivo: PackedScene = preload("res://scenes/inicio/iniciar_intercativo.tscn")
 var video_introductorio: PackedScene = preload("res://scenes/inicio/video_introduccion.tscn")
+var instrucciones: PackedScene = preload("res://scenes/inicio/instrucciones.tscn")
 var conectar_con_audio: PackedScene = preload("res://scenes/inicio/conectar_audio.tscn")
 var elegir_nucleo: PackedScene = preload("res://scenes/inicio/elegir_nucleo.tscn")
 var llamada: PackedScene = preload("res://scenes/llamada_l.tscn")
 #var encuesta: PackedScene = null
 
 var pantallas: Array
-
 
 func _input(event):
 	if event.is_action_pressed("reiniciar"):
@@ -26,7 +26,7 @@ func _reiniciar():
 	
 
 func _inicializar_pantallas():
-	pantallas = [iniciar_interactivo.instantiate(), video_introductorio.instantiate(), conectar_con_audio.instantiate(), elegir_nucleo.instantiate(), llamada.instantiate()]
+	pantallas = [iniciar_interactivo.instantiate(), video_introductorio.instantiate(), instrucciones.instantiate(), conectar_con_audio.instantiate(), elegir_nucleo.instantiate(), llamada.instantiate()]
 	$PantallaActual.add_child(pantallas[pantalla_actual])
 
 func _ready():

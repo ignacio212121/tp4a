@@ -3,6 +3,7 @@ extends Node2D
 @export var num_linea: int = 0 # número a modo de id, para identificar a qué número de llamada pertenece
 @export var estado: String = "esperando" # Define que video se reproducirá, no tiene sentido en los miniatura porque siempre tienen el esperando, pero lo dejo igual
 @export var descripcion: String = "..."
+@export var color: Color = ("#ffffff")
 
 var color_linea: Color
 
