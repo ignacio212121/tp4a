@@ -1,0 +1,57 @@
+[gd_scene load_steps=12 format=3 uid="uid://c70lknxrffwrg"]
+
+[ext_resource type="Script" path="res://assets/scripts/scripts_actividades/dibujar_anim.gd" id="1_w406g"]
+[ext_resource type="Texture2D" uid="uid://b5gb4xlw8ek03" path="res://img/dibujar/dibujar_01.png" id="2_aly0x"]
+[ext_resource type="Texture2D" uid="uid://d1o02fecxl2gs" path="res://img/dibujar/dibujar_02.png" id="3_bfqla"]
+[ext_resource type="Texture2D" uid="uid://c8abbot6y0ngk" path="res://img/dibujar/dibujar_03.png" id="4_oao4m"]
+[ext_resource type="Texture2D" uid="uid://cx5rxvjt50pl1" path="res://img/dibujar/dibujar_04.png" id="5_iav15"]
+[ext_resource type="Texture2D" uid="uid://dkhcwvfdvxbky" path="res://img/dibujar/dibujar_05.png" id="6_d6kv1"]
+[ext_resource type="Texture2D" uid="uid://cfb7swpllyajs" path="res://img/dibujar/dibujar_06.png" id="7_u3y8x"]
+[ext_resource type="Texture2D" uid="uid://dkyx6oa58bdop" path="res://img/dibujar/dibujar_07.png" id="8_vikf4"]
+[ext_resource type="Texture2D" uid="uid://blrlhx1mwp5lj" path="res://img/dibujar/dibujar_08.png" id="9_wayrl"]
+[ext_resource type="Texture2D" uid="uid://dqig5kh6vqbms" path="res://img/dibujar/dibujar_09.png" id="10_wtsdk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_puu66"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aly0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bfqla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oao4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_iav15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d6kv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_u3y8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vikf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wayrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wtsdk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Dibujar" type="Node2D"]
+script = ExtResource("1_w406g")
+
+[node name="DibujarAnim" type="AnimatedSprite2D" parent="."]
+position = Vector2(1786, 115.75)
+scale = Vector2(0.696203, 0.680812)
+sprite_frames = SubResource("SpriteFrames_puu66")
+frame = 4
+frame_progress = 0.995995

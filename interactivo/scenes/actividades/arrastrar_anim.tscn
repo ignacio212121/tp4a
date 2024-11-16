@@ -1,0 +1,64 @@
+[gd_scene load_steps=14 format=3 uid="uid://dpc8cgudrxdle"]
+
+[ext_resource type="Script" path="res://assets/scripts/scripts_actividades/arrastrar.gd" id="1_7dyxu"]
+[ext_resource type="Texture2D" uid="uid://c2l0ei7jtkqhh" path="res://img/arrastrar/a_1.png" id="2_rjsk8"]
+[ext_resource type="Texture2D" uid="uid://d4dtpiyi14t4" path="res://img/arrastrar/a_2.png" id="3_8of2b"]
+[ext_resource type="Texture2D" uid="uid://cxqrvd5htmdee" path="res://img/arrastrar/a_3.png" id="4_4j68p"]
+[ext_resource type="Texture2D" uid="uid://0p8v6yhjq1w2" path="res://img/arrastrar/a_4.png" id="5_wb3sb"]
+[ext_resource type="Texture2D" uid="uid://h8k3sdy8m0cl" path="res://img/arrastrar/a_5.png" id="6_b4gj3"]
+[ext_resource type="Texture2D" uid="uid://dt00r8isj7lx8" path="res://img/arrastrar/a_6.png" id="7_yq3to"]
+[ext_resource type="Texture2D" uid="uid://bc6bjjapeiomg" path="res://img/arrastrar/a_7.png" id="8_b6r4v"]
+[ext_resource type="Texture2D" uid="uid://kea6kiji1csa" path="res://img/arrastrar/a_8.png" id="9_aluay"]
+[ext_resource type="Texture2D" uid="uid://c55rxqt0jrip5" path="res://img/arrastrar/a_9.png" id="10_bl7jq"]
+[ext_resource type="Texture2D" uid="uid://c06gme3ialwxm" path="res://img/arrastrar/a_10.png" id="11_vg3v7"]
+[ext_resource type="Texture2D" uid="uid://bvd77qayholkw" path="res://img/arrastrar/a_11.png" id="12_00wmb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4xpw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rjsk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8of2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4j68p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wb3sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b4gj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yq3to")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b6r4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_aluay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bl7jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vg3v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_00wmb")
+}],
+"loop": true,
+"name": &"nucleo00",
+"speed": 8.0
+}]
+
+[node name="Arrastrar" type="Node2D"]
+script = ExtResource("1_7dyxu")
+
+[node name="ArrastrarAnim" type="AnimatedSprite2D" parent="."]
+position = Vector2(1753, 147)
+scale = Vector2(0.696203, 0.680812)
+sprite_frames = SubResource("SpriteFrames_o4xpw")
+animation = &"nucleo00"

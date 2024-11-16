@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=3 uid="uid://c0pnxckwulqw5"]
+
+[ext_resource type="Script" path="res://assets/scripts/scripts_actividades/presionar.gd" id="1_mv622"]
+[ext_resource type="Texture2D" uid="uid://c0uwqcxbh205h" path="res://img/presionar/p_1.png" id="2_ug5l7"]
+[ext_resource type="Texture2D" uid="uid://d3ln2675piy86" path="res://img/presionar/p_2.png" id="3_aaig8"]
+[ext_resource type="Texture2D" uid="uid://c87krx8a35mw8" path="res://img/presionar/p_3.png" id="4_w28u2"]
+[ext_resource type="Texture2D" uid="uid://ccie162nu48wa" path="res://img/presionar/p_4.png" id="5_2p2dp"]
+[ext_resource type="Texture2D" uid="uid://dm4qtlnl4r5uo" path="res://img/presionar/p_5.png" id="6_pwj31"]
+[ext_resource type="Texture2D" uid="uid://d3lxinvl6nwkw" path="res://img/presionar/p_6.png" id="7_auuxe"]
+[ext_resource type="Texture2D" uid="uid://cahxxp0gj1u8t" path="res://img/presionar/p_7.png" id="8_2kflu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loykj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ug5l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aaig8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w28u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2p2dp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pwj31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_auuxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2kflu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Presionar" type="Node2D"]
+script = ExtResource("1_mv622")
+
+[node name="PresionarAnim" type="AnimatedSprite2D" parent="."]
+position = Vector2(1786, 115.75)
+scale = Vector2(0.696203, 0.680812)
+sprite_frames = SubResource("SpriteFrames_loykj")
