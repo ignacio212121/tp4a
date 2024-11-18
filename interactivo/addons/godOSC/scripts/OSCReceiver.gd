@@ -24,9 +24,9 @@ func _process(delta):
 	# IMPORTANT! You must check if the server has received a message on the correct address. The example below
 	# checks if the server has received an OSC message at the address "/example" and then prints the first value
 	# sent with the message.
-	if target_server.incoming_messages.has(osc_address):
-		get_parent().get_parent().cambiar_estado(target_server.incoming_messages[osc_address][0])
-		target_server.incoming_messages.clear()
+	#if target_server.incoming_messages.has(osc_address):
+		#get_parent().get_parent().cambiar_estado(target_server.incoming_messages[osc_address][0])
+		#target_server.incoming_messages.clear()
 #		# This example changes the scale of a Node2D
 #
 #		#parent.scale = Vector2(1,1) * target_server.incoming_messages[osc_address][0]

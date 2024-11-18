@@ -10,11 +10,11 @@ extends Node
 @export var osc_address := "/example"
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func reiniciar():
+	target_client.send_message(osc_address, ["reiniciar"])
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func nucleo_terminado():
+	target_client.send_message(osc_address, ["nucleo_terminado"])
+	
+func actividad_terminada():
+	target_client.send_message(osc_address, ["actividad_terminada"])

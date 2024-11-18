@@ -1,10 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnm1eg4f72pe3"]
+[gd_scene load_steps=10 format=3 uid="uid://cnm1eg4f72pe3"]
 
 [ext_resource type="Script" path="res://assets/scripts/nucleo_01/info_final.gd" id="1_ptw5a"]
-[ext_resource type="Texture2D" uid="uid://bmxmanunycbpx" path="res://assets/sprites/fondo_negro.png" id="2_qlv1e"]
 [ext_resource type="Texture2D" uid="uid://dign12krxmmny" path="res://img/nucleo_01/info_final/info_01.png" id="3_7isuw"]
 [ext_resource type="Texture2D" uid="uid://bsr4q1lucavn8" path="res://img/nucleo_01/info_final/info_02.png" id="4_ss2yp"]
 [ext_resource type="PackedScene" uid="uid://bt58lk6jwxluf" path="res://scenes/elementos/boton_l.tscn" id="5_fy0rc"]
+
+[sub_resource type="Gradient" id="Gradient_nsgdh"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5woib"]
+gradient = SubResource("Gradient_nsgdh")
+fill_from = Vector2(1, 0)
 
 [sub_resource type="Animation" id="Animation_lpmp5"]
 length = 0.001
@@ -33,7 +38,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.815686)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0hqh2"]
@@ -46,35 +51,37 @@ _data = {
 script = ExtResource("1_ptw5a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_qlv1e")
+position = Vector2(-42, -29)
+scale = Vector2(31.2344, 17.9375)
+texture = SubResource("GradientTexture2D_5woib")
 centered = false
 
-[node name="Info01" type="Sprite2D" parent="Sprite2D"]
-modulate = Color(0, 0, 0, 1)
+[node name="Info01" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(476, 532)
 texture = ExtResource("3_7isuw")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Info01"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Info01"]
 libraries = {
 "": SubResource("AnimationLibrary_0hqh2")
 }
 
-[node name="Info02" type="Sprite2D" parent="Sprite2D"]
+[node name="Info02" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0)
 position = Vector2(1389, 396)
 texture = ExtResource("4_ss2yp")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Info02"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Info02"]
 libraries = {
 "": SubResource("AnimationLibrary_0hqh2")
 }
 
-[node name="Timer1" type="Timer" parent="Sprite2D/Info02"]
+[node name="Timer1" type="Timer" parent="Info02"]
 wait_time = 4.0
 one_shot = true
 
-[node name="BotonL" parent="Sprite2D" instance=ExtResource("5_fy0rc")]
+[node name="BotonL" parent="." instance=ExtResource("5_fy0rc")]
 visible = false
 offset_left = 1049.0
 offset_top = 857.0
@@ -83,9 +90,9 @@ offset_bottom = 972.0
 color = Color(0.0745098, 0.866667, 0.0588235, 1)
 texto = "FINALIZAR LLAMADA"
 
-[node name="Timer2" type="Timer" parent="Sprite2D/BotonL"]
+[node name="Timer2" type="Timer" parent="BotonL"]
 wait_time = 3.0
 
-[connection signal="timeout" from="Sprite2D/Info02/Timer1" to="." method="_on_timer_1_timeout"]
-[connection signal="button_down" from="Sprite2D/BotonL" to="." method="_on_boton_l_button_down"]
-[connection signal="timeout" from="Sprite2D/BotonL/Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Info02/Timer1" to="." method="_on_timer_1_timeout"]
+[connection signal="button_down" from="BotonL" to="." method="_on_boton_l_button_down"]
+[connection signal="timeout" from="BotonL/Timer2" to="." method="_on_timer_2_timeout"]

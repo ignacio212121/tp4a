@@ -434,7 +434,6 @@ frame_progress = 0.266611
 centered = false
 
 [node name="Inicio" type="AnimatedSprite2D" parent="."]
-visible = false
 sprite_frames = SubResource("SpriteFrames_yj3nv")
 animation = &"recibiendo"
 centered = false
@@ -458,6 +457,7 @@ imagen_abajo = ExtResource("102_gjdtk")
 texto = "Un perro animado"
 
 [node name="PromptTres" type="Node2D" parent="."]
+visible = false
 
 [node name="DibujarTres" parent="PromptTres" instance=ExtResource("99_jr7gj")]
 color = Color(1, 0.239216, 0, 1)

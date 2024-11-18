@@ -180,7 +180,6 @@ animations = [{
 }]
 
 [node name="Nucleo02" type="Node2D"]
-modulate = Color(0.316785, 0.316785, 0.316785, 1)
 script = ExtResource("1_1h3rm")
 
 [node name="Background" type="AnimatedSprite2D" parent="."]

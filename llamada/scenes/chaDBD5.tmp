@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://brftkxjlho48o"]
+
+[ext_resource type="Script" path="res://scenes/chat.gd" id="1_3e28g"]
+[ext_resource type="Texture2D" uid="uid://byk41ncxbnnxb" path="res://assets/sprites/chat.png" id="1_o1gga"]
+[ext_resource type="FontFile" uid="uid://lavyopd271pq" path="res://assets/fonts/RobotoMono-Light.ttf" id="2_mphe7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4c3ju"]
+font = ExtResource("2_mphe7")
+font_size = 28
+
+[node name="Chat" type="Node2D"]
+script = ExtResource("1_3e28g")
+
+[node name="Chat" type="Sprite2D" parent="."]
+position = Vector2(1467, 459)
+texture = ExtResource("1_o1gga")
+
+[node name="ChatTexto" type="Label" parent="."]
+offset_left = 1090.0
+offset_top = 57.0
+offset_right = 1824.0
+offset_bottom = 859.0
+label_settings = SubResource("LabelSettings_4c3ju")

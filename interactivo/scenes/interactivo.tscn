@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://addons/godOSC/scripts/OSCClient.gd" id="1_p7f0e"]
 [ext_resource type="Script" path="res://addons/godOSC/scripts/OSCMessage.gd" id="2_skh3d"]
 [ext_resource type="Script" path="res://addons/godOSC/scripts/OSCServer.gd" id="3_nskoe"]
-[ext_resource type="Script" path="res://addons/godOSC/scripts/OSCReceiver.gd" id="4_uyya1"]
+[ext_resource type="Script" path="res://assets/scripts/osc_receiver.gd" id="5_v4t0v"]
 [ext_resource type="Texture2D" uid="uid://lnqw3r2tlncd" path="res://img/inicio/default/inicio_1.png" id="6_ojike"]
 [ext_resource type="Texture2D" uid="uid://bp4y48jl5ndb5" path="res://img/inicio/llamada_1/atendiendo_linea_1_00.png" id="6_re0lj"]
 [ext_resource type="Texture2D" uid="uid://7e678fy8xed3" path="res://img/inicio/llamada_1/atendiendo_linea_1_01.png" id="7_8sepw"]
@@ -509,7 +509,7 @@ script = ExtResource("1_i8l7m")
 
 [node name="OSCClient" type="Node" parent="."]
 script = ExtResource("1_p7f0e")
-ip_address = "192.168.0.7"
+port = 7000
 
 [node name="OSCMessage" type="Node" parent="OSCClient" node_paths=PackedStringArray("target_client")]
 script = ExtResource("2_skh3d")
@@ -521,7 +521,7 @@ script = ExtResource("3_nskoe")
 port = 9000
 
 [node name="OSCReceiver" type="Node" parent="OSCServer" node_paths=PackedStringArray("target_server")]
-script = ExtResource("4_uyya1")
+script = ExtResource("5_v4t0v")
 target_server = NodePath("..")
 osc_address = "/inter"
 
@@ -537,3 +537,7 @@ size_flags_vertical = 4
 texture = ExtResource("102_uqcgj")
 
 [node name="NucleoActual" type="Node2D" parent="."]
+
+[connection signal="instruccion_finalizada" from="OSCServer/OSCReceiver" to="." method="audio_terminado"]
+[connection signal="nucleo_seleccionado" from="OSCServer/OSCReceiver" to="." method="_cambiar_nucleo"]
+[connection signal="reiniciar" from="OSCServer/OSCReceiver" to="." method="_reiniciar_nucleos"]

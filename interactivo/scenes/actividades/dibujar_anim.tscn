@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c70lknxrffwrg"]
+[gd_scene load_steps=12 format=3 uid="uid://cbpp5575dyw56"]
 
 [ext_resource type="Script" path="res://assets/scripts/scripts_actividades/dibujar_anim.gd" id="1_w406g"]
 [ext_resource type="Texture2D" uid="uid://b5gb4xlw8ek03" path="res://img/dibujar/dibujar_01.png" id="2_aly0x"]
