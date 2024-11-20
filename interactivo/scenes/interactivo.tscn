@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://c6oqjff5145ye"]
+[gd_scene load_steps=125 format=3 uid="uid://c6oqjff5145ye"]
 
 [ext_resource type="Script" path="res://assets/scripts/interactivo.gd" id="1_i8l7m"]
 [ext_resource type="Script" path="res://addons/godOSC/scripts/OSCClient.gd" id="1_p7f0e"]
@@ -122,6 +122,7 @@
 [ext_resource type="Texture2D" uid="uid://c5b4y60xamb7w" path="res://img/inicio/default/inicio_95.png" id="100_avqfu"]
 [ext_resource type="Texture2D" uid="uid://cm21r0hrdcoh4" path="res://img/inicio/default/inicio_96.png" id="101_tvwsq"]
 [ext_resource type="Texture2D" uid="uid://cok8gduqf8tp" path="res://img/inicio/background/background_inicio.png" id="102_uqcgj"]
+[ext_resource type="PackedScene" uid="uid://bmijw1xk13sif" path="res://scenes/encuesta.tscn" id="123_ghvbq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ppgan"]
 animations = [{
@@ -506,7 +507,6 @@ animations = [{
 
 [node name="Interactivo" type="Node"]
 script = ExtResource("1_i8l7m")
-nucleo_actual = 2
 
 [node name="OSCClient" type="Node" parent="."]
 script = ExtResource("1_p7f0e")
@@ -539,6 +539,10 @@ texture = ExtResource("102_uqcgj")
 
 [node name="NucleoActual" type="Node2D" parent="."]
 
+[node name="Encuesta" parent="." instance=ExtResource("123_ghvbq")]
+visible = false
+
 [connection signal="instruccion_finalizada" from="OSCServer/OSCReceiver" to="." method="audio_terminado"]
 [connection signal="nucleo_seleccionado" from="OSCServer/OSCReceiver" to="." method="_cambiar_nucleo"]
 [connection signal="reiniciar" from="OSCServer/OSCReceiver" to="." method="_reiniciar_nucleos"]
+[connection signal="volver_empezar" from="Encuesta" to="." method="_on_encuesta_volver_empezar"]

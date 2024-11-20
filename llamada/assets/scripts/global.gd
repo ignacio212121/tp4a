@@ -4,29 +4,29 @@ var colores: Array = [Color("#13DD0F"), Color("#E8007D"), Color("#0017EC"), Colo
 
 var contenido_llamadas = [
 	[{
-		"titulo": "Titulo_1",
-		"mensaje_usuario": "Prueba mensaje",
-		"respuesta_ia": "Prueba respuesta",
+		"titulo": "USO DE IA EN EMPRESAS",
+		"mensaje_usuario": "¿Cuanto ha aumento el uso de la ia generativa en las empresas?",
+		"respuesta_ia": "*Respuesta*",
 		"video": "actividad_01",
 	}, {
-		"titulo": "Titulo_2",
-		"mensaje_usuario": "Prueba mensaje",
-		"respuesta_ia": "Prueba respuesta",
+		"titulo": "SUS USOS MÁS COMUNES",
+		"mensaje_usuario": "¿Puedes redimensionar esta imagén para mi cafeteria?",
+		"respuesta_ia": "*Respuesta*",
 		"video": "actividad_02",
 	}, {
-		"titulo": "Titulo_3",
-		"mensaje_usuario": "Prueba mensaje",
-		"respuesta_ia": "Prueba respuesta",
+		"titulo": "SUS USOS MÁS COMUNES",
+		"mensaje_usuario": "Súbeme la calidad de esta foto, es de la cafeteria",
+		"respuesta_ia": "*Respuesta*",
 		"video": "actividad_03",
 	}, {
-		"titulo": "Titulo_4",
-		"mensaje_usuario": "Prueba mensaje",
-		"respuesta_ia": "Prueba respuesta",
+		"titulo": "MIEDO EN LAS EMPRESAS",
+		"mensaje_usuario": "NO! ¿QUÉ ESTÁ PASANDO?",
+		"respuesta_ia": "Transferencia cancelada",
 		"video": "actividad_04",
 	}, {
-		"titulo": "Titulo_5",
-		"mensaje_usuario": "Prueba mensaje",
-		"respuesta_ia": "Prueba respuesta",
+		"titulo": "",
+		"mensaje_usuario": "...",
+		"respuesta_ia": "Llamada finalizada",
 		"video": "actividad_05",
 	}], ##########################################FIN NUCLEO 1
 	[{

@@ -41,7 +41,7 @@ func _on_video_stream_player_finished():
 		emit_signal("instruccion_terminada")
 
 func siguiente_actividad():
-	$Elementos/Chat.nuevo_mensaje_chat("[TuRespuesta]" + datos[actividad]["respuesta_ia"] + "\n")
+	$Elementos/Chat.nuevo_mensaje_chat("[CodigoCreativo.IA]" + datos[actividad]["respuesta_ia"] + "\n")
 	actividad += 1
 	esperando = false
 	if actividad >= datos.size():

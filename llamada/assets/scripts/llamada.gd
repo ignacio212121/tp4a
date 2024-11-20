@@ -22,6 +22,8 @@ func _input(event):
 		_on_llamada_finalizada()
 
 func _reiniciar():
+	$LlamadasFinalizadas.visible = false
+	llamadas_finalizadas = 0
 	for pantalla in pantallas:
 		if pantalla != null:
 			pantalla.queue_free()
@@ -73,7 +75,7 @@ func _on_llamada_finalizada():
 	$PantallaActual.visible = true
 	llamadas_finalizadas += 1
 	if llamadas_finalizadas >= 5:
-		_reiniciar()
+		$LlamadasFinalizadas.visible = true
 
 func _on_instruccion_finalizada():
 	$OSCClient/OSCMessage.instruccion_finalizada()

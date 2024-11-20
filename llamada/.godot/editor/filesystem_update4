@@ -1,11 +1,8 @@
-res://scenes/llamada_s.tscn
 res://scenes/llamada.tscn
 res://scenes/inicio/elegir_nucleo.tscn
 res://scenes/chat.tscn
 res://scenes/llamada_l.tscn
-res://assets/scripts/osc_receiver.gd
+res://scenes/llamada_s.tscn
+res://scenes/inicio/instrucciones.tscn
+res://scenes/inicio/video_introduccion.tscn
 res://assets/scripts/llamada.gd
-res://assets/scripts/global.gd
-res://assets/scripts/llamada_l.gd
-res://assets/scripts/osc_message.gd
-res://assets/scripts/chat.gd

@@ -9,9 +9,16 @@ var nucleo_05: PackedScene = preload("res://scenes/nucleo_05/nucleo_05.tscn")
 var escenas_nucleos: Array
 var instancias_nucleos = [null, null, null, null, null]
 
+@export var nucleos_terminados: int = 0
 @export var nucleo_actual: int = 0
 
+var votos: Array = [0, 0]
+
 func _ready():
+	#_on_save(votos, "resultados/resultados_encuesta.resultados")
+	var resultados_guardados = _load_data("resultados/resultados_encuesta.resultados")
+	GLOBAL.votos_01 = resultados_guardados[0]
+	GLOBAL.votos_02 = resultados_guardados[1]
 	$Llamada1.play("default")
 	$Llamada1.position = Vector2(962.5, 388)
 	$Llamada1.scale = Vector2(2.229, 2.09)
@@ -73,6 +80,7 @@ func _cambiar_nucleo(num):
 	_actualizar_nucleo()
 
 func _reiniciar_nucleos():
+	nucleos_terminados = 0
 	for nucleo in instancias_nucleos:
 		if nucleo != null:
 			nucleo.queue_free()
@@ -86,9 +94,36 @@ func _on_nucleo_terminado():
 	instancias_nucleos[nucleo_actual] = null
 	$Llamada1.visible = true
 	$OSCClient/OSCMessage.nucleo_terminado()
+	nucleos_terminados += 1
+	if nucleos_terminados >= 5:
+		_encuesta()
+
+func _encuesta():
+	$Encuesta.visible = true
 
 func audio_terminado():
 	instancias_nucleos[nucleo_actual]._actualizar_actividad()
 
 func _on_nucleo_actividad_finalizada():
 	$OSCClient/OSCMessage.actividad_terminada()
+
+
+func _on_encuesta_volver_empezar():
+	$Encuesta.visible = false
+	votos = [GLOBAL.votos_01, GLOBAL.votos_02]
+	_on_save(votos, "resultados/resultados_encuesta.resultados")
+	_reiniciar_nucleos()
+	$OSCClient/OSCMessage.reiniciar()
+
+# GUARDAR DATOS DE LA ENCUESTA
+func _on_save(data, path):
+	var file = FileAccess.open("res://" + path, FileAccess.WRITE)
+	file.store_var(data)
+	file = null
+
+# LEER DATOS DE UN ARCHIVO
+func _load_data(path):
+	var file = FileAccess.open("res://" + path, FileAccess.READ)
+	var data = file.get_var()
+	file = null
+	return data
