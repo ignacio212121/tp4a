@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l052vciymbrn"
-path="res://.godot/imported/info_final.png-12281c17bfb6ecc42423d4791fb6934b.ctex"
+uid="uid://cvgj6ptfsr80s"
+path="res://.godot/imported/leonardo_iaa.png-3f33bdd7c0bccce11bf423b3c064a847.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/nucleo_03/actividad_03/info_final.png"
-dest_files=["res://.godot/imported/info_final.png-12281c17bfb6ecc42423d4791fb6934b.ctex"]
+source_file="res://img/nucleo_04/actividad_02/leonardo_iaa.png"
+dest_files=["res://.godot/imported/leonardo_iaa.png-3f33bdd7c0bccce11bf423b3c064a847.ctex"]
 
 [params]
 

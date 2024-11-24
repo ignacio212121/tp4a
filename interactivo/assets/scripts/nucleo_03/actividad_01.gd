@@ -35,7 +35,4 @@ func aparezco():
 		$Arrastrar.visible = false
 
 func _on_boton_s_button_down() -> void:
-	$Final.visible = true
-
-func _on_boton_sa_button_down() -> void:
 	emit_signal("actividad_terminada")

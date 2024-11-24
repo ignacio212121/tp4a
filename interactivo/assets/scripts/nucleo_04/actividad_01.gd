@@ -2,13 +2,10 @@ extends Node2D
 
 signal actividad_terminada
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.play()
 	$Barra.play()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
@@ -42,4 +39,5 @@ func _on_animation_player_5_animation_finished(anim_name: StringName) -> void:
 
 func _on_animation_player_6_animation_finished(anim_name: StringName) -> void:
 	$Info.visible = true
+	$Titila.visible = true
 	$BotonS.visible = true

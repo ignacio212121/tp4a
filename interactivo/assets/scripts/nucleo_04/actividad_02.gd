@@ -34,6 +34,8 @@ func _on_boton_m_button_down() -> void:
 	$Button2.visible = true
 	$Button3.visible = true
 	$Presionar.visible = false
+	$Fondo/Titila.visible = false
+	$Fondo/Titila2.visible = true
 
 func _on_button_1_mouse_entered() -> void:
 	$LeonardoDisabled.visible = true
