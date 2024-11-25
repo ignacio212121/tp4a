@@ -1,0 +1,237 @@
+[gd_scene load_steps=40 format=3 uid="uid://4y3hbxj34552"]
+
+[ext_resource type="Script" path="res://assets/scripts/instrucciones.gd" id="1_ri7fq"]
+[ext_resource type="Texture2D" uid="uid://bduijvxd577ye" path="res://assets/sprites/intro/intro_frame01.png" id="2_lylea"]
+[ext_resource type="Texture2D" uid="uid://c7qcjrfymq74c" path="res://assets/sprites/intro/intro_frame02.png" id="3_4qxpt"]
+[ext_resource type="Texture2D" uid="uid://d3qp10og0tw71" path="res://assets/sprites/intro/intro_frame03.png" id="4_2llri"]
+[ext_resource type="Texture2D" uid="uid://ccjwt37fqlh8i" path="res://assets/sprites/arrastrar/arrastrar_01.png" id="5_hr3d8"]
+[ext_resource type="Texture2D" uid="uid://w4k7xouajqvt" path="res://assets/sprites/arrastrar/arrastrar_02.png" id="6_yk6f2"]
+[ext_resource type="Texture2D" uid="uid://c54rkaqo06jnm" path="res://assets/sprites/arrastrar/arrastrar_03.png" id="7_1wqjm"]
+[ext_resource type="Texture2D" uid="uid://w68f03lccjr3" path="res://assets/sprites/arrastrar/arrastrar_04.png" id="8_qvs2o"]
+[ext_resource type="Texture2D" uid="uid://d2ypal6jh41vo" path="res://assets/sprites/arrastrar/arrastrar_05.png" id="9_vf4hc"]
+[ext_resource type="Texture2D" uid="uid://c6wtirng2e36m" path="res://assets/sprites/arrastrar/arrastrar_06.png" id="10_clew6"]
+[ext_resource type="Texture2D" uid="uid://bx8draxw68o5d" path="res://assets/sprites/arrastrar/arrastrar_07.png" id="11_24hoo"]
+[ext_resource type="Texture2D" uid="uid://cs8lincyg74x0" path="res://assets/sprites/arrastrar/arrastrar_08.png" id="12_ias0i"]
+[ext_resource type="Texture2D" uid="uid://bng78wpa3ups" path="res://assets/sprites/arrastrar/arrastrar_09.png" id="13_eq65o"]
+[ext_resource type="Texture2D" uid="uid://bi44j5qcbj152" path="res://assets/sprites/arrastrar/arrastrar_10.png" id="14_80m84"]
+[ext_resource type="Texture2D" uid="uid://csgqblwuhvxxh" path="res://assets/sprites/arrastrar/arrastrar_11.png" id="15_ew2pp"]
+[ext_resource type="Texture2D" uid="uid://beyjk2cqobejs" path="res://assets/sprites/dibujar/dibujar_01.png" id="16_t67wn"]
+[ext_resource type="Texture2D" uid="uid://ksqybrecx0ii" path="res://assets/sprites/dibujar/dibujar_02.png" id="17_x8tc6"]
+[ext_resource type="Texture2D" uid="uid://rkfb56efw8j6" path="res://assets/sprites/dibujar/dibujar_03.png" id="18_6cp1l"]
+[ext_resource type="Texture2D" uid="uid://dq4o3awxpe2ma" path="res://assets/sprites/dibujar/dibujar_04.png" id="19_omiuj"]
+[ext_resource type="Texture2D" uid="uid://d21qigch5rkad" path="res://assets/sprites/dibujar/dibujar_05.png" id="20_3v6dq"]
+[ext_resource type="Texture2D" uid="uid://h72px33h04hl" path="res://assets/sprites/dibujar/dibujar_06.png" id="21_u1kbm"]
+[ext_resource type="Texture2D" uid="uid://bfjpuq25genyq" path="res://assets/sprites/dibujar/dibujar_07.png" id="22_yqahd"]
+[ext_resource type="Texture2D" uid="uid://cj1jmudiays2r" path="res://assets/sprites/dibujar/dibujar_08.png" id="23_ey2y3"]
+[ext_resource type="Texture2D" uid="uid://c4cwwkrsqotbn" path="res://assets/sprites/dibujar/dibujar_09.png" id="24_oxhih"]
+[ext_resource type="Texture2D" uid="uid://ddk4dt5rncwht" path="res://assets/sprites/presionar/presionar_01.png" id="25_kjqp0"]
+[ext_resource type="Texture2D" uid="uid://bqykarjtwdowd" path="res://assets/sprites/presionar/presionar_02.png" id="26_0th2b"]
+[ext_resource type="Texture2D" uid="uid://dyjjvsumpglp1" path="res://assets/sprites/presionar/presionar_03.png" id="27_jlpgq"]
+[ext_resource type="Texture2D" uid="uid://ccrcf5t8sy13q" path="res://assets/sprites/presionar/presionar_04.png" id="28_gf3jf"]
+[ext_resource type="Texture2D" uid="uid://c6t3n615j3ggo" path="res://assets/sprites/presionar/presionar_05.png" id="29_25crc"]
+[ext_resource type="Texture2D" uid="uid://cfp8kgbs22f6b" path="res://assets/sprites/presionar/presionar_06.png" id="30_s4fa8"]
+[ext_resource type="Texture2D" uid="uid://di5g7iwxg82mb" path="res://assets/sprites/presionar/presionar_07.png" id="31_2t7m1"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_p5a5r"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4f7b"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_p5a5r")
+
+[sub_resource type="QuadMesh" id="QuadMesh_sq1v4"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_i4f7b")
+size = Vector2(1280, 720)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4xo4g"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_04t7c"]
+file = "res://assets/videos/inicio/intro_2.ogg"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slc4c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_hr3d8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yk6f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1wqjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qvs2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vf4hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_clew6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_24hoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ias0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_eq65o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_80m84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ew2pp")
+}],
+"loop": true,
+"name": &"arrastrar",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0y4ft"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_t67wn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_x8tc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6cp1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_omiuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3v6dq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_u1kbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_yqahd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ey2y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_oxhih")
+}],
+"loop": true,
+"name": &"dibujar",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nbiuh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_kjqp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0th2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_jlpgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_gf3jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_25crc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_s4fa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_s4fa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2t7m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2t7m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2t7m1")
+}],
+"loop": true,
+"name": &"presionar",
+"speed": 6.0
+}]
+
+[node name="Instrucciones" type="Node2D"]
+script = ExtResource("1_ri7fq")
+
+[node name="VideoInicio" type="MeshInstance2D" parent="."]
+position = Vector2(990.5, 527)
+scale = Vector2(1, -1)
+mesh = SubResource("QuadMesh_sq1v4")
+texture = SubResource("ViewportTexture_4xo4g")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(1280, 720)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = SubResource("VideoStreamTheora_04t7c")
+
+[node name="Arrastrar" type="AnimatedSprite2D" parent="."]
+position = Vector2(359, 430.5)
+sprite_frames = SubResource("SpriteFrames_slc4c")
+animation = &"arrastrar"
+
+[node name="Dibujar" type="AnimatedSprite2D" parent="."]
+position = Vector2(981, 430.5)
+sprite_frames = SubResource("SpriteFrames_0y4ft")
+animation = &"dibujar"
+
+[node name="Presionar" type="AnimatedSprite2D" parent="."]
+position = Vector2(1552, 430.5)
+sprite_frames = SubResource("SpriteFrames_nbiuh")
+animation = &"presionar"
+
+[node name="Borde" type="Node2D" parent="."]
+
+[node name="Frame" type="TextureRect" parent="Borde"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 58.0
+offset_top = 50.0
+offset_right = 1866.0
+offset_bottom = 1004.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lylea")
+metadata/_edit_use_anchors_ = true
+
+[node name="FrameDetail" type="TextureRect" parent="Borde"]
+offset_left = 1491.0
+offset_top = 744.0
+offset_right = 1882.0
+offset_bottom = 1018.0
+texture = ExtResource("3_4qxpt")
+
+[node name="FrameDetail2" type="TextureRect" parent="Borde"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1864.0
+offset_top = 50.0
+offset_right = 1904.0
+offset_bottom = 262.0
+grow_vertical = 0
+texture = ExtResource("4_2llri")
+
+[connection signal="finished" from="SubViewport/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
