@@ -17,6 +17,7 @@ func _on_timer_timeout():
 func _on_boton_s_button_down() -> void:
 	$GooglIa/Label/Timer.stop()
 	$GooglIa/Label.text = TEXTO_LABEL
+	$GooglIa/Titila.visible = false
 	_mostrar_opciones()
 
 func _mostrar_opciones():
@@ -32,15 +33,20 @@ func _cargar_y_modular():
 
 func _on_iphone_pressed():
 	resultado = $ResultadoPro
+	$GooglIa/Opciones/Titila2.visible = false
+	$GooglIa/Opciones/Titila.visible = false
 	_cargar_y_modular()
 
 func _on_cyber_pressed():
 	resultado = $ResultadoCyber
+	$GooglIa/Opciones/Titila2.visible = false
+	$GooglIa/Opciones/Titila.visible = false
 	_cargar_y_modular()
 
 func _on_animated_sprite_2d_animation_finished():
 	resultado.visible = true
 	$BotonS.visible = true
+	$Titila.visible = true
 
 func _on_boton_s_pressed():
 	get_parent().get_parent().actividad_actual += 1

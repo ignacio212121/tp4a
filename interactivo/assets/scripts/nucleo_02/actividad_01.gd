@@ -21,6 +21,13 @@ func _on_arrastrable_posicionado():
 		$Arrastrables.queue_free()
 		$CombinacionDatos/Resultado.visible = true
 		$Arrastrar.visible = false
+		$TitilaFoto.visible = false
+		$TitilaFlayer.visible = false
+		$TitilaDic.visible = false
+		$ContenedorCamara.visible = false
+		$ContenedorFlyer.visible = false
+		$ContenedorDiciembre.visible = false
+		$CombinacionDatos/Titila.visible = true
 
 func no_soy_tonto():
 	if $CombinacionDatos/ProgressBar.value > 1:

@@ -30,30 +30,35 @@ var contenido_llamadas = [
 		"video": "actividad_05",
 	}], ##########################################FIN NUCLEO 1
 	[{
-		"titulo": "",
-		"mensaje_usuario": "",
-		"respuesta_ia": "",
+		"titulo": "VENTAJAS DE IA",
+		"mensaje_usuario": "Hola, necesito generar un flyer sobre el curso de fotografía que estoy por iniciar, este se realizará en Diciembre.",
+		"respuesta_ia": "*Respuesta*",
 		"video": "actividad_01",
 	}, {
-		"titulo": "",
-		"mensaje_usuario": "",
-		"respuesta_ia": "",
+		"titulo": "VENTAJAS DE IA",
+		"mensaje_usuario": "Me gusta, pero quisiera que sea de color amarillo y cuente con los logos de algunos programas de edición de imagen.",
+		"respuesta_ia": "*Respuesta*",
 		"video": "actividad_02",
 	}, {
-		"titulo": "",
-		"mensaje_usuario": "",
-		"respuesta_ia": "",
+		"titulo": "DESVENTAJAS DE IA",
+		"mensaje_usuario": "Quisiera que sea un amarillo más claro y al final lo quiero en forma de post de Instagram.",
+		"respuesta_ia": "*Respuesta*",
 		"video": "actividad_03",
 	}, {
-		"titulo": "",
-		"mensaje_usuario": "",
-		"respuesta_ia": "",
+		"titulo": "DESVENTAJAS DE IA",
+		"mensaje_usuario": "Esta bien, ya pagué el premium. Quisiera que sea un amarillo más claro y al final lo quiero en forma de post de Instagram.",
+		"respuesta_ia": "*Respuesta*",
 		"video": "actividad_04",
 	}, {
-		"titulo": "",
-		"mensaje_usuario": "",
-		"respuesta_ia": "",
+		"titulo": "DESVENTAJAS DE",
+		"mensaje_usuario": "Hola de nuevo, necesito generar una pagina web para la venta de telefonos.",
+		"respuesta_ia": "*Respuesta*",
 		"video": "actividad_05",
+	}, {
+		"titulo": "DESVENTAJAS DE IA",
+		"mensaje_usuario": "Se parece mucho al estilo de una marca conodia,queria algo original. ",
+		"respuesta_ia": "LLamada Finalizada",
+		"video": "actividad_06",
 	}], ##########################################FIN NUCLEO 2
 	 [{
 		"titulo": "",

@@ -9,14 +9,12 @@ func _ready() -> void:
 	$Background.play()
 	$Glitch.visible = true
 	$FondoMalo.visible = true
-	$MarcoDeError/AnimatedSprite2D2.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _on_animated_sprite_2d_animation_finished() -> void:
-	$Titila/AnimationPlayer.play("titila")
 	$Felicidades.visible = true
 	$BotonM.visible = true
 	$Titila.visible = true
@@ -29,9 +27,9 @@ func _on_boton_m_button_down() -> void:
 	$Datos/AnimatedSprite2D.play()
 	$Info.visible = true
 	$Botones.visible = true
-	$Titila.visible = false
 	$Felicidades.visible = false
 	$BotonM.visible = false
+	$Titila.visible = false
 	$Botones/TextureButton/AnimationPlayer.play("parpadeo")
 
 func _on_texture_button_mouse_entered() -> void:

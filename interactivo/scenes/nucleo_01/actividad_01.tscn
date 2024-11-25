@@ -1,18 +1,18 @@
-[gd_scene load_steps=37 format=3 uid="uid://c808a2n8ll066"]
+[gd_scene load_steps=38 format=3 uid="uid://c808a2n8ll066"]
 
 [ext_resource type="PackedScene" uid="uid://bjyhlfqw31xgp" path="res://scenes/actividades/arrastrable.tscn" id="1_4v3nf"]
 [ext_resource type="Script" path="res://assets/scripts/nucleo_01/actividad_01.gd" id="1_cd5ww"]
-[ext_resource type="Texture2D" uid="uid://bgn4hi2ioh1id" path="res://img/nucleo_01/tarea_1/carpeta_uno.png" id="2_kqid0"]
+[ext_resource type="Texture2D" uid="uid://bgn4hi2ioh1id" path="res://img/nucleo_1/tarea_1/carpeta_uno.png" id="2_kqid0"]
 [ext_resource type="Texture2D" uid="uid://bcvsr1lnjx76a" path="res://img/nucleo_1/background/linea_1_1.png" id="2_xd4ba"]
 [ext_resource type="Texture2D" uid="uid://crlwgmko53bm3" path="res://img/nucleo_1/background/linea_1_2.png" id="3_8ew0x"]
 [ext_resource type="PackedScene" uid="uid://bv8bnjs72yogm" path="res://scenes/actividades/destino.tscn" id="3_64hak"]
-[ext_resource type="Texture2D" uid="uid://d3ragiwha0q6h" path="res://img/nucleo_01/tarea_1/cuadro_uno.png" id="4_h2gvu"]
+[ext_resource type="Texture2D" uid="uid://d3ragiwha0q6h" path="res://img/nucleo_1/tarea_1/cuadro_uno.png" id="4_h2gvu"]
 [ext_resource type="Texture2D" uid="uid://dv8ub8pikchyy" path="res://img/nucleo_1/background/linea_1_3.png" id="4_jplps"]
 [ext_resource type="Texture2D" uid="uid://p8as5llb73ky" path="res://img/nucleo_1/background/linea_1_4.png" id="5_28d7x"]
 [ext_resource type="Texture2D" uid="uid://qpgum1kyav4k" path="res://img/nucleo_1/background/linea_1_5.png" id="6_16mt3"]
-[ext_resource type="Texture2D" uid="uid://b124sxj1x8rik" path="res://img/nucleo_01/tarea_1/cuadro_dos.png" id="6_khidi"]
+[ext_resource type="Texture2D" uid="uid://b124sxj1x8rik" path="res://img/nucleo_1/tarea_1/cuadro_dos.png" id="6_khidi"]
 [ext_resource type="Texture2D" uid="uid://d16qanjua6vgh" path="res://img/nucleo_1/background/linea_1_6.png" id="7_c882e"]
-[ext_resource type="Texture2D" uid="uid://2i24mb5ffygy" path="res://img/nucleo_01/tarea_1/carpeta_dos.png" id="7_ufosa"]
+[ext_resource type="Texture2D" uid="uid://2i24mb5ffygy" path="res://img/nucleo_1/tarea_1/carpeta_dos.png" id="7_ufosa"]
 [ext_resource type="Texture2D" uid="uid://dfrclm318fyov" path="res://img/nucleo_1/background/linea_1_7.png" id="8_8mdfi"]
 [ext_resource type="Texture2D" uid="uid://m8ii12su1b6i" path="res://img/nucleo_1/background/linea_1_8.png" id="9_mq21t"]
 [ext_resource type="Texture2D" uid="uid://42rj2ghqrfes" path="res://img/nucleo_1/background/linea_1_9.png" id="10_5l0sg"]
@@ -26,14 +26,15 @@
 [ext_resource type="Texture2D" uid="uid://jrqgymtojaji" path="res://img/nucleo_1/background/linea_1_17.png" id="18_y4mw1"]
 [ext_resource type="Texture2D" uid="uid://dbq657pq6v2h0" path="res://img/nucleo_1/background/linea_1_18.png" id="19_beiik"]
 [ext_resource type="Texture2D" uid="uid://dlutqn3f1dlm4" path="res://img/nucleo_1/background/linea_1_19.png" id="20_osqr5"]
-[ext_resource type="Texture2D" uid="uid://bhfsceq7aap1y" path="res://img/nucleo_01/tarea_1/borde.png" id="21_kvr8a"]
-[ext_resource type="Texture2D" uid="uid://1gx7unujwtcv" path="res://img/nucleo_01/tarea_1/fondo.png" id="22_3cos1"]
-[ext_resource type="Texture2D" uid="uid://c71ocp561ntyb" path="res://img/nucleo_01/tarea_1/encuesta_dos.png" id="29_bp2aq"]
-[ext_resource type="Texture2D" uid="uid://dmge77sepolnl" path="res://img/nucleo_01/tarea_1/encuesta_uno.png" id="30_7wokn"]
-[ext_resource type="Texture2D" uid="uid://bop8ogxc5ahiq" path="res://img/nucleo_01/tarea_1/carpeta_dos_bien.png" id="31_xct85"]
-[ext_resource type="Texture2D" uid="uid://ok8nl4h0ajmo" path="res://img/nucleo_01/tarea_1/carpeta_uno_bien.png" id="32_6soqr"]
+[ext_resource type="Texture2D" uid="uid://bhfsceq7aap1y" path="res://img/nucleo_1/tarea_1/borde.png" id="21_kvr8a"]
+[ext_resource type="Texture2D" uid="uid://1gx7unujwtcv" path="res://img/nucleo_1/tarea_1/fondo.png" id="22_3cos1"]
+[ext_resource type="Texture2D" uid="uid://c71ocp561ntyb" path="res://img/nucleo_1/tarea_1/encuesta_dos.png" id="29_bp2aq"]
+[ext_resource type="Texture2D" uid="uid://dmge77sepolnl" path="res://img/nucleo_1/tarea_1/encuesta_uno.png" id="30_7wokn"]
+[ext_resource type="Texture2D" uid="uid://bop8ogxc5ahiq" path="res://img/nucleo_1/tarea_1/carpeta_dos_bien.png" id="31_xct85"]
+[ext_resource type="Texture2D" uid="uid://ok8nl4h0ajmo" path="res://img/nucleo_1/tarea_1/carpeta_uno_bien.png" id="32_6soqr"]
 [ext_resource type="PackedScene" uid="uid://dpc8cgudrxdle" path="res://scenes/actividades/arrastrar_anim.tscn" id="35_4na0n"]
-[ext_resource type="Texture2D" uid="uid://d6y8npgqapt8" path="res://img/nucleo_01/tarea_1/info.png" id="35_v2p63"]
+[ext_resource type="Texture2D" uid="uid://d6y8npgqapt8" path="res://img/nucleo_1/tarea_1/info.png" id="35_v2p63"]
+[ext_resource type="PackedScene" uid="uid://sxca04083gd4" path="res://scenes/titila.tscn" id="35_w7jnl"]
 [ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="36_84els"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cqqxp"]
@@ -131,6 +132,18 @@ visible = false
 position = Vector2(801, 607)
 texture = ExtResource("30_7wokn")
 
+[node name="Titila2023" parent="." instance=ExtResource("35_w7jnl")]
+self_modulate = Color(1, 1, 1, 0.376471)
+position = Vector2(88, 173)
+scale = Vector2(0.786925, 1.70093)
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+
+[node name="Titila2024" parent="." instance=ExtResource("35_w7jnl")]
+self_modulate = Color(1, 1, 1, 0.376471)
+position = Vector2(82, 576)
+scale = Vector2(0.786925, 1.70093)
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+
 [node name="CarpetaDosBien" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(252, 741)
@@ -165,6 +178,14 @@ color = Color(0.0745098, 0.866667, 0.0588235, 1)
 visible = false
 texture = ExtResource("35_v2p63")
 centered = false
+
+[node name="Titila" parent="." instance=ExtResource("35_w7jnl")]
+visible = false
+light_mask = 128
+visibility_layer = 128
+position = Vector2(892, 572)
+scale = Vector2(0.40678, 0.35514)
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
 
 [node name="BotonS" parent="." instance=ExtResource("36_84els")]
 visible = false

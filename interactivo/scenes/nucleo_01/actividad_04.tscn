@@ -1,4 +1,4 @@
-[gd_scene load_steps=172 format=3 uid="uid://ssca5ib35g7o"]
+[gd_scene load_steps=168 format=3 uid="uid://ssca5ib35g7o"]
 
 [ext_resource type="Script" path="res://assets/scripts/nucleo_01/actividad_04.gd" id="1_1pb5p"]
 [ext_resource type="Texture2D" uid="uid://bcvsr1lnjx76a" path="res://img/nucleo_1/background/linea_1_1.png" id="2_1hhoo"]
@@ -14,9 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c1bj6ngk3d27s" path="res://img/nucleo_01/tarea_3/felicidades.png" id="8_72p1t"]
 [ext_resource type="Texture2D" uid="uid://dfrclm318fyov" path="res://img/nucleo_1/background/linea_1_7.png" id="8_nxqqy"]
 [ext_resource type="Texture2D" uid="uid://m8ii12su1b6i" path="res://img/nucleo_1/background/linea_1_8.png" id="9_fx04y"]
-[ext_resource type="Texture2D" uid="uid://dw3h14qlbpie" path="res://img/elementos/titila_01.png" id="9_qnhuh"]
 [ext_resource type="Texture2D" uid="uid://42rj2ghqrfes" path="res://img/nucleo_1/background/linea_1_9.png" id="10_6si2g"]
-[ext_resource type="Texture2D" uid="uid://j2p2xc3ulyp3" path="res://img/elementos/titila_02.png" id="10_oan4o"]
 [ext_resource type="Texture2D" uid="uid://crohfmodcoejw" path="res://img/nucleo_1/tarea_3/marco_de_error.png" id="11_236yc"]
 [ext_resource type="Texture2D" uid="uid://p6pocamco8ok" path="res://img/nucleo_1/background/linea_1_10.png" id="11_ujghr"]
 [ext_resource type="Texture2D" uid="uid://dkckdxduv12ng" path="res://img/nucleo_1/tarea_3/error2/error_1.png" id="12_4co3d"]
@@ -45,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://cyfrj3gox0wo4" path="res://img/nucleo_1/tarea_3/error2/error_14.png" id="25_126ng"]
 [ext_resource type="Texture2D" uid="uid://wijctt1ghhmv" path="res://img/nucleo_1/tarea_3/error2/error_15.png" id="26_3aljd"]
 [ext_resource type="Texture2D" uid="uid://yqf2okfyvf4h" path="res://img/nucleo_1/tarea_3/error2/error_16.png" id="27_h8gvo"]
+[ext_resource type="PackedScene" uid="uid://sxca04083gd4" path="res://scenes/titila.tscn" id="27_pfpc4"]
 [ext_resource type="Texture2D" uid="uid://cyvjurbijcre" path="res://img/nucleo_1/tarea_3/error2/error_17.png" id="28_wqxlf"]
 [ext_resource type="Texture2D" uid="uid://dm52r3w7ltdp8" path="res://img/nucleo_1/tarea_3/error2/error_18.png" id="29_p608k"]
 [ext_resource type="Texture2D" uid="uid://d05iq3eypqbuo" path="res://img/nucleo_1/tarea_3/error2/error_19.png" id="30_jaaof"]
@@ -241,44 +240,6 @@ animations = [{
 "name": &"error",
 "speed": 1.0
 }]
-
-[sub_resource type="Animation" id="Animation_saus1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Titila:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("9_qnhuh")]
-}
-
-[sub_resource type="Animation" id="Animation_t0pcr"]
-resource_name = "titila"
-length = 1.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Titila:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("9_qnhuh"), ExtResource("10_oan4o"), ExtResource("9_qnhuh"), ExtResource("10_oan4o")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ssg8u"]
-_data = {
-"RESET": SubResource("Animation_saus1"),
-"titila": SubResource("Animation_t0pcr")
-}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6u0bq"]
 animations = [{
@@ -734,17 +695,11 @@ visible = false
 position = Vector2(968, 780)
 texture = ExtResource("8_72p1t")
 
-[node name="Titila" type="Sprite2D" parent="."]
+[node name="Titila" parent="." instance=ExtResource("27_pfpc4")]
 visible = false
-position = Vector2(971.5, 868)
-scale = Vector2(1.0339, 0.523364)
-texture = ExtResource("9_qnhuh")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Titila"]
-root_node = NodePath("../../BotonM")
-libraries = {
-"": SubResource("AnimationLibrary_ssg8u")
-}
+position = Vector2(765, 813)
+scale = Vector2(1.00969, 0.495327)
+color = Color(1, 0, 0, 1)
 
 [node name="MarcoDeError" type="Sprite2D" parent="."]
 visible = false
@@ -879,7 +834,7 @@ libraries = {
 
 [node name="TransferenciaC" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(1139, 561)
+position = Vector2(1095, 558)
 texture = ExtResource("139_0785g")
 
 [node name="InfoFuente" type="Sprite2D" parent="."]
@@ -901,7 +856,7 @@ offset_left = 789.0
 offset_top = 834.0
 offset_right = 1153.0
 offset_bottom = 902.0
-color = Color(0.0745098, 0.866667, 0.0588235, 1)
+color = Color(1, 0, 0, 1)
 texto = "RECLAMAR PREMIO"
 
 [node name="Timer" type="Timer" parent="."]

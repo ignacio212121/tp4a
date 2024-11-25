@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://sxca04083gd4"]
+
+[ext_resource type="Texture2D" uid="uid://ykr57a5w0jru" path="res://img/elementos/titila_01.png" id="1_whrn4"]
+[ext_resource type="Script" path="res://assets/scripts/scripts_actividades/titila.gd" id="2_w1tii"]
+[ext_resource type="Texture2D" uid="uid://c2840b7akh7eb" path="res://img/elementos/titila_02.png" id="3_ma7vf"]
+
+[sub_resource type="Animation" id="Animation_eb11d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_whrn4")]
+}
+
+[sub_resource type="Animation" id="Animation_1og7w"]
+resource_name = "titila"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_whrn4"), ExtResource("3_ma7vf"), ExtResource("1_whrn4"), ExtResource("3_ma7vf")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tcosh"]
+_data = {
+"RESET": SubResource("Animation_eb11d"),
+"titila": SubResource("Animation_1og7w")
+}
+
+[node name="Titila" type="Sprite2D"]
+scale = Vector2(0.708232, 0.495327)
+texture = ExtResource("1_whrn4")
+centered = false
+script = ExtResource("2_w1tii")
+color = Color(0, 0.882707, 0.874298, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tcosh")
+}
+
+[connection signal="texture_changed" from="." to="." method="_on_texture_changed"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

@@ -4,43 +4,22 @@ signal actividad_terminada
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AnimatedSprite2D.play()
+	pass
 
+func _on_idea_22_pressed() -> void:
+	$Info.visible = true
+	$Titila.visible = false
+	$Idea33.modulate = Color("#ffffff5d")
+	$Idea22.modulate = Color("#ffffff5d")
+	$Idea11.modulate = Color("#ffffff5d")
+	$Presionar.visible = false
+	$Timer.start()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	hola()
-
-func _on_idea_1_button_down() -> void:
-	$Idea11.visible = true
-
-func _on_idea_2_button_down() -> void:
-	$Idea22.visible = true
-
-func _on_idea_3_button_down() -> void:
-	$Idea33.visible = true
-
-func hola():
-	if $Idea11.visible == true && $Idea22.visible == true && $Idea33.visible == true:
-		$Info.visible = true
-		$BotonS.visible = true
-		$Presionar.visible = false
-
-func _on_boton_s_button_down() -> void:
+func _on_timer_timeout() -> void:
 	$InfoFinal.visible = true
+	$Info.modulate = Color("#ffffff5d")
+	$Titila2.visible = true
+	$BotonS.visible = true
 
-func _on_boton_s_2_button_down() -> void:
-	$Idea11.visible = false
-	$Idea22.visible = false
-	$Idea33.visible = false
-	$Info.visible = false
-	$BotonS.visible = false
-	$AnimatedSprite2D.visible = false
-	$InfoFinal.visible = false
-	$Idea1.visible = false
-	$Idea2.visible = false
-	$Idea3.visible = false
-	$Final.visible = true
-
-func _on_boton_l_button_down() -> void:
+func _on_boton_s_pressed() -> void:
 	emit_signal("actividad_terminada")

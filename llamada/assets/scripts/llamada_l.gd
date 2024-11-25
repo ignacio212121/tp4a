@@ -28,7 +28,7 @@ func iniciar_video():
 #Carga la ruta del video en base al num_linea y al estado (el estado en realidad solo se usaría en los videos de llamada grandes)
 func actualizar_animacion(video_name):
 	$SubViewport/VideoStreamPlayer.stream.set_file("res://assets/videos/llamada_0" + 
-	str(num_linea) + "/" + str(video_name) + ".ogg")
+	str(num_linea) + "/" + str(video_name) + ".ogv")
 
 
 func _on_video_stream_player_finished():

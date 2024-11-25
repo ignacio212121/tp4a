@@ -21,6 +21,7 @@ func _on_animated_sprite_2d_animation_finished():
 	$BuscandoCambios/Instagram.visible = true
 	$BuscandoCambios/AnimatedSprite2D.visible = false
 	$BuscandoCambios/BotonM.visible = true
+	$BuscandoCambios/Titila.visible = true
 
 
 func _on_boton_m_pressed():
@@ -30,6 +31,7 @@ func _on_boton_m_pressed():
 func _on_boton_s_pressed():
 	$Resultado/BotonS.visible = false
 	$Resultado/Avisar.visible = true
+	$Resultado/Titila.visible = false
 
 
 func _on_boton_final():

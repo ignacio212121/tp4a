@@ -15,6 +15,9 @@ func _on_button_button_down() -> void:
 	$Uno.visible = false
 	$Button.visible = false
 	$BotonM.visible = true
+	$Titila.visible = false
+	$Titila2.visible = true
+	$LeonardoIa.visible = false
 
 func _on_boton_m_button_down() -> void:
 	$Dos.visible = false
@@ -34,27 +37,36 @@ func _on_barra_frame_changed() -> void:
 		$Arrastrable.visible = true
 		$Destino.visible = true
 		$Parte2/Festival/AnimatedSprite2D.visible = false
+		$Parte2/Titila2.visible = true
+		$Parte2/Titila5.visible = true
 	if $Barra.frame == 60:
 		$Arrastrable2.visible = true
 		$Destino2.visible = true
 		$Parte2/Rock/AnimatedSprite2D.visible = false
+		$Parte2/Titila3.visible = true
+		$Parte2/Titila6.visible = true
 	if $Barra.frame == 90:
 		$Arrastrable3.visible = true
 		$Destino3.visible = true
 		$Parte2/LaPlata/AnimatedSprite2D.visible = false
 		$Barra.visible = false
+		$Parte2/Titila4.visible = true
+		$Parte2/Titila7.visible = true
 		$Label.text = "DATOS CARGADOS"
 
 func _on_arrastrable_3_posicionado() -> void:
 	$Parte2/LaPlata.visible = false
+	$Parte2/Titila4.visible = false
 	barra_aparece()
 
 func _on_arrastrable_2_posicionado() -> void:
 	$Parte2/Rock.visible = false
+	$Parte2/Titila3.visible = false
 	barra_aparece()
 
 func _on_arrastrable_posicionado() -> void:
 	$Parte2/Festival.visible = false
+	$Parte2/Titila2.visible = false
 	barra_aparece()
 
 func barra_aparece():
@@ -73,11 +85,15 @@ func barra_aparece():
 		$Arrastrable2.visible = false
 		$Arrastrable3.visible = false
 		$Arrastrar.visible = false
+		$Parte2/Titila5.visible = false
+		$Parte2/Titila6.visible = false
+		$Parte2/Titila7.visible = false
 
 func _on_timer_timeout() -> void:
 	$ImagFinal.visible = true
 	$Loading.visible = false
 	$BotonS.visible = true
+	$Titila3.visible = true
 
 func _on_boton_s_button_down() -> void:
 	emit_signal("actividad_terminada")

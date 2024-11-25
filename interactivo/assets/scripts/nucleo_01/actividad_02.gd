@@ -20,12 +20,14 @@ func _on_texture_button_button_down() -> void:
 	$Barra.visible = true
 	$Barra.play()
 	$Presionar.visible = false
+	$Titila.visible = false
 
 func _on_barra_animation_finished() -> void:
 	$Red2.visible = false
 	$Barra.visible = false
 	$Red3.visible = true
 	$Enviar.visible = true
+	$Titila2.visible = true
 
 func _on_enviar_button_down() -> void:
 	$Info2.visible = true

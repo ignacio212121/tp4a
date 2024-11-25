@@ -1,4 +1,4 @@
-[gd_scene load_steps=130 format=3 uid="uid://rbfdncbyb3h4"]
+[gd_scene load_steps=131 format=3 uid="uid://rbfdncbyb3h4"]
 
 [ext_resource type="Script" path="res://assets/scripts/nucleo_02/actividad_03.gd" id="1_u2433"]
 [ext_resource type="Texture2D" uid="uid://dm4m7hmln7xdt" path="res://img/nucleo_02/actividad_03/buscando_cambios.png" id="2_345bm"]
@@ -125,6 +125,7 @@
 [ext_resource type="Texture2D" uid="uid://bmgtm2yw7545x" path="res://img/nucleo_02/actividad_03/instagram.png" id="123_syojm"]
 [ext_resource type="PackedScene" uid="uid://bsx2wekvb5qet" path="res://scenes/elementos/boton_m.tscn" id="124_bxyof"]
 [ext_resource type="Texture2D" uid="uid://55nrh5iucj1d" path="res://img/nucleo_02/actividad_03/resultado.png" id="126_hn7xl"]
+[ext_resource type="PackedScene" uid="uid://sxca04083gd4" path="res://scenes/titila.tscn" id="127_jf58y"]
 [ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="127_kmg8o"]
 [ext_resource type="Texture2D" uid="uid://dkodnsmbg7m3n" path="res://img/nucleo_02/actividad_03/avisar.png" id="128_cfg5r"]
 
@@ -514,6 +515,11 @@ visible = false
 position = Vector2(-45, 26)
 texture = ExtResource("128_cfg5r")
 
+[node name="Titila" parent="Resultado/Avisar" instance=ExtResource("127_jf58y")]
+position = Vector2(-99, 34)
+scale = Vector2(0.404358, 0.373832)
+color = Color(1, 0, 0, 1)
+
 [node name="BotonS" parent="Resultado/Avisar" instance=ExtResource("127_kmg8o")]
 offset_left = -81.0
 offset_top = 51.0
@@ -521,6 +527,11 @@ offset_right = 47.0
 offset_bottom = 96.0
 color = Color(1, 0, 0, 1)
 texto = "AVISAR"
+
+[node name="Titila" parent="Resultado" instance=ExtResource("127_jf58y")]
+position = Vector2(-254, 264)
+scale = Vector2(0.384988, 0.359813)
+color = Color(0.913725, 0, 0.490196, 1)
 
 [node name="BotonS" parent="Resultado" instance=ExtResource("127_kmg8o")]
 offset_left = -239.0
@@ -561,6 +572,12 @@ texture = ExtResource("122_cqews")
 visible = false
 position = Vector2(-681, -20)
 texture = ExtResource("123_syojm")
+
+[node name="Titila" parent="BuscandoCambios" instance=ExtResource("127_jf58y")]
+visible = false
+position = Vector2(-392, 255)
+scale = Vector2(1.04116, 0.495327)
+color = Color(0.913725, 0, 0.490196, 1)
 
 [node name="BotonM" parent="BuscandoCambios" instance=ExtResource("124_bxyof")]
 visible = false

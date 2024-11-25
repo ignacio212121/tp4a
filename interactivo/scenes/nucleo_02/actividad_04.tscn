@@ -1,10 +1,11 @@
-[gd_scene load_steps=111 format=3 uid="uid://dpbhi8obrljgs"]
+[gd_scene load_steps=112 format=3 uid="uid://dpbhi8obrljgs"]
 
 [ext_resource type="Script" path="res://assets/scripts/nucleo_02/actividad_04.gd" id="1_pvae5"]
 [ext_resource type="Texture2D" uid="uid://dxrhwrn25g5vs" path="res://img/nucleo_02/actividad_04/googlIA.png" id="2_c64mc"]
 [ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="3_mcmjx"]
 [ext_resource type="Texture2D" uid="uid://glx8u86fwcw" path="res://img/sprites/tapa.jpg" id="3_vqexg"]
 [ext_resource type="Texture2D" uid="uid://diytu0gjyxhg6" path="res://img/barra de carga/carga_1.png" id="4_1gbjx"]
+[ext_resource type="PackedScene" uid="uid://sxca04083gd4" path="res://scenes/titila.tscn" id="4_mv8c7"]
 [ext_resource type="Texture2D" uid="uid://dn7aa80dtvspl" path="res://img/barra de carga/carga_2.png" id="5_b63mk"]
 [ext_resource type="Texture2D" uid="uid://b6w7bswqmx625" path="res://img/barra de carga/carga_3.png" id="6_etbfs"]
 [ext_resource type="Texture2D" uid="uid://dexfo1rjvipn2" path="res://img/barra de carga/carga_4.png" id="7_3pavd"]
@@ -418,6 +419,11 @@ position = Vector2(-116, -1134)
 scale = Vector2(0.737037, 0.719298)
 texture = ExtResource("3_vqexg")
 
+[node name="Titila" parent="GooglIa" instance=ExtResource("4_mv8c7")]
+position = Vector2(-166, -1180)
+scale = Vector2(0.384988, 0.350467)
+color = Color(0.913725, 0, 0.490196, 1)
+
 [node name="BotonS" parent="GooglIa" instance=ExtResource("3_mcmjx")]
 offset_left = -150.0
 offset_top = -1165.0
@@ -462,6 +468,16 @@ position = Vector2(-62.25, -965)
 scale = Vector2(0.937956, 1)
 texture = ExtResource("101_8mr0f")
 
+[node name="Titila" parent="GooglIa/Opciones" instance=ExtResource("4_mv8c7")]
+position = Vector2(-942, -1116)
+scale = Vector2(1.0339, 1.39252)
+color = Color(0.913725, 0, 0.490196, 1)
+
+[node name="Titila2" parent="GooglIa/Opciones" instance=ExtResource("4_mv8c7")]
+position = Vector2(-561, -1116)
+scale = Vector2(1.034, 1.393)
+color = Color(0.913725, 0, 0.490196, 1)
+
 [node name="Iphone" type="TextureButton" parent="GooglIa/Opciones"]
 offset_left = -904.0
 offset_top = -1065.0
@@ -494,6 +510,12 @@ texture = ExtResource("107_oyu1r")
 [node name="Presionar" parent="." instance=ExtResource("109_bhre5")]
 modulate = Color(0.909804, 0, 0.490196, 1)
 position = Vector2(0, -23)
+
+[node name="Titila" parent="." instance=ExtResource("4_mv8c7")]
+visible = false
+position = Vector2(1362, 877)
+scale = Vector2(0.384988, 0.350467)
+color = Color(0.913725, 0, 0.490196, 1)
 
 [node name="BotonS" parent="." instance=ExtResource("3_mcmjx")]
 visible = false

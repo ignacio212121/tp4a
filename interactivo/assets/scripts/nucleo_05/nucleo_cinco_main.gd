@@ -46,6 +46,5 @@ func _on_inicio_animation_finished():
 	_recibiendo()
 	#$PromptUno.visible = true
 
-
 func _on_boton_s_pressed():
 	emit_signal("nucleo_terminado")

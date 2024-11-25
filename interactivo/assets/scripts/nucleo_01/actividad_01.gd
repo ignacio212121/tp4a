@@ -15,6 +15,7 @@ func _on_arrastrable_posicionado() -> void:
 	$CarpetaUnoBien.visible = true
 	$Arrastrable.visible = false
 	$Destino.visible = false
+	$Titila2023.visible = false
 	boton()
 
 func _on_arrastrable_2_posicionado() -> void:
@@ -22,6 +23,7 @@ func _on_arrastrable_2_posicionado() -> void:
 	$CarpetaDosBien.visible = true
 	$Arrastrable2.visible = false
 	$Destino2.visible = false
+	$Titila2024.visible = false
 	boton()
 
 func boton():
@@ -32,6 +34,8 @@ func boton():
 func _on_tiempo_timeout() -> void:
 	$Info.visible = true
 	$BotonS.visible = true
+	$Titila.visible = true
+	
 
 func _on_boton_s_button_down() -> void:
 	emit_signal("actividad_terminada")

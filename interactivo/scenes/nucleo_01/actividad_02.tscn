@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=3 uid="uid://cj2t32ek8qj4j"]
+[gd_scene load_steps=132 format=3 uid="uid://cj2t32ek8qj4j"]
 
 [ext_resource type="Script" path="res://assets/scripts/nucleo_01/actividad_02.gd" id="1_chl37"]
 [ext_resource type="Texture2D" uid="uid://bcvsr1lnjx76a" path="res://img/nucleo_1/background/linea_1_1.png" id="2_j0085"]
@@ -20,12 +20,13 @@
 [ext_resource type="Texture2D" uid="uid://jrqgymtojaji" path="res://img/nucleo_1/background/linea_1_17.png" id="18_xfwra"]
 [ext_resource type="Texture2D" uid="uid://dbq657pq6v2h0" path="res://img/nucleo_1/background/linea_1_18.png" id="19_bvngo"]
 [ext_resource type="Texture2D" uid="uid://dlutqn3f1dlm4" path="res://img/nucleo_1/background/linea_1_19.png" id="20_cf3eo"]
-[ext_resource type="Texture2D" uid="uid://bhfsceq7aap1y" path="res://img/nucleo_01/tarea_1/borde.png" id="21_u5ljh"]
-[ext_resource type="Texture2D" uid="uid://bllfluvxma2hn" path="res://img/nucleo_01/tarea_2/redimensionar.png" id="22_7xbcg"]
-[ext_resource type="Texture2D" uid="uid://dpg4id1huxijl" path="res://img/nucleo_01/tarea_2/boton.png" id="23_r716y"]
-[ext_resource type="Texture2D" uid="uid://dyld0a0pnmm3e" path="res://img/nucleo_01/tarea_2/boton_2.png" id="24_rkg4b"]
-[ext_resource type="Texture2D" uid="uid://c3b6tg7gpaho0" path="res://img/nucleo_01/tarea_2/info.png" id="25_jb7v4"]
-[ext_resource type="Texture2D" uid="uid://b36jddkg757q7" path="res://img/nucleo_01/tarea_2/red_2.png" id="26_l5u4p"]
+[ext_resource type="Texture2D" uid="uid://bhfsceq7aap1y" path="res://img/nucleo_1/tarea_1/borde.png" id="21_u5ljh"]
+[ext_resource type="Texture2D" uid="uid://bllfluvxma2hn" path="res://img/nucleo_1/tarea_2/redimensionar.png" id="22_7xbcg"]
+[ext_resource type="PackedScene" uid="uid://sxca04083gd4" path="res://scenes/titila.tscn" id="23_p8x6b"]
+[ext_resource type="Texture2D" uid="uid://dpg4id1huxijl" path="res://img/nucleo_1/tarea_2/boton.png" id="23_r716y"]
+[ext_resource type="Texture2D" uid="uid://dyld0a0pnmm3e" path="res://img/nucleo_1/tarea_2/boton_2.png" id="24_rkg4b"]
+[ext_resource type="Texture2D" uid="uid://c3b6tg7gpaho0" path="res://img/nucleo_1/tarea_2/info.png" id="25_jb7v4"]
+[ext_resource type="Texture2D" uid="uid://b36jddkg757q7" path="res://img/nucleo_1/tarea_2/red_2.png" id="26_l5u4p"]
 [ext_resource type="Texture2D" uid="uid://diytu0gjyxhg6" path="res://img/barra de carga/carga_1.png" id="27_5mtda"]
 [ext_resource type="Texture2D" uid="uid://dn7aa80dtvspl" path="res://img/barra de carga/carga_2.png" id="28_vuvip"]
 [ext_resource type="Texture2D" uid="uid://b6w7bswqmx625" path="res://img/barra de carga/carga_3.png" id="29_duhxu"]
@@ -122,11 +123,11 @@
 [ext_resource type="Texture2D" uid="uid://ci4g6fc5lq1sk" path="res://img/barra de carga/carga_94.png" id="120_kyuct"]
 [ext_resource type="Texture2D" uid="uid://duvhv5nnj1o8s" path="res://img/barra de carga/carga_95.png" id="121_13h2u"]
 [ext_resource type="Texture2D" uid="uid://bsmb1btap6tkv" path="res://img/barra de carga/carga_96.png" id="122_g1wq8"]
-[ext_resource type="Texture2D" uid="uid://dej6px2604tgn" path="res://img/nucleo_01/tarea_2/red_3.png" id="123_ad380"]
+[ext_resource type="Texture2D" uid="uid://dej6px2604tgn" path="res://img/nucleo_1/tarea_2/red_3.png" id="123_ad380"]
 [ext_resource type="PackedScene" uid="uid://c0pnxckwulqw5" path="res://scenes/actividades/presionar_anim.tscn" id="124_ugq77"]
-[ext_resource type="Texture2D" uid="uid://b4dhorxs58qoc" path="res://img/nucleo_01/tarea_1/enviar.png" id="124_vf85d"]
-[ext_resource type="Texture2D" uid="uid://p6gwj3wiarhk" path="res://img/nucleo_01/tarea_1/enviar2.png" id="125_a8ou6"]
-[ext_resource type="Texture2D" uid="uid://cfxmbl77jxa2s" path="res://img/nucleo_01/tarea_2/info_2.png" id="126_s228v"]
+[ext_resource type="Texture2D" uid="uid://b4dhorxs58qoc" path="res://img/nucleo_1/tarea_1/enviar.png" id="124_vf85d"]
+[ext_resource type="Texture2D" uid="uid://p6gwj3wiarhk" path="res://img/nucleo_1/tarea_1/enviar2.png" id="125_a8ou6"]
+[ext_resource type="Texture2D" uid="uid://cfxmbl77jxa2s" path="res://img/nucleo_1/tarea_2/info_2.png" id="126_s228v"]
 [ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="127_nxxt1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5wwel"]
@@ -507,6 +508,11 @@ centered = false
 position = Vector2(754, 542)
 texture = ExtResource("22_7xbcg")
 
+[node name="Titila" parent="." instance=ExtResource("23_p8x6b")]
+position = Vector2(558, 851)
+scale = Vector2(0.929782, 0.509346)
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 587.5
 offset_top = 871.5
@@ -540,6 +546,12 @@ texture = ExtResource("123_ad380")
 
 [node name="Presionar" parent="." instance=ExtResource("124_ugq77")]
 modulate = Color(0.0745098, 0.866667, 0.0588235, 1)
+
+[node name="Titila2" parent="." instance=ExtResource("23_p8x6b")]
+visible = false
+position = Vector2(631, 857)
+scale = Vector2(0.539951, 0.448598)
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
 
 [node name="Enviar" type="TextureButton" parent="."]
 visible = false

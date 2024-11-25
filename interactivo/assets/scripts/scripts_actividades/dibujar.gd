@@ -31,7 +31,6 @@ func _ready():
 	$AnimatedSprite2D.play()
 
 func _process(delta):
-
 	borrador.position = viewport.get_mouse_position()
 	if Input.is_action_pressed("mouse_left"):
 		borrador.visible = true
@@ -45,13 +44,11 @@ func _draw_to_accumulated_texture():
 	accumulated_texture.update(img)
 	capa_mascara.texture = accumulated_texture
 
-
 func _zona_cumplida():
 	zonas += 1
 	if zonas == 9:
 		arriba.visible = false
 		$BotonS.visible = true
-
 
 func _on_boton_s_pressed():
 	emit_signal("actividad_finalizada")

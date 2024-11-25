@@ -5,4 +5,3 @@ res://scenes/llamada_l.tscn
 res://scenes/llamada_s.tscn
 res://scenes/inicio/instrucciones.tscn
 res://scenes/inicio/video_introduccion.tscn
-res://assets/scripts/llamada.gd

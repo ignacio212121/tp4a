@@ -69,8 +69,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -189.5
+offset_top = -191.0
+offset_right = 890.5
+offset_bottom = 889.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.4, 0.4)
 stream = SubResource("VideoStreamTheora_g2aoc")
 loop = true
 
