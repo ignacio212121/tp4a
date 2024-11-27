@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://assets/scripts/llamada.gd" id="1_ax2i4"]
 [ext_resource type="Script" path="res://assets/scripts/osc_receiver.gd" id="3_rvgf8"]
-[ext_resource type="Texture2D" uid="uid://b3y6316qble6m" path="res://assets/sprites/llamadas_finalizadas.png" id="6_fji2q"]
+[ext_resource type="Texture2D" uid="uid://byd2xbxahvei4" path="res://assets/sprites/llamadas_finalizadas.png" id="6_fji2q"]
 [ext_resource type="Script" path="res://addons/godOSC/scripts/OSCServer.gd" id="22_epe1x"]
 [ext_resource type="Script" path="res://addons/godOSC/scripts/OSCClient.gd" id="24_ph7x7"]
 [ext_resource type="Script" path="res://assets/scripts/osc_message.gd" id="25_pdlhb"]

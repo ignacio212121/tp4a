@@ -30,12 +30,12 @@ func actualizar_animacion(video_name):
 	$SubViewport/VideoStreamPlayer.stream.set_file("res://assets/videos/llamada_0" + 
 	str(num_linea) + "/" + str(video_name) + ".ogv")
 
-
 func _on_video_stream_player_finished():
 	if not esperando:
 		$Elementos/Chat.nuevo_mensaje_chat("[MensajeDeUsuario]" + datos[actividad]["mensaje_usuario"] + "\n")
 		esperando = true
 		actualizar_animacion("esperando")
+		$AudioStreamPlayer.play()
 		iniciar_video()
 		$SubViewport/VideoStreamPlayer.loop = true
 		emit_signal("instruccion_terminada")
@@ -44,6 +44,7 @@ func siguiente_actividad():
 	$Elementos/Chat.nuevo_mensaje_chat("[CodigoCreativo.IA]" + datos[actividad]["respuesta_ia"] + "\n")
 	actividad += 1
 	esperando = false
+	$AudioStreamPlayer.stop()
 	if actividad >= datos.size():
 		emit_signal("llamada_finalizada")
 	else:

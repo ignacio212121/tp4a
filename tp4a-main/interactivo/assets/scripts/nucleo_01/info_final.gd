@@ -13,6 +13,7 @@ func _on_timer_1_timeout() -> void:
 
 func _on_timer_2_timeout():
 	$BotonL.visible = true
+	$Titila.visible = true
 
 func _on_boton_l_button_down() -> void:
 	emit_signal("actividad_terminada")

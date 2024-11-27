@@ -21,3 +21,17 @@ func _on_button_button_down() -> void:
 
 func _on_boton_m_button_down() -> void:
 	emit_signal("actividad_terminada")
+
+
+func _on_verde_mal_button_down() -> void:
+	$Mal.visible = true
+	$Mal/AnimationPlayer.play("mal")
+	$AudioStreamPlayer.play()
+
+func _on_rojo_mal_button_down() -> void:
+	$Mal.visible = true
+	$Mal/AnimationPlayer.play("mal")
+	$AudioStreamPlayer.play()
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	$Mal.visible = false

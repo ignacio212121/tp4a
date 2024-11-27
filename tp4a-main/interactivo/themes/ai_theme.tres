@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://bm1ub45g4i7os"]
 
-[ext_resource type="FontFile" uid="uid://8xw37k07sq4b" path="res://assets/fonts/RobotoMono-Regular.ttf" id="1_ni0mt"]
-[ext_resource type="FontFile" uid="uid://btxkh8gg8mwqh" path="res://assets/fonts/RobotoMono-Medium.ttf" id="2_tgbne"]
+[ext_resource type="FontFile" uid="uid://ctvrj0r17ryrp" path="res://assets/fonts/RobotoMono-Regular.ttf" id="1_ni0mt"]
+[ext_resource type="FontFile" uid="uid://h5dsiqrce30n" path="res://assets/fonts/RobotoMono-Medium.ttf" id="2_tgbne"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8yv0b"]
 bg_color = Color(0, 0, 0, 1)

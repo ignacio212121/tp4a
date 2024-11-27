@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d30mcpvabqr2o"
-path="res://.godot/imported/frame_1_anim.png-b97916c9b3dce3d298bc15adb4f4ddcb.ctex"
+uid="uid://cpwpr5lhllhol"
+path="res://.godot/imported/frame_1_anim.png-d0f91a893238305b0152b69aa045fecb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/nucleo_3/tarea_1/frame_1_anim.png"
-dest_files=["res://.godot/imported/frame_1_anim.png-b97916c9b3dce3d298bc15adb4f4ddcb.ctex"]
+source_file="res://img/nucleo_03/actividad_01/frame_1_anim.png"
+dest_files=["res://.godot/imported/frame_1_anim.png-d0f91a893238305b0152b69aa045fecb.ctex"]
 
 [params]
 

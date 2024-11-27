@@ -16,6 +16,8 @@ signal actividad_finalizada
 var accumulated_texture
 var zonas = 0
 
+var polygon = [Vector2(222, 240), Vector2(1710, 239), Vector2(1079, 908), Vector2(219, 904)]
+
 func _ready():
 	$Label.modulate = color
 	$Marco.modulate = color
@@ -29,6 +31,7 @@ func _ready():
 	accumulated_texture.set_image(viewport.get_texture().get_image())
 	arriba.material.set_shader_parameter("mask_texture", accumulated_texture)
 	$AnimatedSprite2D.play()
+	$Timer.start()
 
 func _process(delta):
 	borrador.position = viewport.get_mouse_position()
@@ -58,3 +61,14 @@ func _on_help_mouse_entered() -> void:
 
 func _on_help_mouse_exited() -> void:
 	$Informacion.visible = false
+
+func _on_timer_timeout() -> void:
+	$AreasInteraccion/Zona0.visible = true
+	$AreasInteraccion/Zona1.visible = true
+	$AreasInteraccion/Zona2.visible = true
+	$AreasInteraccion/Zona3.visible = true
+	$AreasInteraccion/Zona4.visible = true
+	$AreasInteraccion/Zona5.visible = true
+	$AreasInteraccion/Zona6.visible = true
+	$AreasInteraccion/Zona7.visible = true
+	$AreasInteraccion/Zona8.visible = true

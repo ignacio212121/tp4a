@@ -12,7 +12,6 @@ func _on_timer_timeout():
 		index += 1
 	else:
 		$GooglIa/Label/Timer.stop()
-		_mostrar_opciones()
 
 func _on_boton_s_button_down() -> void:
 	$GooglIa/Label/Timer.stop()

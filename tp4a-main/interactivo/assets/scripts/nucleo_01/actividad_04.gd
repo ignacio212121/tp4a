@@ -30,6 +30,7 @@ func _on_boton_m_button_down() -> void:
 	$Felicidades.visible = false
 	$BotonM.visible = false
 	$Titila.visible = false
+	$Glitch/Glitch4.visible = false
 	$Botones/TextureButton/AnimationPlayer.play("parpadeo")
 
 func _on_texture_button_mouse_entered() -> void:

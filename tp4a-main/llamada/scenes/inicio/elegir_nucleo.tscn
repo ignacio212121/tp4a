@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bl022wbkuohoj"]
 
 [ext_resource type="Script" path="res://assets/scripts/elegir_nucleo.gd" id="1_h0i8w"]
-[ext_resource type="Texture2D" uid="uid://bduijvxd577ye" path="res://assets/sprites/intro/intro_frame01.png" id="1_oplm7"]
-[ext_resource type="Texture2D" uid="uid://c7qcjrfymq74c" path="res://assets/sprites/intro/intro_frame02.png" id="2_cl7xn"]
-[ext_resource type="Texture2D" uid="uid://d3qp10og0tw71" path="res://assets/sprites/intro/intro_frame03.png" id="3_ua1m2"]
+[ext_resource type="Texture2D" uid="uid://fmfd1l67oxo4" path="res://assets/sprites/intro/intro_frame01.png" id="1_oplm7"]
+[ext_resource type="Texture2D" uid="uid://byhkifvhvl252" path="res://assets/sprites/intro/intro_frame02.png" id="2_cl7xn"]
+[ext_resource type="Texture2D" uid="uid://cjwy2vlok5cvd" path="res://assets/sprites/intro/intro_frame03.png" id="3_ua1m2"]
 [ext_resource type="PackedScene" uid="uid://drx5frcgg37qy" path="res://scenes/llamada_s.tscn" id="4_1phu5"]
 
 [node name="ElegirNucleo" type="Node2D"]

@@ -31,6 +31,8 @@ func _on_barra_animation_finished() -> void:
 
 func _on_enviar_button_down() -> void:
 	$Info2.visible = true
+	$Titila2.visible = false
+	$Enviar.visible = false
 
 func _on_boton_s_button_down() -> void:
 	emit_signal("actividad_terminada")

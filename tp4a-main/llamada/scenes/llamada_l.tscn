@@ -1,12 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://edik7in6a6us"]
+[gd_scene load_steps=18 format=3 uid="uid://edik7in6a6us"]
 
 [ext_resource type="Script" path="res://assets/scripts/llamada_l.gd" id="1_rchcx"]
-[ext_resource type="Texture2D" uid="uid://dqjmr7x6vjerl" path="res://assets/sprites/call_frame_l.png" id="2_6ftdt"]
+[ext_resource type="Texture2D" uid="uid://bit588fxad5ht" path="res://assets/sprites/call_frame_l.png" id="2_6ftdt"]
 [ext_resource type="Theme" uid="uid://bm1ub45g4i7os" path="res://themes/ai_theme.tres" id="3_jg8el"]
 [ext_resource type="Shader" path="res://assets/shaders/gui.gdshader" id="4_m7l4o"]
-[ext_resource type="Texture2D" uid="uid://cgwvpv43hyfpm" path="res://assets/sprites/intro/radio_animacion/radio_1.png" id="5_xa6iw"]
-[ext_resource type="Texture2D" uid="uid://bdfaqdqfgex6c" path="res://assets/sprites/intro/radio_animacion/radio_2.png" id="6_jokh1"]
-[ext_resource type="Texture2D" uid="uid://0d3yn245fx2a" path="res://assets/sprites/intro/radio_animacion/radio_3.png" id="7_mjnpo"]
+[ext_resource type="Texture2D" uid="uid://bkv48mq0skij4" path="res://assets/sprites/intro/radio_animacion/radio_1.png" id="5_xa6iw"]
+[ext_resource type="Texture2D" uid="uid://c035taclf7dxg" path="res://assets/sprites/intro/radio_animacion/radio_2.png" id="6_jokh1"]
+[ext_resource type="Texture2D" uid="uid://dn6uwx1hwfihr" path="res://assets/sprites/intro/radio_animacion/radio_3.png" id="7_mjnpo"]
+[ext_resource type="AudioStream" uid="uid://dapc7nab8qjue" path="res://assets/audio/Música de elevador- efecto de sonido..mp3" id="9_81wu1"]
 [ext_resource type="PackedScene" uid="uid://brftkxjlho48o" path="res://scenes/chat.tscn" id="33_i83xj"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_mxxat"]
@@ -116,5 +117,9 @@ theme = ExtResource("3_jg8el")
 text = "LINEA N"
 
 [node name="Chat" parent="Elementos" instance=ExtResource("33_i83xj")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_81wu1")
+parameters/looping = true
 
 [connection signal="finished" from="SubViewport/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

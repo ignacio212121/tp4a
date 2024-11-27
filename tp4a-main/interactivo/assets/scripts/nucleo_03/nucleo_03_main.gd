@@ -2,7 +2,7 @@ extends Node2D
 
 @export var actividad_actual = 0
 
-var color: Color = Color("#0017ec")
+var color: Color = Color("#707be2")
 
 var actividad_01: PackedScene = preload("res://scenes/nucleo_03/actividad_01.tscn")
 var actividad_02: PackedScene = preload("res://scenes/nucleo_03/actividad_02.tscn")

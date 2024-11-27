@@ -1,28 +1,29 @@
 [gd_scene load_steps=28 format=3 uid="uid://csmeaxa4g6wmb"]
 
 [ext_resource type="Script" path="res://assets/scripts/scripts_actividades/dibujar.gd" id="1_ds8yn"]
-[ext_resource type="Texture2D" uid="uid://4hx61tjemxyd" path="res://img/sprites/marco.png" id="2_nhu46"]
-[ext_resource type="Texture2D" uid="uid://wrq1s28qwau" path="res://img/sprites/borrador.png" id="3_y1u5r"]
-[ext_resource type="Texture2D" uid="uid://dmo77wtlahxku" path="res://img/sprites/placeholder_abajo.png" id="4_io414"]
+[ext_resource type="Texture2D" uid="uid://cuf3l54lrskkl" path="res://img/sprites/marco.png" id="2_nhu46"]
+[ext_resource type="Texture2D" uid="uid://cjg4rn8morxnu" path="res://img/sprites/borrador.png" id="3_y1u5r"]
+[ext_resource type="Texture2D" uid="uid://cky18237u7v6j" path="res://img/sprites/placeholder_abajo.png" id="4_io414"]
 [ext_resource type="Theme" uid="uid://bm1ub45g4i7os" path="res://themes/ai_theme.tres" id="4_sd87m"]
-[ext_resource type="Texture2D" uid="uid://on5p778c7ep3" path="res://img/nucleo_5/botones/help.png" id="5_fhngj"]
 [ext_resource type="Shader" path="res://assets/shaders/transparencia.gdshader" id="5_iuy0o"]
-[ext_resource type="Texture2D" uid="uid://b75qlnk12j3eb" path="res://img/sprites/placeholder_arriba.jpg" id="6_hhqj5"]
+[ext_resource type="Texture2D" uid="uid://cnvwckwl7shch" path="res://img/sprites/placeholder_arriba.jpg" id="6_hhqj5"]
 [ext_resource type="Script" path="res://assets/scripts/scripts_actividades/zonas_dibujar.gd" id="8_i6245"]
 [ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="9_a7tif"]
-[ext_resource type="Texture2D" uid="uid://g0uirbmqwoqb" path="res://img/nucleo_5/botones/informacion.png" id="11_7acla"]
-[ext_resource type="Texture2D" uid="uid://c70mvtlc3pfre" path="res://img/nucleo_05/dibujo_anim/dibujo_01.png" id="12_xo22s"]
-[ext_resource type="Texture2D" uid="uid://ccby46mk716rx" path="res://img/nucleo_05/dibujo_anim/dibujo_02.png" id="13_k8fwo"]
-[ext_resource type="Texture2D" uid="uid://dbd0c5ggl48ug" path="res://img/nucleo_05/dibujo_anim/dibujo_03.png" id="14_0yghn"]
-[ext_resource type="Texture2D" uid="uid://b7a1dufbj7h7y" path="res://img/nucleo_05/dibujo_anim/dibujo_04.png" id="15_qevuk"]
-[ext_resource type="Texture2D" uid="uid://m81swbfwdvwn" path="res://img/nucleo_05/dibujo_anim/dibujo_05.png" id="16_x4yhu"]
-[ext_resource type="Texture2D" uid="uid://bhkrhwn780agl" path="res://img/nucleo_05/dibujo_anim/dibujo_06.png" id="17_6poi5"]
-[ext_resource type="Texture2D" uid="uid://pcsagxxl2wm7" path="res://img/nucleo_05/dibujo_anim/dibujo_07.png" id="18_hdnro"]
-[ext_resource type="Texture2D" uid="uid://dtiu5ujs633go" path="res://img/nucleo_05/dibujo_anim/dibujo_08.png" id="19_yu5jk"]
-[ext_resource type="Texture2D" uid="uid://5eqrt5oxejkl" path="res://img/nucleo_05/dibujo_anim/dibujo_09.png" id="20_widxn"]
+[ext_resource type="Texture2D" uid="uid://dywyfvjxnyrd5" path="res://img/nucleo_05/dibujo_anim/dibujo_01.png" id="12_xo22s"]
+[ext_resource type="Texture2D" uid="uid://bfe4fm4ngiugu" path="res://img/nucleo_05/dibujo_anim/dibujo_02.png" id="13_k8fwo"]
+[ext_resource type="Texture2D" uid="uid://cncct77xnjj7t" path="res://img/nucleo_05/dibujo_anim/dibujo_03.png" id="14_0yghn"]
+[ext_resource type="Texture2D" uid="uid://cf87aw81qe784" path="res://img/nucleo_05/dibujo_anim/dibujo_04.png" id="15_qevuk"]
+[ext_resource type="Texture2D" uid="uid://bb2lxp3e4yso4" path="res://img/nucleo_05/dibujo_anim/dibujo_05.png" id="16_x4yhu"]
+[ext_resource type="Texture2D" uid="uid://lh2vf2j0kfh7" path="res://img/nucleo_05/dibujo_anim/dibujo_06.png" id="17_6poi5"]
+[ext_resource type="Texture2D" uid="uid://cn2jcecq5r248" path="res://img/nucleo_05/dibujo_anim/dibujo_07.png" id="18_hdnro"]
+[ext_resource type="Texture2D" uid="uid://fm6wcdymboah" path="res://img/nucleo_05/dibujo_anim/dibujo_08.png" id="19_yu5jk"]
+[ext_resource type="Texture2D" uid="uid://dwnkp5ukq0mmm" path="res://img/nucleo_05/dibujo_anim/dibujo_09.png" id="20_widxn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lnjbd"]
 radius = 28.0713
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r01ya"]
+load_path = "res://.godot/imported/help.png-0b6cedeed0b94a5ce14cb9da785b35bb.ctex"
 
 [sub_resource type="Gradient" id="Gradient_24rcq"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -40,6 +41,9 @@ shader_parameter/mask_texture = SubResource("ViewportTexture_ac3nf")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2kofn"]
 radius = 41.0122
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x6pdw"]
+load_path = "res://.godot/imported/informacion.png-41ca295eae3388d205136f0f25e5a31e.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h4owr"]
 animations = [{
@@ -108,7 +112,7 @@ position = Vector2(108, 66)
 shape = SubResource("CircleShape2D_lnjbd")
 
 [node name="Sprite2D" type="Sprite2D" parent="Help"]
-texture = ExtResource("5_fhngj")
+texture = SubResource("CompressedTexture2D_r01ya")
 
 [node name="Marco" type="Sprite2D" parent="."]
 position = Vector2(964, 553)
@@ -160,68 +164,195 @@ metadata/_edit_use_anchors_ = true
 [node name="AreasInteraccion" type="Node2D" parent="."]
 
 [node name="Zona0" type="Area2D" parent="AreasInteraccion"]
-position = Vector2(73, 380)
+visible = false
+position = Vector2(708, 346)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("8_i6245")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasInteraccion/Zona0"]
-position = Vector2(668, 0)
+position = Vector2(-0.498962, -0.0776611)
 shape = SubResource("CircleShape2D_2kofn")
+debug_color = Color(0.968627, 0.6, 0.701961, 1)
+
+[node name="Sprite2D2" type="Sprite2D" parent="AreasInteraccion/Zona0"]
+modulate = Color(1, 0.239216, 0, 0.435294)
+position = Vector2(0.500977, -0.0776611)
+scale = Vector2(0.918466, 0.891696)
+texture = ExtResource("3_y1u5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreasInteraccion/Zona0"]
+modulate = Color(0.101961, 0.101961, 0.101961, 0.788235)
+position = Vector2(0.500977, -0.0776733)
+scale = Vector2(0.854369, 0.834952)
+texture = ExtResource("3_y1u5r")
 
 [node name="Zona1" type="Area2D" parent="AreasInteraccion"]
-position = Vector2(948, 393)
+visible = false
+position = Vector2(979, 349)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("8_i6245")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasInteraccion/Zona1"]
 shape = SubResource("CircleShape2D_2kofn")
 
+[node name="Sprite2D2" type="Sprite2D" parent="AreasInteraccion/Zona1"]
+modulate = Color(1, 0.239216, 0, 0.435294)
+position = Vector2(0.301025, -0.0776672)
+scale = Vector2(0.918466, 0.891696)
+texture = ExtResource("3_y1u5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreasInteraccion/Zona1"]
+modulate = Color(0.101961, 0.101961, 0.101961, 0.788235)
+position = Vector2(0.301086, -0.0776794)
+scale = Vector2(0.854369, 0.834952)
+texture = ExtResource("3_y1u5r")
+
 [node name="Zona2" type="Area2D" parent="AreasInteraccion"]
-position = Vector2(1125, 393)
+visible = false
+position = Vector2(1255, 346)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("8_i6245")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasInteraccion/Zona2"]
 shape = SubResource("CircleShape2D_2kofn")
 
+[node name="Sprite2D2" type="Sprite2D" parent="AreasInteraccion/Zona2"]
+modulate = Color(1, 0.239216, 0, 0.435294)
+position = Vector2(0.301025, -0.0776672)
+scale = Vector2(0.918466, 0.891696)
+texture = ExtResource("3_y1u5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreasInteraccion/Zona2"]
+modulate = Color(0.101961, 0.101961, 0.101961, 0.788235)
+position = Vector2(0.301086, -0.0776794)
+scale = Vector2(0.854369, 0.834952)
+texture = ExtResource("3_y1u5r")
+
 [node name="Zona3" type="Area2D" parent="AreasInteraccion"]
-position = Vector2(740, 552)
+visible = false
+position = Vector2(707, 587)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("8_i6245")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasInteraccion/Zona3"]
 shape = SubResource("CircleShape2D_2kofn")
 
+[node name="Sprite2D2" type="Sprite2D" parent="AreasInteraccion/Zona3"]
+modulate = Color(1, 0.239216, 0, 0.435294)
+position = Vector2(0.301025, -0.0776672)
+scale = Vector2(0.918466, 0.891696)
+texture = ExtResource("3_y1u5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreasInteraccion/Zona3"]
+modulate = Color(0.101961, 0.101961, 0.101961, 0.788235)
+position = Vector2(0.301086, -0.0776794)
+scale = Vector2(0.854369, 0.834952)
+texture = ExtResource("3_y1u5r")
+
 [node name="Zona4" type="Area2D" parent="AreasInteraccion"]
-position = Vector2(948, 556)
+visible = false
+position = Vector2(989, 576)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("8_i6245")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasInteraccion/Zona4"]
 shape = SubResource("CircleShape2D_2kofn")
 
+[node name="Sprite2D2" type="Sprite2D" parent="AreasInteraccion/Zona4"]
+modulate = Color(1, 0.239216, 0, 0.435294)
+position = Vector2(0.301025, -0.0776672)
+scale = Vector2(0.918466, 0.891696)
+texture = ExtResource("3_y1u5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreasInteraccion/Zona4"]
+modulate = Color(0.101961, 0.101961, 0.101961, 0.788235)
+position = Vector2(0.301086, -0.0776794)
+scale = Vector2(0.854369, 0.834952)
+texture = ExtResource("3_y1u5r")
+
 [node name="Zona5" type="Area2D" parent="AreasInteraccion"]
-position = Vector2(1127, 550)
+visible = false
+position = Vector2(1267, 577)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("8_i6245")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasInteraccion/Zona5"]
 shape = SubResource("CircleShape2D_2kofn")
 
+[node name="Sprite2D2" type="Sprite2D" parent="AreasInteraccion/Zona5"]
+modulate = Color(1, 0.239216, 0, 0.435294)
+position = Vector2(0.301025, -0.0776672)
+scale = Vector2(0.918466, 0.891696)
+texture = ExtResource("3_y1u5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreasInteraccion/Zona5"]
+modulate = Color(0.101961, 0.101961, 0.101961, 0.788235)
+position = Vector2(0.301086, -0.0776794)
+scale = Vector2(0.854369, 0.834952)
+texture = ExtResource("3_y1u5r")
+
 [node name="Zona6" type="Area2D" parent="AreasInteraccion"]
-position = Vector2(740, 733)
+visible = false
+position = Vector2(710, 833)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("8_i6245")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasInteraccion/Zona6"]
 shape = SubResource("CircleShape2D_2kofn")
 
+[node name="Sprite2D2" type="Sprite2D" parent="AreasInteraccion/Zona6"]
+modulate = Color(1, 0.239216, 0, 0.435294)
+position = Vector2(0.301025, -0.0776672)
+scale = Vector2(0.918466, 0.891696)
+texture = ExtResource("3_y1u5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreasInteraccion/Zona6"]
+modulate = Color(0.101961, 0.101961, 0.101961, 0.788235)
+position = Vector2(0.301086, -0.0776794)
+scale = Vector2(0.854369, 0.834952)
+texture = ExtResource("3_y1u5r")
+
 [node name="Zona7" type="Area2D" parent="AreasInteraccion"]
-position = Vector2(948, 735)
+visible = false
+position = Vector2(1004, 835)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("8_i6245")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasInteraccion/Zona7"]
 shape = SubResource("CircleShape2D_2kofn")
 
+[node name="Sprite2D2" type="Sprite2D" parent="AreasInteraccion/Zona7"]
+modulate = Color(1, 0.239216, 0, 0.435294)
+position = Vector2(0.301025, -0.0776672)
+scale = Vector2(0.918466, 0.891696)
+texture = ExtResource("3_y1u5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreasInteraccion/Zona7"]
+modulate = Color(0.101961, 0.101961, 0.101961, 0.788235)
+position = Vector2(0.301086, -0.0776794)
+scale = Vector2(0.854369, 0.834952)
+texture = ExtResource("3_y1u5r")
+
 [node name="Zona8" type="Area2D" parent="AreasInteraccion"]
-position = Vector2(1130, 727)
+visible = false
+position = Vector2(1270, 828)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("8_i6245")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasInteraccion/Zona8"]
 shape = SubResource("CircleShape2D_2kofn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="AreasInteraccion/Zona8"]
+modulate = Color(1, 0.239216, 0, 0.435294)
+position = Vector2(0.301025, -0.0776672)
+scale = Vector2(0.918466, 0.891696)
+texture = ExtResource("3_y1u5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreasInteraccion/Zona8"]
+modulate = Color(0.101961, 0.101961, 0.101961, 0.788235)
+position = Vector2(0.301086, -0.0776794)
+scale = Vector2(0.854369, 0.834952)
+texture = ExtResource("3_y1u5r")
 
 [node name="Node2D" type="Node2D" parent="AreasInteraccion"]
 
@@ -237,7 +368,7 @@ texto = "ENVIAR"
 [node name="Informacion" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(438, 368)
-texture = ExtResource("11_7acla")
+texture = SubResource("CompressedTexture2D_x6pdw")
 centered = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -245,6 +376,9 @@ position = Vector2(954, 822)
 scale = Vector2(0.696203, 0.692805)
 sprite_frames = SubResource("SpriteFrames_h4owr")
 frame_progress = 0.231569
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 35.0
 
 [connection signal="mouse_entered" from="Help" to="." method="_on_help_mouse_entered"]
 [connection signal="mouse_exited" from="Help" to="." method="_on_help_mouse_exited"]
@@ -267,3 +401,4 @@ frame_progress = 0.231569
 [connection signal="mouse_entered" from="AreasInteraccion/Zona8" to="AreasInteraccion/Zona8" method="_on_mouse_entered"]
 [connection signal="zona_cumplida" from="AreasInteraccion/Zona8" to="." method="_zona_cumplida"]
 [connection signal="pressed" from="BotonS" to="." method="_on_boton_s_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

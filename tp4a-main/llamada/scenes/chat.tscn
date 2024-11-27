@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://brftkxjlho48o"]
 
 [ext_resource type="Script" path="res://assets/scripts/chat.gd" id="1_2duug"]
-[ext_resource type="Texture2D" uid="uid://byk41ncxbnnxb" path="res://assets/sprites/chat.png" id="1_o1gga"]
-[ext_resource type="Texture2D" uid="uid://dt0m7gbqr3h2n" path="res://assets/sprites/titulo.png" id="2_gmvif"]
-[ext_resource type="FontFile" uid="uid://lavyopd271pq" path="res://assets/fonts/RobotoMono-Light.ttf" id="2_mphe7"]
-[ext_resource type="FontFile" uid="uid://btxkh8gg8mwqh" path="res://assets/fonts/RobotoMono-Medium.ttf" id="3_jq0r3"]
+[ext_resource type="Texture2D" uid="uid://dcv5togkhok8i" path="res://assets/sprites/chat.png" id="1_o1gga"]
+[ext_resource type="Texture2D" uid="uid://bq422coeelbpr" path="res://assets/sprites/titulo.png" id="2_gmvif"]
+[ext_resource type="FontFile" uid="uid://1qoxcrjd0k2r" path="res://assets/fonts/RobotoMono-Light.ttf" id="2_mphe7"]
+[ext_resource type="FontFile" uid="uid://c4uwu43b584fy" path="res://assets/fonts/RobotoMono-Medium.ttf" id="3_jq0r3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mrbs7"]
 font = ExtResource("3_jq0r3")

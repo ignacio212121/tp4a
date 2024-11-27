@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://owbsseyjq5yv"]
 
 [ext_resource type="Script" path="res://assets/scripts/video_introduccion.gd" id="1_b6hk3"]
-[ext_resource type="Texture2D" uid="uid://bduijvxd577ye" path="res://assets/sprites/intro/intro_frame01.png" id="1_fl5e6"]
-[ext_resource type="Texture2D" uid="uid://c7qcjrfymq74c" path="res://assets/sprites/intro/intro_frame02.png" id="2_u2f56"]
-[ext_resource type="Texture2D" uid="uid://d3qp10og0tw71" path="res://assets/sprites/intro/intro_frame03.png" id="3_tg72b"]
+[ext_resource type="Texture2D" uid="uid://fmfd1l67oxo4" path="res://assets/sprites/intro/intro_frame01.png" id="1_fl5e6"]
+[ext_resource type="Texture2D" uid="uid://byhkifvhvl252" path="res://assets/sprites/intro/intro_frame02.png" id="2_u2f56"]
+[ext_resource type="Texture2D" uid="uid://cjwy2vlok5cvd" path="res://assets/sprites/intro/intro_frame03.png" id="3_tg72b"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_ljf6q"]
 viewport_path = NodePath("Inicio1/SubViewport")
