@@ -152,7 +152,7 @@
 [ext_resource type="Texture2D" uid="uid://b0ql0e0b50asp" path="res://img/nucleo_04/actividad_01/paso_6.png" id="150_8j4rm"]
 [ext_resource type="Texture2D" uid="uid://crfleyr8jodps" path="res://img/nucleo_04/actividad_01/info.png" id="151_qxmji"]
 [ext_resource type="PackedScene" uid="uid://sxca04083gd4" path="res://scenes/titila.tscn" id="152_1yvaw"]
-[ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="152_s3h55"]
+[ext_resource type="PackedScene" uid="uid://bsx2wekvb5qet" path="res://scenes/elementos/boton_m.tscn" id="153_0gl8u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0i5tq"]
 animations = [{
@@ -766,16 +766,16 @@ texture = ExtResource("151_qxmji")
 
 [node name="Titila" parent="." instance=ExtResource("152_1yvaw")]
 visible = false
-position = Vector2(1608, 886)
-scale = Vector2(0.392252, 0.331775)
+position = Vector2(930, 872)
+scale = Vector2(1.01211, 0.46729)
 color = Color(0.615686, 0.0313726, 0.909804, 1)
 
-[node name="BotonS" parent="." instance=ExtResource("152_s3h55")]
+[node name="BotonM" parent="." instance=ExtResource("153_0gl8u")]
 visible = false
-offset_left = 1625.0
-offset_top = 899.0
-offset_right = 1753.0
-offset_bottom = 944.0
+offset_left = 956.0
+offset_top = 890.0
+offset_right = 1320.0
+offset_bottom = 958.0
 color = Color(0.615686, 0.0313726, 0.909804, 1)
 texto = "ENVIAR"
 
@@ -786,4 +786,4 @@ texto = "ENVIAR"
 [connection signal="animation_finished" from="Pasos/Paso4/AnimationPlayer4" to="." method="_on_animation_player_4_animation_finished"]
 [connection signal="animation_finished" from="Pasos/Paso5/AnimationPlayer5" to="." method="_on_animation_player_5_animation_finished"]
 [connection signal="animation_finished" from="Pasos/Paso6/AnimationPlayer6" to="." method="_on_animation_player_6_animation_finished"]
-[connection signal="button_down" from="BotonS" to="." method="_on_boton_s_button_down"]
+[connection signal="button_down" from="BotonM" to="." method="_on_boton_m_button_down"]

@@ -749,6 +749,7 @@ offset_bottom = 1079.0
 
 [node name="Glitch" type="ColorRect" parent="Glitch"]
 material = SubResource("ShaderMaterial_tw0hr")
+layout_mode = 0
 offset_left = -623.0
 offset_top = 425.0
 offset_right = -5.0
@@ -756,12 +757,14 @@ offset_bottom = 1049.0
 
 [node name="Glitch3" type="ColorRect" parent="Glitch"]
 material = SubResource("ShaderMaterial_tw0hr")
+layout_mode = 0
 offset_left = -628.0
 offset_right = 40.0
 offset_bottom = 91.0
 
 [node name="Glitch2" type="ColorRect" parent="Glitch"]
 material = SubResource("ShaderMaterial_tw0hr")
+layout_mode = 0
 offset_left = -626.0
 offset_top = -1.0
 offset_right = -500.0
@@ -769,6 +772,7 @@ offset_bottom = 452.0
 
 [node name="Glitch4" type="ColorRect" parent="Glitch"]
 material = SubResource("ShaderMaterial_tw0hr")
+layout_mode = 0
 offset_left = -495.0
 offset_top = -12.0
 offset_right = 123.0

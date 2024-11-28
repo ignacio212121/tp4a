@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://e8lkbwp71apd"]
+[gd_scene load_steps=33 format=3 uid="uid://e8lkbwp71apd"]
 
 [ext_resource type="Script" path="res://assets/scripts/conectar_audio.gd" id="1_gedji"]
 [ext_resource type="Texture2D" uid="uid://fmfd1l67oxo4" path="res://assets/sprites/intro/intro_frame01.png" id="2_6ruqy"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://ddsde3w4fd3nf" path="res://assets/sprites/loading/loading_21.png" id="28_fkepq"]
 [ext_resource type="Texture2D" uid="uid://d0wxubxrtb0eu" path="res://assets/sprites/loading/loading_22.png" id="29_jbk04"]
 [ext_resource type="Texture2D" uid="uid://d1bovvpb6knog" path="res://assets/sprites/loading/loading_23.png" id="30_udi15"]
+[ext_resource type="AudioStream" uid="uid://bbnmdvbich58l" path="res://assets/audio/MUSICA DE ASCENSOR - RELAXING BOSSA (ELEVATOR MUSIC).mp3" id="31_bptd3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d26h2"]
 animations = [{
@@ -181,5 +182,10 @@ modulate = Color(0.866667, 0.592157, 0.0588235, 1)
 position = Vector2(954, 512)
 scale = Vector2(0.673228, 0.649606)
 sprite_frames = SubResource("SpriteFrames_d26h2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_bptd3")
+volume_db = -9.0
+parameters/looping = true
 
 [connection signal="pressed" from="ConectarAudio" to="." method="_on_conectar_audio_pressed"]

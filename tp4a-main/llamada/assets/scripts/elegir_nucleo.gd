@@ -16,13 +16,14 @@ func _ready() -> void:
 	$Llamadas/LlamadaS4.iniciar_video()
 	$Llamadas/LlamadaS5.actualizar_linea()
 	$Llamadas/LlamadaS5.iniciar_video()
+	$AudioStreamPlayer.play()
 
 func _on_linea_elegida(num_linea, llamada):
 	$Llamadas.remove_child(llamada)
 	llamada.queue_free()
 	llamada = null
 	get_parent().get_parent().ir_a_llamada(num_linea)
-	
+	$AudioStreamPlayer.stop()
 
 func detener_llamadas():
 	for llamada in $Llamadas.get_children():

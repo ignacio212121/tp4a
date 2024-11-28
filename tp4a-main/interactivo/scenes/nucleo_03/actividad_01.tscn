@@ -507,7 +507,6 @@ imagen = ExtResource("111_2godn")
 [node name="Frame1" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(290, 222)
-scale = Vector2(1, 1)
 texture = ExtResource("110_qmnng")
 
 [node name="Frame2" type="Sprite2D" parent="."]

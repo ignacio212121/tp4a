@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bkv48mq0skij4" path="res://assets/sprites/intro/radio_animacion/radio_1.png" id="5_xa6iw"]
 [ext_resource type="Texture2D" uid="uid://c035taclf7dxg" path="res://assets/sprites/intro/radio_animacion/radio_2.png" id="6_jokh1"]
 [ext_resource type="Texture2D" uid="uid://dn6uwx1hwfihr" path="res://assets/sprites/intro/radio_animacion/radio_3.png" id="7_mjnpo"]
-[ext_resource type="AudioStream" uid="uid://dapc7nab8qjue" path="res://assets/audio/Música de elevador- efecto de sonido..mp3" id="9_81wu1"]
+[ext_resource type="AudioStream" uid="uid://bbnmdvbich58l" path="res://assets/audio/MUSICA DE ASCENSOR - RELAXING BOSSA (ELEVATOR MUSIC).mp3" id="9_5mg4d"]
 [ext_resource type="PackedScene" uid="uid://brftkxjlho48o" path="res://scenes/chat.tscn" id="33_i83xj"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_mxxat"]
@@ -119,7 +119,8 @@ text = "LINEA N"
 [node name="Chat" parent="Elementos" instance=ExtResource("33_i83xj")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_81wu1")
+stream = ExtResource("9_5mg4d")
+volume_db = -9.0
 parameters/looping = true
 
 [connection signal="finished" from="SubViewport/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

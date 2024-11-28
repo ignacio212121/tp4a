@@ -29,49 +29,46 @@ func _on_boton_m_button_down() -> void:
 	$Fondo/Dalle.visible = true
 	$Fondo/Ideogram.visible = true
 	$Fondo/Leonardo.visible = true
-	$Fondo/BotonS.visible = true
+	$BotonMFinal.visible = true
+	$Titila.visible = true
+	$Fondo/Titila.visible = false
 	$Button1.visible = true
 	$Button2.visible = true
 	$Button3.visible = true
 	$Presionar.visible = false
-	$Fondo/Titila.visible = false
-	$Fondo/Titila2.visible = true
-
-func _on_button_1_mouse_entered() -> void:
-	$LeonardoDisabled.visible = true
-	$DalleDisabled.visible = true
-	$IdeogramDisabled.visible = true
 	$LeonardoInfo.visible = true
-
-func _on_button_2_mouse_entered() -> void:
-	$LeonardoDisabled.visible = true
-	$DalleDisabled.visible = true
-	$IdeogramDisabled.visible = true
 	$DalleInfo.visible = true
-
-func _on_button_3_mouse_entered() -> void:
-	$LeonardoDisabled.visible = true
-	$DalleDisabled.visible = true
-	$IdeogramDisabled.visible = true
 	$IdeogramInfo.visible = true
 
-func _on_button_1_mouse_exited() -> void:
-	$LeonardoDisabled.visible = false
-	$DalleDisabled.visible = false
-	$IdeogramDisabled.visible = false
+func _on_button_1_mouse_entered() -> void:
+	$IdeogramInfo.visible = false
+	$DalleInfo.visible = false
+	$LeonardoDisabled.visible = true
+
+func _on_button_2_mouse_entered() -> void:
+	$IdeogramInfo.visible = false
 	$LeonardoInfo.visible = false
+	$DalleDisabled.visible = true
+
+func _on_button_3_mouse_entered() -> void:
+	$LeonardoInfo.visible = false
+	$DalleInfo.visible = false
+	$IdeogramDisabled.visible = true
+
+func _on_button_1_mouse_exited() -> void:
+	$IdeogramInfo.visible = true
+	$DalleInfo.visible = true
+	$LeonardoDisabled.visible = false
 
 func _on_button_2_mouse_exited() -> void:
-	$LeonardoDisabled.visible = false
+	$IdeogramInfo.visible = true
+	$LeonardoInfo.visible = true
 	$DalleDisabled.visible = false
-	$IdeogramDisabled.visible = false
-	$DalleInfo.visible = false
 
 func _on_button_3_mouse_exited() -> void:
-	$LeonardoDisabled.visible = false
-	$DalleDisabled.visible = false
+	$LeonardoInfo.visible = true
+	$DalleInfo.visible = true
 	$IdeogramDisabled.visible = false
-	$IdeogramInfo.visible = false
 
-func _on_boton_s_button_down() -> void:
+func _on_boton_m_final_button_down() -> void:
 	emit_signal("actividad_terminada")

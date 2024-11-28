@@ -3,16 +3,16 @@
 [ext_resource type="Script" path="res://assets/scripts/iniciar_intercativo.gd" id="1_2hdbf"]
 [ext_resource type="Texture2D" uid="uid://fmfd1l67oxo4" path="res://assets/sprites/intro/intro_frame01.png" id="1_7tpq3"]
 [ext_resource type="PackedScene" uid="uid://bt58lk6jwxluf" path="res://scenes/botones/boton_l.tscn" id="1_lhmkw"]
+[ext_resource type="AudioStream" uid="uid://bbnmdvbich58l" path="res://assets/audio/MUSICA DE ASCENSOR - RELAXING BOSSA (ELEVATOR MUSIC).mp3" id="2_ckioc"]
 [ext_resource type="Texture2D" uid="uid://byhkifvhvl252" path="res://assets/sprites/intro/intro_frame02.png" id="2_qh1pi"]
 [ext_resource type="Texture2D" uid="uid://cjwy2vlok5cvd" path="res://assets/sprites/intro/intro_frame03.png" id="3_ym8mx"]
-[ext_resource type="AudioStream" uid="uid://dapc7nab8qjue" path="res://assets/audio/Música de elevador- efecto de sonido..mp3" id="6_kx86t"]
 
 [node name="IniciarIntercativo" type="Node2D"]
 script = ExtResource("1_2hdbf")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_kx86t")
-volume_db = 0.1
+stream = ExtResource("2_ckioc")
+volume_db = -9.0
 parameters/looping = true
 
 [node name="Borde" type="Node2D" parent="."]

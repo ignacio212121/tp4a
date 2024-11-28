@@ -13,6 +13,7 @@ func _on_idea_22_pressed() -> void:
 	$Idea22.modulate = Color("#ffffff5d")
 	$Idea11.modulate = Color("#ffffff5d")
 	$Presionar.visible = false
+	$Idea22.texture_hover = null
 	$Timer.start()
 
 func _on_timer_timeout() -> void:

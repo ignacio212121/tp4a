@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://drx5frcgg37qy"]
 
 [ext_resource type="Script" path="res://assets/scripts/llamada_s.gd" id="1_1qfwm"]
-[ext_resource type="Texture2D" uid="uid://cd2gqmpcrce1e" path="res://assets/sprites/call_frame_small.png" id="2_0vrpd"]
+[ext_resource type="Texture2D" uid="uid://c304asxwu5s0y" path="res://assets/sprites/call_frame_small.png" id="2_0vrpd"]
 [ext_resource type="Theme" uid="uid://bm1ub45g4i7os" path="res://themes/ai_theme.tres" id="3_cdoyl"]
 [ext_resource type="Shader" path="res://assets/shaders/gui.gdshader" id="4_4vpp2"]
 

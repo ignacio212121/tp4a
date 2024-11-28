@@ -14,9 +14,6 @@ func _on_barra_animation_finished() -> void:
 	$Pasos/Paso1/AnimationPlayer.play("fade")
 	$Pasos/Paso1.visible = true
 
-func _on_boton_s_button_down() -> void:
-	emit_signal("actividad_terminada")
-
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	$Pasos/Paso2.visible = true
 	$Pasos/Paso2/AnimationPlayer2.play("fade")
@@ -40,4 +37,7 @@ func _on_animation_player_5_animation_finished(anim_name: StringName) -> void:
 func _on_animation_player_6_animation_finished(anim_name: StringName) -> void:
 	$Info.visible = true
 	$Titila.visible = true
-	$BotonS.visible = true
+	$BotonM.visible = true
+
+func _on_boton_m_button_down() -> void:
+	emit_signal("actividad_terminada")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://chwrpwf8t6sxu"]
+[gd_scene load_steps=112 format=3 uid="uid://chwrpwf8t6sxu"]
 
 [ext_resource type="Script" path="res://assets/scripts/nucleo_03/actividad_03.gd" id="1_a5p8h"]
 [ext_resource type="Texture2D" uid="uid://fai6o7famdqo" path="res://img/nucleo_3/fondo/linea_3_1.png" id="2_qb016"]
@@ -103,6 +103,7 @@
 [ext_resource type="Texture2D" uid="uid://qiyhb5rufyn5" path="res://img/nucleo_3/fondo/linea_3_100.png" id="101_7gllj"]
 [ext_resource type="PackedScene" uid="uid://sxca04083gd4" path="res://scenes/titila.tscn" id="102_yh0l6"]
 [ext_resource type="Texture2D" uid="uid://dy6epmayrnige" path="res://img/nucleo_3/actividad_03/idea_1_1.png" id="103_22o3l"]
+[ext_resource type="Texture2D" uid="uid://cifi43h61bkck" path="res://img/nucleo_3/actividad_03/idea_2_2_hover.png" id="105_43oi0"]
 [ext_resource type="Texture2D" uid="uid://bisym5udytdeu" path="res://img/nucleo_3/actividad_03/idea_2_2.png" id="105_obtl5"]
 [ext_resource type="Texture2D" uid="uid://c3viq164elkt8" path="res://img/nucleo_3/actividad_03/idea_3_3.png" id="107_tqf07"]
 [ext_resource type="Texture2D" uid="uid://erqd60h43rj8" path="res://img/nucleo_3/actividad_03/info.png" id="108_vy1b1"]
@@ -443,6 +444,7 @@ offset_right = 1135.0
 offset_bottom = 724.0
 scale = Vector2(1.195, 1.195)
 texture_normal = ExtResource("105_obtl5")
+texture_hover = ExtResource("105_43oi0")
 
 [node name="Idea33" type="Sprite2D" parent="."]
 position = Vector2(1582, 548)

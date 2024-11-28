@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl022wbkuohoj"]
+[gd_scene load_steps=7 format=3 uid="uid://bl022wbkuohoj"]
 
 [ext_resource type="Script" path="res://assets/scripts/elegir_nucleo.gd" id="1_h0i8w"]
 [ext_resource type="Texture2D" uid="uid://fmfd1l67oxo4" path="res://assets/sprites/intro/intro_frame01.png" id="1_oplm7"]
 [ext_resource type="Texture2D" uid="uid://byhkifvhvl252" path="res://assets/sprites/intro/intro_frame02.png" id="2_cl7xn"]
 [ext_resource type="Texture2D" uid="uid://cjwy2vlok5cvd" path="res://assets/sprites/intro/intro_frame03.png" id="3_ua1m2"]
 [ext_resource type="PackedScene" uid="uid://drx5frcgg37qy" path="res://scenes/llamada_s.tscn" id="4_1phu5"]
+[ext_resource type="AudioStream" uid="uid://bbnmdvbich58l" path="res://assets/audio/MUSICA DE ASCENSOR - RELAXING BOSSA (ELEVATOR MUSIC).mp3" id="6_s3vtj"]
 
 [node name="ElegirNucleo" type="Node2D"]
 script = ExtResource("1_h0i8w")
@@ -70,6 +71,11 @@ video_path = "res://assets/videos/llamada_04/esperando_s.ogv"
 position = Vector2(1090, 591)
 num_linea = 5
 video_path = "res://assets/videos/llamada_05/esperando_s.ogv"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_s3vtj")
+volume_db = -9.0
+parameters/looping = true
 
 [connection signal="clickeado" from="Llamadas/LlamadaS" to="." method="_on_linea_elegida"]
 [connection signal="clickeado" from="Llamadas/LlamadaS2" to="." method="_on_linea_elegida"]
