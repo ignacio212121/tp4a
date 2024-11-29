@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwn0l2aa1j7k7"]
+
+[ext_resource type="Script" path="res://assets/scripts/nucleo_04/info_final.gd" id="1_8egdr"]
+[ext_resource type="Texture2D" uid="uid://bhyigkfmlmu3o" path="res://img/nucleo_04/info_final/info.png" id="2_uw18r"]
+[ext_resource type="PackedScene" uid="uid://sxca04083gd4" path="res://scenes/titila.tscn" id="3_hirhj"]
+[ext_resource type="PackedScene" uid="uid://bt58lk6jwxluf" path="res://scenes/elementos/boton_l.tscn" id="4_kqlf7"]
+
+[sub_resource type="Gradient" id="Gradient_3uk5g"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rm1ev"]
+gradient = SubResource("Gradient_3uk5g")
+width = 1920
+height = 1080
+fill_from = Vector2(1, 0)
+
+[sub_resource type="Animation" id="Animation_5dpr3"]
+resource_name = "new_animation"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_v4r3c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dlb3k"]
+_data = {
+"RESET": SubResource("Animation_v4r3c"),
+"new_animation": SubResource("Animation_5dpr3")
+}
+
+[node name="InfoFinal" type="Node2D"]
+script = ExtResource("1_8egdr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_rm1ev")
+centered = false
+
+[node name="Info" type="Sprite2D" parent="."]
+position = Vector2(963, 522)
+texture = ExtResource("2_uw18r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Info"]
+libraries = {
+"": SubResource("AnimationLibrary_dlb3k")
+}
+
+[node name="Titila" parent="." instance=ExtResource("3_hirhj")]
+visible = false
+position = Vector2(1085, 762)
+scale = Vector2(1.95884, 0.901869)
+color = Color(0.615686, 0.0313726, 0.909804, 1)
+
+[node name="BotonL" parent="." instance=ExtResource("4_kqlf7")]
+visible = false
+offset_left = 1136.0
+offset_top = 804.0
+offset_right = 1854.0
+offset_bottom = 919.0
+color = Color(0.615686, 0.0313726, 0.909804, 1)
+texto = "FINALIZAR"
+
+[connection signal="animation_finished" from="Info/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="button_down" from="BotonL" to="." method="_on_boton_l_button_down"]

@@ -1,0 +1,374 @@
+[gd_scene load_steps=50 format=3 uid="uid://b43qja41nvnnq"]
+
+[ext_resource type="Script" path="res://assets/scripts/nucleo_02/actividad_02.gd" id="1_dwkx8"]
+[ext_resource type="Texture2D" uid="uid://tpof0netd2np" path="res://img/nucleo_02/actividad_02/posicionar.png" id="1_is1t1"]
+[ext_resource type="PackedScene" uid="uid://djtfeu0qegsme" path="res://scenes/actividades/clickeable.tscn" id="2_8nndn"]
+[ext_resource type="PackedScene" uid="uid://bgs2ty3i0fjmf" path="res://scenes/elementos/boton_s.tscn" id="3_1wg1b"]
+[ext_resource type="Texture2D" uid="uid://nxr3a0fd8e6o" path="res://img/nucleo_02/actividad_02/amarillo_normal.png" id="3_udvtd"]
+[ext_resource type="PackedScene" uid="uid://sxca04083gd4" path="res://scenes/titila.tscn" id="4_8xpin"]
+[ext_resource type="Texture2D" uid="uid://bqmbd02thqs8c" path="res://img/nucleo_02/actividad_02/rojo_normal.png" id="4_vy5d8"]
+[ext_resource type="Texture2D" uid="uid://sf6mf3qtkcni" path="res://img/nucleo_02/actividad_02/azul_normal.png" id="5_q5vw4"]
+[ext_resource type="Texture2D" uid="uid://cvjvbaawff7sd" path="res://img/nucleo_02/actividad_02/verde_normal.png" id="7_xpjdf"]
+[ext_resource type="Texture2D" uid="uid://b5bddwuoay8qy" path="res://img/nucleo_02/actividad_02/exportando_datos.png" id="8_yhblh"]
+[ext_resource type="Texture2D" uid="uid://bvxqfnnunowlr" path="res://img/nucleo_02/actividad_02/aplicaciones.png" id="11_ejgnt"]
+[ext_resource type="Theme" uid="uid://bm1ub45g4i7os" path="res://themes/ai_theme.tres" id="11_o1ejt"]
+[ext_resource type="Texture2D" uid="uid://kp0f3cyi30rw" path="res://img/nucleo_02/actividad_02/face_normal.png" id="12_111pu"]
+[ext_resource type="Texture2D" uid="uid://kvsuywys5hw5" path="res://img/nucleo_02/actividad_02/netflix_normal.png" id="13_h8wxu"]
+[ext_resource type="Texture2D" uid="uid://bqbnukt6htupu" path="res://img/nucleo_02/actividad_02/candy_normal.png" id="14_y1cl0"]
+[ext_resource type="Texture2D" uid="uid://dwqyscjoobecm" path="res://img/nucleo_02/actividad_02/ps_normal.png" id="15_gute7"]
+[ext_resource type="Texture2D" uid="uid://o6h3c78u1e4p" path="res://img/nucleo_02/actividad_02/ps_seleccionado.png" id="16_0nvoo"]
+[ext_resource type="Texture2D" uid="uid://cb16k8lpo8trx" path="res://img/nucleo_02/actividad_02/personalización.png" id="19_8k172"]
+[ext_resource type="Texture2D" uid="uid://cva71dl7w5ohj" path="res://img/loading/loading_1.png" id="20_166y1"]
+[ext_resource type="Texture2D" uid="uid://66gc3yu7iwsx" path="res://img/loading/loading_2.png" id="21_i2r8f"]
+[ext_resource type="Texture2D" uid="uid://c6sew2e0ir6mj" path="res://img/loading/loading_3.png" id="22_kqflp"]
+[ext_resource type="Texture2D" uid="uid://sxtu06ycdm8k" path="res://img/loading/loading_4.png" id="23_p4kxa"]
+[ext_resource type="Texture2D" uid="uid://c7iycrog04uhh" path="res://img/loading/loading_5.png" id="24_jmh6l"]
+[ext_resource type="Texture2D" uid="uid://ccpgak81n0b2s" path="res://img/loading/loading_6.png" id="25_gbwtd"]
+[ext_resource type="Texture2D" uid="uid://cgpquyk68y338" path="res://img/loading/loading_7.png" id="26_76ebc"]
+[ext_resource type="Texture2D" uid="uid://bngdy2b100g2o" path="res://img/loading/loading_8.png" id="27_lky65"]
+[ext_resource type="Texture2D" uid="uid://b71vfud5tevbd" path="res://img/loading/loading_9.png" id="28_y0mqh"]
+[ext_resource type="Texture2D" uid="uid://d21d0nkunsrdm" path="res://img/loading/loading_10.png" id="29_jx6vh"]
+[ext_resource type="Texture2D" uid="uid://4ujvsvd7thbb" path="res://img/loading/loading_11.png" id="30_hvyvc"]
+[ext_resource type="Texture2D" uid="uid://cqbc5jkm0q1el" path="res://img/loading/loading_12.png" id="31_i74ia"]
+[ext_resource type="Texture2D" uid="uid://srf3ur4q8os4" path="res://img/loading/loading_13.png" id="32_wohhh"]
+[ext_resource type="Texture2D" uid="uid://cdm8q5goy6yco" path="res://img/loading/loading_14.png" id="33_ye0x0"]
+[ext_resource type="Texture2D" uid="uid://c04qx6hd4dek2" path="res://img/loading/loading_15.png" id="34_dtk2u"]
+[ext_resource type="Texture2D" uid="uid://di4fi7bnqwruf" path="res://img/loading/loading_16.png" id="35_rx7sg"]
+[ext_resource type="Texture2D" uid="uid://d4ctiqvhm43y0" path="res://img/loading/loading_17.png" id="36_l15ul"]
+[ext_resource type="Texture2D" uid="uid://c321kr4hns11p" path="res://img/loading/loading_18.png" id="37_w3a8y"]
+[ext_resource type="Texture2D" uid="uid://dhrvns0b5byur" path="res://img/loading/loading_19.png" id="38_ivc7e"]
+[ext_resource type="Texture2D" uid="uid://c36k7g7yrjsyi" path="res://img/loading/loading_20.png" id="39_0eg06"]
+[ext_resource type="Texture2D" uid="uid://b60smssvblwee" path="res://img/loading/loading_21.png" id="40_v8xng"]
+[ext_resource type="Texture2D" uid="uid://dun6hte04rfhs" path="res://img/loading/loading_22.png" id="41_60rhk"]
+[ext_resource type="Texture2D" uid="uid://bum5rb6yytpvc" path="res://img/loading/loading_23.png" id="42_6w4x1"]
+[ext_resource type="PackedScene" uid="uid://c0pnxckwulqw5" path="res://scenes/actividades/presionar_anim.tscn" id="42_yo16s"]
+[ext_resource type="AudioStream" uid="uid://c2k1bqavbkcrg" path="res://assets/sonidos/error.mp3" id="44_bqcli"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mf55w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_166y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_i2r8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_kqflp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p4kxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jmh6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_gbwtd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_76ebc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_lky65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_y0mqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_jx6vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_hvyvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_i74ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_wohhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ye0x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_dtk2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_rx7sg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_l15ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_w3a8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ivc7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_0eg06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_v8xng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_60rhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_6w4x1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_70bnw"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hr8cw"]
+gradient = SubResource("Gradient_70bnw")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="Animation" id="Animation_gnj6h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ycynb"]
+resource_name = "mal"
+length = 0.4667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0.815686, 0.0509804, 0, 0.647059), Color(0.815686, 0.0509804, 0, 0.647059), Color(0.815686, 0.0509804, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ph5j"]
+_data = {
+"RESET": SubResource("Animation_gnj6h"),
+"mal": SubResource("Animation_ycynb")
+}
+
+[node name="Actividad02" type="Node2D"]
+script = ExtResource("1_dwkx8")
+
+[node name="Posicionar" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(946, 120)
+texture = ExtResource("1_is1t1")
+
+[node name="Titila" parent="Posicionar" instance=ExtResource("4_8xpin")]
+position = Vector2(-81, 106)
+scale = Vector2(0.389831, 0.32243)
+color = Color(0.913725, 0, 0.490196, 1)
+
+[node name="BotonS" parent="Posicionar" instance=ExtResource("3_1wg1b")]
+offset_left = -63.0
+offset_top = 117.0
+offset_right = 65.0
+offset_bottom = 162.0
+color = Color(0.909804, 0, 0.490196, 1)
+texto = "ENVIAR"
+
+[node name="Colores" type="Node2D" parent="."]
+
+[node name="Titila" parent="Colores" instance=ExtResource("4_8xpin")]
+position = Vector2(471, 21)
+scale = Vector2(0.428571, 0.915888)
+color = Color(0.913725, 0, 0.490196, 1)
+
+[node name="Amarillo" parent="Colores" instance=ExtResource("2_8nndn")]
+position = Vector2(560, 120)
+imagen = ExtResource("3_udvtd")
+
+[node name="RojoNormal" type="Sprite2D" parent="Colores"]
+position = Vector2(817, 123)
+texture = ExtResource("4_vy5d8")
+
+[node name="AzulNormal" type="Sprite2D" parent="Colores"]
+position = Vector2(1330, 125)
+texture = ExtResource("5_q5vw4")
+
+[node name="VerdeNormal" type="Sprite2D" parent="Colores"]
+position = Vector2(1074, 123)
+texture = ExtResource("7_xpjdf")
+
+[node name="RojoMal" type="Button" parent="Colores"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 753.0
+offset_top = 60.0
+offset_right = 882.0
+offset_bottom = 187.0
+
+[node name="VerdeMal" type="Button" parent="Colores"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1010.0
+offset_top = 59.0
+offset_right = 1139.0
+offset_bottom = 186.0
+
+[node name="AzulMal" type="Button" parent="Colores"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1265.0
+offset_top = 61.0
+offset_right = 1394.0
+offset_bottom = 188.0
+
+[node name="PosicionarAplicaciones" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(946, 123)
+texture = ExtResource("11_ejgnt")
+
+[node name="Titila" parent="PosicionarAplicaciones" instance=ExtResource("4_8xpin")]
+position = Vector2(-81, 101)
+scale = Vector2(0.389831, 0.327103)
+color = Color(0.913725, 0, 0.490196, 1)
+
+[node name="BotonS" parent="PosicionarAplicaciones" instance=ExtResource("3_1wg1b")]
+offset_left = -63.0
+offset_top = 114.0
+offset_right = 65.0
+offset_bottom = 159.0
+color = Color(0.909804, 0, 0.490196, 1)
+texto = "ENVIAR"
+
+[node name="Aplicaciones" type="Node2D" parent="."]
+visible = false
+
+[node name="Titila" parent="Aplicaciones" instance=ExtResource("4_8xpin")]
+position = Vector2(985, 24)
+scale = Vector2(0.428571, 0.915888)
+color = Color(0.913725, 0, 0.490196, 1)
+
+[node name="FaceNormal" type="Sprite2D" parent="Aplicaciones"]
+position = Vector2(816, 122)
+texture = ExtResource("12_111pu")
+
+[node name="NetflixNormal" type="Sprite2D" parent="Aplicaciones"]
+position = Vector2(560, 122)
+texture = ExtResource("13_h8wxu")
+
+[node name="CandyNormal" type="Sprite2D" parent="Aplicaciones"]
+position = Vector2(1332, 123)
+texture = ExtResource("14_y1cl0")
+
+[node name="RojoMal" type="Button" parent="Aplicaciones"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 495.0
+offset_top = 59.0
+offset_right = 624.0
+offset_bottom = 186.0
+metadata/_edit_use_anchors_ = true
+
+[node name="VerdeMal" type="Button" parent="Aplicaciones"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 752.0
+offset_top = 59.0
+offset_right = 881.0
+offset_bottom = 186.0
+metadata/_edit_use_anchors_ = true
+
+[node name="AzulMal" type="Button" parent="Aplicaciones"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1268.0
+offset_top = 61.0
+offset_right = 1397.0
+offset_bottom = 188.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Ps" type="TextureButton" parent="Aplicaciones"]
+offset_left = 1010.0
+offset_top = 60.0
+offset_right = 1139.0
+offset_bottom = 186.0
+texture_normal = ExtResource("15_gute7")
+texture_hover = ExtResource("16_0nvoo")
+
+[node name="ExportandoDatos" type="Sprite2D" parent="."]
+position = Vector2(953, 618)
+texture = ExtResource("8_yhblh")
+
+[node name="ProgressBar" type="ProgressBar" parent="ExportandoDatos"]
+offset_left = -151.0
+offset_top = 2.0
+offset_right = 171.0
+offset_bottom = 45.0
+theme = ExtResource("11_o1ejt")
+show_percentage = false
+
+[node name="Loading" type="AnimatedSprite2D" parent="ExportandoDatos"]
+modulate = Color(0.913725, 0, 0.490196, 1)
+position = Vector2(11.0001, 173)
+scale = Vector2(0.587572, 0.574686)
+sprite_frames = SubResource("SpriteFrames_mf55w")
+
+[node name="Personalizacion" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1031, 548)
+texture = ExtResource("19_8k172")
+
+[node name="Timer" type="Timer" parent="Personalizacion"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Titila" parent="Personalizacion" instance=ExtResource("4_8xpin")]
+position = Vector2(-431, 155)
+scale = Vector2(0.53753, 0.528037)
+color = Color(0.913725, 0, 0.490196, 1)
+
+[node name="BotonS" parent="Personalizacion" instance=ExtResource("3_1wg1b")]
+offset_left = -412.0
+offset_top = 176.0
+offset_right = -284.0
+offset_bottom = 221.0
+scale = Vector2(1.43319, 1.62979)
+color = Color(0.909804, 0, 0.490196, 1)
+texto = "ENVIAR"
+
+[node name="Presionar" parent="." instance=ExtResource("42_yo16s")]
+modulate = Color(0.909804, 0, 0.490196, 1)
+
+[node name="Mal" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960.5, 539.5)
+scale = Vector2(30.4844, 17.3594)
+texture = SubResource("GradientTexture2D_hr8cw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Mal"]
+libraries = {
+"": SubResource("AnimationLibrary_8ph5j")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("44_bqcli")
+volume_db = 0.5
+
+[connection signal="pressed" from="Posicionar/BotonS" to="." method="_on_boton_colores"]
+[connection signal="clickeado" from="Colores/Amarillo" to="." method="_on_amarillo_clickeado"]
+[connection signal="button_down" from="Colores/RojoMal" to="." method="_on_rojo_mal_button_down"]
+[connection signal="button_down" from="Colores/VerdeMal" to="." method="_on_verde_mal_button_down"]
+[connection signal="button_down" from="Colores/AzulMal" to="." method="_on_azul_mal_button_down"]
+[connection signal="pressed" from="PosicionarAplicaciones/BotonS" to="." method="_on_boton_aplicaciones"]
+[connection signal="button_down" from="Aplicaciones/RojoMal" to="." method="_on_rojo_mal_button_down"]
+[connection signal="button_down" from="Aplicaciones/VerdeMal" to="." method="_on_verde_mal_button_down"]
+[connection signal="button_down" from="Aplicaciones/AzulMal" to="." method="_on_azul_mal_button_down"]
+[connection signal="pressed" from="Aplicaciones/Ps" to="." method="_on_ps_pressed"]
+[connection signal="timeout" from="Personalizacion/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Personalizacion/BotonS" to="." method="_on_boton_personalizacion"]
+[connection signal="animation_finished" from="Mal/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

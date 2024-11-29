@@ -1,0 +1,139 @@
+[gd_scene load_steps=12 format=3 uid="uid://cnm1eg4f72pe3"]
+
+[ext_resource type="Script" path="res://assets/scripts/nucleo_01/info_final.gd" id="1_ptw5a"]
+[ext_resource type="Texture2D" uid="uid://sjgd1t645f4c" path="res://img/nucleo_1/info_final_1/info_01.png" id="2_sg1hy"]
+[ext_resource type="PackedScene" uid="uid://sxca04083gd4" path="res://scenes/titila.tscn" id="4_7i5ea"]
+[ext_resource type="PackedScene" uid="uid://bt58lk6jwxluf" path="res://scenes/elementos/boton_l.tscn" id="5_fy0rc"]
+[ext_resource type="Texture2D" uid="uid://binpcejdi7qrk" path="res://img/nucleo_1/info_final_1/info_02.png" id="5_usyki"]
+
+[sub_resource type="Gradient" id="Gradient_nsgdh"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5woib"]
+gradient = SubResource("Gradient_nsgdh")
+fill_from = Vector2(1, 0)
+
+[sub_resource type="Animation" id="Animation_ldnls"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2s5hm"]
+resource_name = "aparce"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1.23114, 0.965936),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6kolp"]
+resource_name = "aparece2"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1.23114, 0.965936),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ughe"]
+_data = {
+"RESET": SubResource("Animation_ldnls"),
+"aparce": SubResource("Animation_2s5hm"),
+"aparece2": SubResource("Animation_6kolp")
+}
+
+[node name="InfoFinal" type="Node2D"]
+script = ExtResource("1_ptw5a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-43, -27)
+scale = Vector2(31.2344, 17.9375)
+texture = SubResource("GradientTexture2D_5woib")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Info01" type="Sprite2D" parent="."]
+position = Vector2(961, 547)
+texture = ExtResource("2_sg1hy")
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Info01"]
+libraries = {
+"": SubResource("AnimationLibrary_4ughe")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.5
+one_shot = true
+
+[node name="Titila" parent="." instance=ExtResource("4_7i5ea")]
+visible = false
+position = Vector2(1056, 841)
+scale = Vector2(1.98305, 0.878505)
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+
+[node name="BotonL" parent="." instance=ExtResource("5_fy0rc")]
+visible = false
+offset_left = 1110.0
+offset_top = 883.0
+offset_right = 1828.0
+offset_bottom = 998.0
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+texto = "SIGUIENTE"
+
+[node name="Info02" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(973, 573)
+texture = ExtResource("5_usyki")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Info02"]
+libraries = {
+"": SubResource("AnimationLibrary_4ughe")
+}
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 3.5
+one_shot = true
+
+[node name="Titila2" parent="." instance=ExtResource("4_7i5ea")]
+visible = false
+position = Vector2(1056, 841)
+scale = Vector2(1.98305, 0.878505)
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+
+[node name="BotonL2" parent="." instance=ExtResource("5_fy0rc")]
+visible = false
+offset_left = 1110.0
+offset_top = 883.0
+offset_right = 1828.0
+offset_bottom = 998.0
+color = Color(0.0745098, 0.866667, 0.0588235, 1)
+texto = "FINALIZAR"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_down" from="BotonL" to="." method="_on_boton_l_button_down"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="button_down" from="BotonL2" to="." method="_on_boton_l_2_button_down"]

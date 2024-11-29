@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://brftkxjlho48o"]
+
+[ext_resource type="Script" path="res://assets/scripts/chat.gd" id="1_2duug"]
+[ext_resource type="Texture2D" uid="uid://dcv5togkhok8i" path="res://assets/sprites/chat.png" id="1_o1gga"]
+[ext_resource type="Texture2D" uid="uid://bq422coeelbpr" path="res://assets/sprites/titulo.png" id="2_gmvif"]
+[ext_resource type="FontFile" uid="uid://1qoxcrjd0k2r" path="res://assets/fonts/RobotoMono-Light.ttf" id="2_mphe7"]
+[ext_resource type="FontFile" uid="uid://c4uwu43b584fy" path="res://assets/fonts/RobotoMono-Medium.ttf" id="3_jq0r3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mrbs7"]
+font = ExtResource("3_jq0r3")
+font_size = 49
+
+[node name="Chat" type="Node2D"]
+script = ExtResource("1_2duug")
+
+[node name="Titulo" type="Sprite2D" parent="."]
+position = Vector2(1460, 97.5)
+scale = Vector2(1, 1.11852)
+texture = ExtResource("2_gmvif")
+
+[node name="LabelTitulo" type="Label" parent="."]
+offset_left = 1100.0
+offset_top = 33.0
+offset_right = 1819.0
+offset_bottom = 163.0
+label_settings = SubResource("LabelSettings_mrbs7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Chat" type="Sprite2D" parent="."]
+position = Vector2(1467, 537)
+scale = Vector2(1, 0.814118)
+texture = ExtResource("1_o1gga")
+
+[node name="TimerChat" type="Timer" parent="."]
+wait_time = 0.055
+
+[node name="TimerTitulo" type="Timer" parent="."]
+wait_time = 0.055
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 1090.0
+offset_top = 212.0
+offset_right = 1829.0
+offset_bottom = 862.0
+theme_override_fonts/normal_font = ExtResource("2_mphe7")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+scroll_following = true
+
+[connection signal="timeout" from="TimerChat" to="." method="_on_timer_chat_timeout"]
+[connection signal="timeout" from="TimerTitulo" to="." method="_on_timer_titulo_timeout"]

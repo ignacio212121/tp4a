@@ -1,0 +1,124 @@
+[gd_scene load_steps=22 format=3 uid="uid://blelpttyol1gd"]
+
+[ext_resource type="Script" path="res://assets/scripts/nucleo_01/nucleo_uno_main.gd" id="1_q0s4k"]
+[ext_resource type="Texture2D" uid="uid://b5xf0fhean8sm" path="res://img/nucleo_1/inicio/atendiendo_linea_1_00.png" id="1_qkvy8"]
+[ext_resource type="Texture2D" uid="uid://rvb3bywxygtu" path="res://img/nucleo_1/tarea_3/background_linea_1_error.png" id="2_e5h8p"]
+[ext_resource type="Texture2D" uid="uid://dy5u80pisngq5" path="res://img/nucleo_1/inicio/atendiendo_linea_1_01.png" id="2_eh77d"]
+[ext_resource type="Texture2D" uid="uid://coqg4gk6w6kx6" path="res://img/nucleo_1/inicio/atendiendo_linea_1_02.png" id="3_ubpfx"]
+[ext_resource type="Texture2D" uid="uid://co8qvukljh6mi" path="res://img/nucleo_1/inicio/atendiendo_linea_1_03.png" id="4_g6pc7"]
+[ext_resource type="Texture2D" uid="uid://cfyncvqkepmqe" path="res://img/nucleo_1/inicio/recibiendo_1_01.png" id="5_86abl"]
+[ext_resource type="Texture2D" uid="uid://cdthi8gcmcbvv" path="res://img/nucleo_1/inicio/recibiendo_1_02.png" id="6_bwotb"]
+[ext_resource type="Texture2D" uid="uid://0phj6n44vsdq" path="res://img/nucleo_1/tarea_3/error/error_01.png" id="7_m62jj"]
+[ext_resource type="Texture2D" uid="uid://buk2t8gckoeo1" path="res://img/nucleo_1/inicio/recibiendo_1_03.png" id="7_obwgi"]
+[ext_resource type="Texture2D" uid="uid://b74y4jmhs5wii" path="res://img/nucleo_1/tarea_3/error/error_02.png" id="8_j5ors"]
+[ext_resource type="Texture2D" uid="uid://vmkiwquj8dlj" path="res://img/nucleo_1/inicio/recibiendo_1_04.png" id="8_lsrd1"]
+[ext_resource type="Texture2D" uid="uid://cptp2tya5p7db" path="res://img/nucleo_1/tarea_3/error/error_03.png" id="9_jx713"]
+[ext_resource type="Texture2D" uid="uid://b26hkaiy1n7k3" path="res://img/nucleo_1/finalizando_llamada/finalizando_01.png" id="11_1c6gs"]
+[ext_resource type="Texture2D" uid="uid://cemm1jjjxt7gc" path="res://img/nucleo_1/finalizando_llamada/finalizando_02.png" id="12_eifw1"]
+[ext_resource type="Texture2D" uid="uid://dl55t2mum47ox" path="res://img/nucleo_1/finalizando_llamada/finalizando_03.png" id="13_fa5bq"]
+[ext_resource type="Texture2D" uid="uid://ll55hds5ivt4" path="res://img/nucleo_1/finalizando_llamada/finalizando_04.png" id="14_bbbvm"]
+[ext_resource type="Shader" path="res://assets/shaders/glitch.gdshader" id="14_g1l3v"]
+[ext_resource type="AudioStream" uid="uid://blv26j1ol6add" path="res://assets/sonidos/Música de elevador- efecto de sonido..mp3" id="19_kii1k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t28sv"]
+shader = ExtResource("14_g1l3v")
+shader_parameter/shake_power = 0.02
+shader_parameter/shake_rate = 0.3
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8lrl3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qkvy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eh77d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ubpfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g6pc7")
+}],
+"loop": false,
+"name": &"atendiendo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.3,
+"texture": ExtResource("7_m62jj")
+}, {
+"duration": 1.3,
+"texture": ExtResource("8_j5ors")
+}, {
+"duration": 1.2,
+"texture": ExtResource("9_jx713")
+}],
+"loop": true,
+"name": &"error",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_1c6gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_eifw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fa5bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bbbvm")
+}],
+"loop": true,
+"name": &"finalizando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_86abl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bwotb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_obwgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lsrd1")
+}],
+"loop": true,
+"name": &"recibiendo",
+"speed": 5.0
+}]
+
+[node name="Nucleo01" type="Node2D"]
+script = ExtResource("1_q0s4k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_e5h8p")
+centered = false
+
+[node name="Glitch" type="ColorRect" parent="Sprite2D"]
+visible = false
+material = SubResource("ShaderMaterial_t28sv")
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="ActividadesUno" type="Node2D" parent="."]
+
+[node name="Atendiendo" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8lrl3")
+animation = &"error"
+centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_kii1k")
+volume_db = 0.1
+
+[connection signal="animation_finished" from="Atendiendo" to="." method="_on_atendiendo_animation_finished"]

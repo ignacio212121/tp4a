@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bt58lk6jwxluf"]
+
+[ext_resource type="Texture2D" uid="uid://cdvd6j3goqd8a" path="res://img/elementos/boton_l_normal.png" id="1_54j0n"]
+[ext_resource type="Texture2D" uid="uid://cbbet18wc8plt" path="res://img/elementos/boton_l_hover.png" id="2_ecyd2"]
+[ext_resource type="Script" path="res://assets/scripts/scripts_actividades/botones.gd" id="3_6tbh2"]
+[ext_resource type="FontFile" uid="uid://ctvrj0r17ryrp" path="res://assets/fonts/RobotoMono-Regular.ttf" id="4_qpd2n"]
+[ext_resource type="AudioStream" uid="uid://bomkrlrlv1lpw" path="res://assets/audio/clicksoundeffect.mp3" id="5_klutf"]
+
+[node name="BotonL" type="TextureButton"]
+texture_normal = ExtResource("1_54j0n")
+texture_hover = ExtResource("2_ecyd2")
+script = ExtResource("3_6tbh2")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 4.0
+offset_right = 693.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("4_qpd2n")
+theme_override_font_sizes/font_size = 42
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_klutf")
+volume_db = 2.0
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
